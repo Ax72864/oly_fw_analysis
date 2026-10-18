@@ -1,0 +1,219 @@
+{
+  "main_image_sha256": "a2eb1d1f1afe47cce148e9aae0a04dfb82547d9de9437d342e012341140913f4",
+  "main_literal_candidates": [
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "runtime",
+      "offset": "0xa70d3b",
+      "value": "0x6069b4a5",
+      "runtime_site": "0x60a91d5b",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x616069b4"
+    },
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "runtime",
+      "offset": "0xa70d4f",
+      "value": "0x6069b4a5",
+      "runtime_site": "0x60a91d6f",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x616069b4"
+    },
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "runtime",
+      "offset": "0xa70d63",
+      "value": "0x6069b4a4",
+      "runtime_site": "0x60a91d83",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x616069b4"
+    },
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "runtime",
+      "offset": "0xa70d77",
+      "value": "0x6069b4a4",
+      "runtime_site": "0x60a91d97",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x616069b4"
+    },
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "runtime",
+      "offset": "0xa70d8b",
+      "value": "0x6069b4a4",
+      "runtime_site": "0x60a91dab",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x616069b4"
+    },
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "runtime",
+      "offset": "0xa70d9f",
+      "value": "0x6069b4a4",
+      "runtime_site": "0x60a91dbf",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x616069b4"
+    },
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "runtime",
+      "offset": "0xa70ef8",
+      "value": "0x6069b481",
+      "runtime_site": "0x60a91f18",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x616069b4"
+    },
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "runtime",
+      "offset": "0xa70f1d",
+      "value": "0x6069b481",
+      "runtime_site": "0x60a91f3d",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x616069b4"
+    },
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "runtime",
+      "offset": "0xa70f42",
+      "value": "0x6069b481",
+      "runtime_site": "0x60a91f62",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x616069b4"
+    },
+    {
+      "section": 3,
+      "component": "0x100",
+      "alias": "logical_flash",
+      "offset": "0x2ea267",
+      "value": "0x40a1a6dc",
+      "runtime_site": "0x6030b287",
+      "classification": "match starts on the second opcode byte, not on its 32-bit operand",
+      "actual_operand": "0x6040a1a6"
+    },
+    {
+      "section": 8,
+      "component": "0x100",
+      "alias": "flash_alias",
+      "offset": "0x9d641b",
+      "value": "0x814da560",
+      "runtime_site": "0x609f743b",
+      "classification": "unaligned match straddles adjacent main-image function-pointer words",
+      "aligned_pointer_words": [
+        "0x60814947",
+        "0x6081494a",
+        "0x60814da5",
+        "0x60814db4"
+      ],
+      "alignment": 4
+    },
+    {
+      "section": 8,
+      "component": "0x100",
+      "alias": "flash_alias",
+      "offset": "0x9e034b",
+      "value": "0x814da560",
+      "runtime_site": "0x60a0136b",
+      "classification": "unaligned match straddles adjacent main-image function-pointer words",
+      "aligned_pointer_words": [
+        "0x60814947",
+        "0x6081494a",
+        "0x60814da5",
+        "0x60814db4"
+      ],
+      "alignment": 4
+    },
+    {
+      "section": 8,
+      "component": "0x100",
+      "alias": "flash_alias",
+      "offset": "0x9e5fd3",
+      "value": "0x814da560",
+      "runtime_site": "0x60a06ff3",
+      "classification": "unaligned match straddles adjacent main-image function-pointer words",
+      "aligned_pointer_words": [
+        "0x60814947",
+        "0x60848386",
+        "0x60814da5",
+        "0x60814db4"
+      ],
+      "alignment": 4
+    },
+    {
+      "section": 8,
+      "component": "0x100",
+      "alias": "flash_alias",
+      "offset": "0x9e8687",
+      "value": "0x814da560",
+      "runtime_site": "0x60a096a7",
+      "classification": "unaligned match straddles adjacent main-image function-pointer words",
+      "aligned_pointer_words": [
+        "0x60814947",
+        "0x6084b778",
+        "0x60814da5",
+        "0x60814db4"
+      ],
+      "alignment": 4
+    },
+    {
+      "section": 8,
+      "component": "0x100",
+      "alias": "flash_alias",
+      "offset": "0x9eaddb",
+      "value": "0x814da560",
+      "runtime_site": "0x60a0bdfb",
+      "classification": "unaligned match straddles adjacent main-image function-pointer words",
+      "aligned_pointer_words": [
+        "0x60814947",
+        "0x6081494a",
+        "0x60814da5",
+        "0x60814db4"
+      ],
+      "alignment": 4
+    },
+    {
+      "section": 8,
+      "component": "0x100",
+      "alias": "flash_alias",
+      "offset": "0x9eddcb",
+      "value": "0x814da560",
+      "runtime_site": "0x60a0edeb",
+      "classification": "unaligned match straddles adjacent main-image function-pointer words",
+      "aligned_pointer_words": [
+        "0x60814947",
+        "0x6081494a",
+        "0x60814da5",
+        "0x60814db4"
+      ],
+      "alignment": 4
+    },
+    {
+      "section": 8,
+      "component": "0x100",
+      "alias": "flash_alias",
+      "offset": "0x9f03bf",
+      "value": "0x814da560",
+      "runtime_site": "0x60a113df",
+      "classification": "unaligned match straddles adjacent main-image function-pointer words",
+      "aligned_pointer_words": [
+        "0x60814947",
+        "0x6081494a",
+        "0x60814da5",
+        "0x60814db4"
+      ],
+      "alignment": 4
+    }
+  ],
+  "source_document_sha256": "4a54b70bf46c4411591ce3d2a41068ebbe9097e2f3c609ab792b0fd1c3ca6fd9",
+  "orf_cmio_sha256": "0e72e011e8e58f107ae0556a5949bb907a69b21656116e09a8c3991828dcdd69"
+}

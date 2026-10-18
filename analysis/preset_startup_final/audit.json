@@ -1,0 +1,78 @@
+{
+  "main_sha256": "a2eb1d1f1afe47cce148e9aae0a04dfb82547d9de9437d342e012341140913f4",
+  "startup_sections": [
+    {
+      "id": 1,
+      "descriptor": "0x60026d7c",
+      "destination": "0x60142800",
+      "end_exclusive": "0x601cb000",
+      "flash_source": "0x404c1800",
+      "length": 559104,
+      "requested_cpu": 0
+    },
+    {
+      "id": 2,
+      "descriptor": "0x60026d88",
+      "destination": "0x6022a800",
+      "end_exclusive": "0x60428000",
+      "flash_source": "0x405a9800",
+      "length": 2086912,
+      "requested_cpu": 0
+    },
+    {
+      "id": 3,
+      "descriptor": "0x60026d94",
+      "destination": "0x60432800",
+      "end_exclusive": "0x6069b800",
+      "flash_source": "0x407b1800",
+      "length": 2527232,
+      "requested_cpu": 1
+    },
+    {
+      "id": 4,
+      "descriptor": "0x60026da0",
+      "destination": "0x606b4800",
+      "end_exclusive": "0x60a50000",
+      "flash_source": "0x40a33800",
+      "length": 3782656,
+      "requested_cpu": 1
+    },
+    {
+      "id": 5,
+      "descriptor": "0x60026dac",
+      "destination": "0x60a76000",
+      "end_exclusive": "0x60fdc800",
+      "flash_source": "0x40df5000",
+      "length": 5662720,
+      "requested_cpu": 1
+    },
+    {
+      "id": 6,
+      "descriptor": "0x60026db8",
+      "destination": "0x61010000",
+      "end_exclusive": "0x610f2000",
+      "flash_source": "0x4138f000",
+      "length": 925696,
+      "requested_cpu": 1
+    },
+    {
+      "id": 7,
+      "descriptor": "0x60026dc4",
+      "destination": "0x61100000",
+      "end_exclusive": "0x61100000",
+      "flash_source": "0x4147f000",
+      "length": 0,
+      "requested_cpu": 2
+    },
+    {
+      "id": 8,
+      "descriptor": "0x60026dd0",
+      "destination": "0x61104000",
+      "end_exclusive": "0x6115b800",
+      "flash_source": "0x41483000",
+      "length": 358400,
+      "requested_cpu": 1
+    }
+  ],
+  "source_document_sha256": "430c00262c809df6d88f89b3b52743741fb2248de343a8272765ec38e9d351c0"
+}

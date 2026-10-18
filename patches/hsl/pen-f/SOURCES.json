@@ -1,0 +1,110 @@
+{
+  "source_documents": [
+    {
+      "path": "src/image_parameters/image_parameters.s",
+      "source_document": "analysis/hl_record_fix_release_20261010/qualification/assembly/consumer/patch.s",
+      "source_sha256": "6563cbece36b8eb2db017e1c33a6a86c07063acf8333293e119318daf2a26342"
+    },
+    {
+      "path": "src/image_parameters/layout.ld",
+      "source_document": "analysis/hl_record_fix_release_20261010/qualification/assembly/consumer/patch.ld",
+      "source_sha256": "35d162f273ef86d38b14b9d208cc145f0d2049a33889c3b4c2c78bf64a83de71"
+    },
+    {
+      "path": "src/editor_storage/editor.s",
+      "source_document": "analysis/hsl_range7_release_20261015/assembly/extended/penf_hsl_all_raw_ui.s",
+      "source_sha256": "468525fa1bbce62131a2da1f4031292752c4d99af7b79191237ddabbfcae0deb"
+    },
+    {
+      "path": "src/editor_storage/settings.s",
+      "source_document": "analysis/hsl_range7_release_20261015/assembly/extended/penf_hsl_persistent_cells.s",
+      "source_sha256": "684a4c2380198f0fe8029cebd195d8559177ada8d739a5cf3c1f4724a2f969b1"
+    },
+    {
+      "path": "src/editor_storage/settings_lifecycle.s",
+      "source_document": "analysis/hsl_range7_release_20261015/assembly/extended/penf_hsl_all_profiles_routes.s",
+      "source_sha256": "88b64bf8f0f0555cb192524ffe59902406d2bdcf124635d59ef5b3708e0d8696"
+    },
+    {
+      "path": "src/editor_storage/image_transport.s",
+      "source_document": "analysis/hsl_range7_release_20261015/assembly/extended/penf_hsl_all_profiles_transport.s",
+      "source_sha256": "d0580ceedb5dd8439d08bdc75b91ec29366c9674cc2e524e5e581b5a9047702a"
+    },
+    {
+      "path": "src/editor_storage/layout.ld",
+      "source_document": "analysis/hsl_range7_release_20261015/assembly/extended/patch.ld",
+      "source_sha256": "e94f30df456411644ca305b99db65202a755fbca31f709952be54b9d57bf2f6d"
+    },
+    {
+      "path": "src/raw_development/raw_development.s",
+      "source_document": "analysis/hsl_all_raw_20261012/release/assembly/penf_hsl_all_raw.s",
+      "source_sha256": "8bf261ef0f06cefabe489a41dd6aa7a2200334836500aaac383b83c25a9edfe6"
+    },
+    {
+      "path": "src/raw_development/layout.ld",
+      "source_document": "analysis/hsl_all_raw_20261012/release/assembly/raw.ld",
+      "source_sha256": "cba860cf3b99daaa2873669ffa46b5baef434dcc20f5546fcab893be1da764d2"
+    },
+    {
+      "path": "src/orf_metadata/orf_metadata.s",
+      "source_document": "analysis/hsl_orf_native_20261013/release/assembly/penf_hsl_native_orf.s",
+      "source_sha256": "72430087ff9249b400e43e01f297853a80a3cd055ceb1adcfe4a53bba3e559bc"
+    },
+    {
+      "path": "src/orf_metadata/cmio_tables.s",
+      "source_document": "analysis/hsl_orf_native_20261013/release/assembly/penf_cmio_weights.s",
+      "source_sha256": "a2a9df8aca7c32ac18de703805e823e903fd1b31c0244294a1f66b4322c84bfb"
+    },
+    {
+      "path": "src/orf_metadata/cmio_stream.s",
+      "source_document": "analysis/hsl_orf_native_20261013/release/assembly/penf_cmio_stream.s",
+      "source_sha256": "3dfef657ffcbcef6dfae2cfa2079c07d947c63eb113b683a4765b9030d601323"
+    },
+    {
+      "path": "src/orf_metadata/layout.ld",
+      "source_document": "analysis/hsl_orf_native_20261013/release/assembly/native-orf.ld",
+      "source_sha256": "3d598de885b30e7b531f30707c8e2a850b413d7eb258d517534cbac20339cfc6"
+    },
+    {
+      "path": "src/settings_backup/settings_backup.s",
+      "source_document": "analysis/hsl_backup_release_20261013/assembly/penf_hsl_backup.s",
+      "source_sha256": "c64ae57814f6cf475719c149cf35f1bb0ed8c03ad449cf697084f988e15c3780"
+    },
+    {
+      "path": "src/settings_backup/layout.ld",
+      "source_document": "analysis/hsl_backup_release_20261013/assembly/patch.ld",
+      "source_sha256": "4b449e2cdccd73e4b5d6dc335b53e5a907038e35db353b79f0886b5bb2531b5a"
+    },
+    {
+      "path": "src/extended_range/extended_range.s",
+      "source_document": "analysis/hsl_range7_release_20261015/assembly/extended/penf_hsl_range7.s",
+      "source_sha256": "b90eb9996c390f11298a59efe12c9a237eb1d924d0a236b0576ba8f5d4f6f474"
+    },
+    {
+      "path": "src/extended_range/layout.ld",
+      "source_document": "analysis/hsl_range7_release_20261015/assembly/extended/inline.ld",
+      "source_sha256": "3c87dddc2a9c03d1f326e32d4ebdc98440ba7e6ab5b5d54776054f3f3a3b2f84"
+    },
+    {
+      "path": "src/wifi/wifi.s",
+      "source_document": "analysis/penf_wifi_linked_20261015/assembly/recipe.s",
+      "source_sha256": "2066326007e0ecdf740e908baf3c9d1865c5a0da361f0aaed181834608e9b028"
+    },
+    {
+      "path": "src/wifi/layout.ld",
+      "source_document": "analysis/penf_wifi_linked_20261015/assembly/recipe.ld",
+      "source_sha256": "1da4def13a0161e2e0e761b7d78b8a751fb1478d39bad8ce1f0415b261007155"
+    },
+    {
+      "path": "value-pixels.txt",
+      "source_document": "analysis/value_bitmap_20261011/draft-04-regular/report.json",
+      "source_sha256": "7bdba0243154fd88955a508150e12925d033f89bdd6319af9f25ce7881979b24"
+    },
+    {
+      "path": "patch.json",
+      "source_document": "analysis/penf_wifi_linked_20261015/assembly/edits.json",
+      "source_sha256": "2dc73d8ede2aed0385d4e707187fc230e7f25766efec0eed23249917b9d6c8d7"
+    }
+  ],
+  "notes": "Original authored assembly and minimal displaced stock instructions; addresses and reference hashes target the specified release. Full vendor firmware is supplied by the builder user."
+}

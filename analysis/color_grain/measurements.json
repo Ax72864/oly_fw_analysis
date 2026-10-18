@@ -1,0 +1,15 @@
+{
+  "mask_lut_sha256": "f2474dcac3871c3c593f4a790814b443364c860126fe38121f8048486a57370f",
+  "mask_entries": 256,
+  "element_type": "u16le",
+  "level_gains": {
+    "Off": 0,
+    "Low": 110,
+    "Medium": 300,
+    "High": 600
+  },
+  "mask_first_nonzero": 37,
+  "mask_plateau_start": 120,
+  "mask_max": 1023,
+  "source_document_sha256": "783c76b1ccfe44fca2497a293aeed1c6df6cc3238114b6029c7518581bb6c85f"
+}

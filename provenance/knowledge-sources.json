@@ -1,0 +1,772 @@
+[
+  {
+    "path": "CONTRIBUTING.md",
+    "sources": [],
+    "sha256": "13cd11732f65a73bcb2ab8aa3a15f979711d5ad672a72a8cf8019c742113dbf3"
+  },
+  {
+    "path": "README.md",
+    "sources": [],
+    "sha256": "dc7dc380a6bec351d4d3b0b8e85448c870fe39fa29ec0416704473acf843e71b"
+  },
+  {
+    "path": "REPRODUCING.md",
+    "sources": [],
+    "sha256": "df62831c2292506a264b2e8d3da85fe4f077ccb651ae05c437137f96f2ade92d"
+  },
+  {
+    "path": "RIGHTS-AND-PROVENANCE.md",
+    "sources": [],
+    "sha256": "7b324fe9c4e6fbefa28bebf68dc5b33245a8f3ed51c60f4913d280896e0e97f9"
+  },
+  {
+    "path": "docs/README.md",
+    "sources": [],
+    "sha256": "6bbf386e8bd759c7a9383bfb0ac4ac161c83a0ee5af6dfd47a3b77c3083c0715"
+  },
+  {
+    "path": "docs/boot/pen-f/FUNCTION_MAP.md",
+    "sources": [
+      {
+        "source_document": "docs/boot/BOOT_EMULATION.md",
+        "sha256": "979c2e66c7ee4d0bf50e778267972ed050f5619d510465f406cf788b40f30602"
+      },
+      {
+        "source_document": "docs/boot/BOOT_RUNTIME.md",
+        "sha256": "121e289e3a79747d1de39543d3ad56046f1bc6d98c45cecf4fd7e0810fdc9d27"
+      },
+      {
+        "source_document": "docs/boot/BOOT_ALEX_UPLOAD_AND_CONTINUATION.md",
+        "sha256": "2be8112704e0c0f575a8b426ccd300ac58008ba024f12d361c647163c4f549ab"
+      },
+      {
+        "source_document": "docs/boot/BOOT_DISPLAY_STARTUP.md",
+        "sha256": "afa4e1283a50ccb4d4da546cc194986e068a03f3774ac502efdcedc3ba090e8e"
+      },
+      {
+        "source_document": "docs/boot/BOOT_RESOURCE_STARTUP.md",
+        "sha256": "92460ce47985ba6de41b44becb07b9187dcf5a6a9babcd559790bc0fd1d2defa"
+      },
+      {
+        "source_document": "docs/boot/BOOT_CROSS_CORE_SECTION3.md",
+        "sha256": "2ccec01486c9a017f4e9d489897faa182dd4748d6b461c6baca8559583714a4c"
+      },
+      {
+        "source_document": "docs/boot/BOOT_REMOTE_SEMAPHORE.md",
+        "sha256": "43984399631a31efb7025da1448f6a232ae7db4c5270c03eb011348d5a09ca84"
+      },
+      {
+        "source_document": "docs/boot/BOOT_SECTION_COMPLETION.md",
+        "sha256": "90b02aa917c3a20b3e0fe77827a71665608eaf3a83b5d51f1f4c10da52b18fa9"
+      },
+      {
+        "source_document": "docs/boot/BOOT_A_MODE_AND_CAMERA_INIT.md",
+        "sha256": "b2d8592a070a58471ca49e65d3752973ad80aee98150be41307dbf4a81c1de13"
+      },
+      {
+        "source_document": "docs/boot/BOOT_CAMERA_CONTROLLER.md",
+        "sha256": "608895303d7758db21b3523df744b62ca9f154eb6c1ac5cd65d1b39e1fab1cfa"
+      },
+      {
+        "source_document": "docs/boot/STARTUP_MAILBOX_PROVENANCE.md",
+        "sha256": "ffa9fb185fc68443764d023dedd3197758c5f608544375206228d3a138c70f6a"
+      },
+      {
+        "source_document": "docs/boot/BOOT_STARTUP_SURVEY.md",
+        "sha256": "b9efd18fb90cda92ddc78be3acf0211e73404964218068d9f60359e37f0253aa"
+      },
+      {
+        "source_document": "docs/boot/UPDATE_ENTRY_AND_PREMAIN.md",
+        "sha256": "5085f13d81a1f94f1304a308f56c9d73a8e68e9fdbe4301331dbafc6412e5b41"
+      },
+      {
+        "source_document": "tools/penf_boot_emulator.py",
+        "sha256": "13388e8da2ceaf640e513af09568f22c7f0de90650fb4df8f2fc6249a0ce9ebb"
+      },
+      {
+        "source_document": "tools/penf_startup_survey.py",
+        "sha256": "793d11e99e47ce5621b98a1a1424ec0b0effa1562ff75d1a207b3201d96ebdfc"
+      }
+    ],
+    "sha256": "b39144cc658f82f0defcff1804b5f6ddf8b15f5183ddc28519682389d3bb12b2"
+  },
+  {
+    "path": "docs/boot/pen-f/INPUTS.md",
+    "sources": [
+      {
+        "source_document": "docs/boot/BUTTON_INPUT_AND_HELD_BOOT.md",
+        "sha256": "75d54459e35be62a22d87d9c0015a5177989d8930ea4c9253967dc397727c286"
+      },
+      {
+        "source_document": "docs/boot/MODE_DIAL_AND_SD_ENTRY.md",
+        "sha256": "79f04b42d053dca88a166c560b8ac5609f898b8b2abc4a3ffe74e763a4eeb858"
+      },
+      {
+        "source_document": "docs/boot/APPLICATION_BOOT_DISPATCH.md",
+        "sha256": "83b7769cd6558050eab1e5bd06280ac2534bf4ec43141c4724dc0b9d784f9117"
+      },
+      {
+        "source_document": "docs/color/COLOR_BUTTONS_AND_PROFILE_BANKS.md",
+        "sha256": "29e7a289f52ec420ce5c1543be25085d0a8181e1ab6339f66ba848a9c0f44653"
+      }
+    ],
+    "sha256": "e1aef4c5db85153a4e20401e0e9612ce8e7fc0ba29e702bcce4765617197c2d2"
+  },
+  {
+    "path": "docs/boot/pen-f/RECOVERY.md",
+    "sources": [
+      {
+        "source_document": "docs/boot/SD_UPDATE_PATH.md",
+        "sha256": "3522f30163ac479b537972d0f9966a0730c5d6df10d9b94ae50cd53db9f6da9f"
+      },
+      {
+        "source_document": "docs/boot/BOOT_RECOVERY_MAP.md",
+        "sha256": "9809944f03010514fe8515daa1a9a71a5ef9749ee779833674d9f20eda9137e6"
+      },
+      {
+        "source_document": "docs/boot/UPDATE_ENTRY_AND_PREMAIN.md",
+        "sha256": "5085f13d81a1f94f1304a308f56c9d73a8e68e9fdbe4301331dbafc6412e5b41"
+      },
+      {
+        "source_document": "docs/safety/REPACK_AND_LAYOUT_PREFLIGHT.md",
+        "sha256": "3a78460ac3ae718772df11eee0a710b0ea348f21aecb15ce70246e1114bb480c"
+      },
+      {
+        "source_document": "docs/safety/CMIO_AND_RUNTIME_FLASH_PROTECTION.md",
+        "sha256": "bb79ba825748a6c56ff3ab6f15a5f3902ec03fc8e7dee78d0db4f95ef0b53491"
+      }
+    ],
+    "sha256": "3518eb4825ee836882f18b68a3d763f7ab27e073970ce60b89ea953de95e873c"
+  },
+  {
+    "path": "docs/boot/pen-f/STARTUP.md",
+    "sources": [
+      {
+        "source_document": "docs/boot/BOOT_RUNTIME.md",
+        "sha256": "121e289e3a79747d1de39543d3ad56046f1bc6d98c45cecf4fd7e0810fdc9d27"
+      },
+      {
+        "source_document": "docs/boot/BOOT_CAMERA_CONTROLLER.md",
+        "sha256": "608895303d7758db21b3523df744b62ca9f154eb6c1ac5cd65d1b39e1fab1cfa"
+      },
+      {
+        "source_document": "docs/boot/BOOT_STARTUP_SURVEY.md",
+        "sha256": "b9efd18fb90cda92ddc78be3acf0211e73404964218068d9f60359e37f0253aa"
+      },
+      {
+        "source_document": "docs/boot/APPLICATION_BOOT_DISPATCH.md",
+        "sha256": "83b7769cd6558050eab1e5bd06280ac2534bf4ec43141c4724dc0b9d784f9117"
+      },
+      {
+        "source_document": "docs/boot/SD_MOUNT_AND_RED_EXCLUSION.md",
+        "sha256": "8dfea13048f0546fd236ec6a7c0d85e03f2a5d64d5ceffaf2ceb3ac1e967f5fa"
+      },
+      {
+        "source_document": "docs/boot/STARTUP_MAILBOX_PROVENANCE.md",
+        "sha256": "ffa9fb185fc68443764d023dedd3197758c5f608544375206228d3a138c70f6a"
+      },
+      {
+        "source_document": "docs/boot/EM1II_STARTUP_AND_SD.md",
+        "sha256": "e289d8c10153a7185f0a7428903a59baa5ceda25dc92f64fe4677ce130d81de3"
+      }
+    ],
+    "sha256": "68d993c2c3b9b56427a5c72679bc6e67e1e39b7aa3973afc2f6ec0131a6ffb30"
+  },
+  {
+    "path": "docs/color/MODES.md",
+    "sources": [
+      {
+        "source_document": "docs/color/JPEG_MODE_MAP.md",
+        "sha256": "ac8e93b88c34c44726c2da15fc4bf8a23318c109d052b546e155d38c2d2b088f"
+      },
+      {
+        "source_document": "docs/color/COLOR_ACROSS_GENERATIONS.md",
+        "sha256": "d7969cae68c93a7735f597311525203d5f8c7452f431c073aa60e20c4badf9e9"
+      },
+      {
+        "source_document": "docs/color/COLOR_FEATURE_EVOLUTION.md",
+        "sha256": "9812e40a2c33549c789d36734a9737f1c8125d8bf9d9d98e4fe57b397df08e48"
+      },
+      {
+        "source_document": "docs/color/CREATIVE_PROCESSING_JOBS.md",
+        "sha256": "b3bebcc76e163d42eced7d6ae757d613b02bff071d0982b8f2cb2abaaa3a3a53"
+      }
+    ],
+    "sha256": "fc0184a54407aceb134c0a05fb7adbafcb7b5ac2f5b37193a5040df5b5a0f41f"
+  },
+  {
+    "path": "docs/color/pen-f/CAPTURE_PARAMETERS.md",
+    "sources": [
+      {
+        "source_document": "docs/color/IMAGE_PARAMETER_OWNERSHIP.md",
+        "sha256": "0edb6c1000c26a6e36281e9e57c5735571bc06a13ca7175dcae1196fe2259a31"
+      },
+      {
+        "source_document": "docs/color/HSL_STATIC_TRANSPORT.md",
+        "sha256": "5263fce593d43f6f1824f97979dc2d626d39aa9a9696ec0c6a5769140e30e5db"
+      },
+      {
+        "source_document": "docs/color/HSL_CAPTURE_GUARD_DIAGNOSIS.md",
+        "sha256": "4b45a3e0cef5725591483933fb2734be1591ad2d2bafd15ac22d1e459bf1503c"
+      },
+      {
+        "source_document": "docs/color/HSL_JOB_ARRAY_CONSUMER.md",
+        "sha256": "da3518202bf19ed9e2dcdd9e318015ccfd7f406fa2335b4dabcdd9f4fb9bf578"
+      },
+      {
+        "source_document": "docs/color/ALL_RAW_HSL.md",
+        "sha256": "8b113cf53935421d40a3b44543c13ace2cc18470eb0db20ae42dcef20a03d9e3"
+      }
+    ],
+    "sha256": "e355f78c7e644e3eaab731db525d046da2c04571489b301738f493488b770515"
+  },
+  {
+    "path": "docs/color/pen-f/CREATIVE_PROCESSING_JOBS.md",
+    "sources": [
+      {
+        "source_document": "docs/color/CREATIVE_PROCESSING_JOBS.md",
+        "sha256": "b3bebcc76e163d42eced7d6ae757d613b02bff071d0982b8f2cb2abaaa3a3a53"
+      }
+    ],
+    "sha256": "b1d66f8166b4ef7e4c769626e6bbfbdc7d3623edbf85eaba97c4c0110e4e1fb8"
+  },
+  {
+    "path": "docs/color/pen-f/EDITOR.md",
+    "sources": [
+      {
+        "source_document": "docs/color/COLOR_UI_ENTRY_AND_TEXT.md",
+        "sha256": "f14a909a729cad86820b1c2719bbc740cb0ae70d1fae52ebb26a9e44733739bf"
+      },
+      {
+        "source_document": "docs/color/STOCK_COLOR_EDIT_CHAIN.md",
+        "sha256": "b76e0378ed3fcc4cbb344aab1e70dfa7002dabe59539bf6cf33b98ca897f9557"
+      },
+      {
+        "source_document": "docs/color/COLOR_REQUEST_AND_REPLY.md",
+        "sha256": "86d965bf75f709ecd677ae8153b710c747f9d2410731e608d4d7b4c56533efed"
+      },
+      {
+        "source_document": "docs/color/COLOR_EXECUTION_CONTEXT.md",
+        "sha256": "8e8b51dea5326e64553768e10af36f70ab31fd838f8112839b3fba99ba8229c2"
+      },
+      {
+        "source_document": "docs/color/COLOR_WHEEL_DISPLAY.md",
+        "sha256": "f8168026bde761879f58613d4b1d9cfc83f4625d976e2ad48619eeb0bc2f2d74"
+      },
+      {
+        "source_document": "docs/color/COLOR_HELD_OK_RESET.md",
+        "sha256": "be4ba0c68e71fd880264d3bf7e65c0bc1d18b71e6b04bff3c33efeee6b8f81fe"
+      },
+      {
+        "source_document": "docs/color/ALL_RAW_HSL.md",
+        "sha256": "8b113cf53935421d40a3b44543c13ace2cc18470eb0db20ae42dcef20a03d9e3"
+      },
+      {
+        "source_document": "docs/color/HSL_RANGE7.md",
+        "sha256": "5df3de0de94ab09ec8387f96efca5e5948873940d114363d67db2c5fffa2d0b0"
+      }
+    ],
+    "sha256": "0ab8f53953a71d2471ebc7bc4cd437e183c5e0c0af10471a6bee649067a0d3a1"
+  },
+  {
+    "path": "docs/color/pen-f/EDIT_AND_CAPTURE_MAP.md",
+    "sources": [
+      {
+        "source_document": "docs/color/STOCK_COLOR_EDIT_CHAIN.md",
+        "sha256": "b76e0378ed3fcc4cbb344aab1e70dfa7002dabe59539bf6cf33b98ca897f9557"
+      },
+      {
+        "source_document": "docs/color/COLOR_HELD_OK_RESET.md",
+        "sha256": "be4ba0c68e71fd880264d3bf7e65c0bc1d18b71e6b04bff3c33efeee6b8f81fe"
+      },
+      {
+        "source_document": "docs/color/CURRENT_COLOR_REFRESH_AND_VIEWER.md",
+        "sha256": "1a67a0d83ad7b1c5ba7cf1a09f98d5c2db34581ff7405b67d6ac825d6ecd51c8"
+      },
+      {
+        "source_document": "docs/color/COLOR_NOTIFICATIONS_AND_STATE_REQUEST.md",
+        "sha256": "77eb0c853cab96737023811469ba8fef7642de29720d8d97c9b3cfeb7217497c"
+      },
+      {
+        "source_document": "docs/color/COLOR_REQUEST_AND_REPLY.md",
+        "sha256": "86d965bf75f709ecd677ae8153b710c747f9d2410731e608d4d7b4c56533efed"
+      },
+      {
+        "source_document": "docs/color/COLOR_EXECUTION_CONTEXT.md",
+        "sha256": "8e8b51dea5326e64553768e10af36f70ab31fd838f8112839b3fba99ba8229c2"
+      },
+      {
+        "source_document": "docs/color/PROFILE_LIFECYCLE_MAP.md",
+        "sha256": "020066addfa379168c04f5661b6b02fde67460bf29f8f61b224094c447341f8e"
+      },
+      {
+        "source_document": "docs/color/PROFILE_CONTEXT_AND_IMAGE_SNAPSHOT.md",
+        "sha256": "579238d8f746bacd3150cd4c48b6dfa5a9c1254c4d45cb625979e97a584d938e"
+      },
+      {
+        "source_document": "docs/color/IMAGE_PARAMETER_OWNERSHIP.md",
+        "sha256": "0edb6c1000c26a6e36281e9e57c5735571bc06a13ca7175dcae1196fe2259a31"
+      },
+      {
+        "source_document": "docs/color/HSL_PERSISTENT_CELLS.md",
+        "sha256": "1168f6e371bba6210ce49ef0b8d661589b24bce3d467287bfcde6c6d7fdeb231"
+      },
+      {
+        "source_document": "docs/color/HSL_JOB_ARRAY_CONSUMER.md",
+        "sha256": "da3518202bf19ed9e2dcdd9e318015ccfd7f406fa2335b4dabcdd9f4fb9bf578"
+      },
+      {
+        "source_document": "docs/color/HSL_STATIC_TRANSPORT.md",
+        "sha256": "5263fce593d43f6f1824f97979dc2d626d39aa9a9696ec0c6a5769140e30e5db"
+      },
+      {
+        "source_document": "docs/color/HSL_CAPTURE_GUARD_DIAGNOSIS.md",
+        "sha256": "4b45a3e0cef5725591483933fb2734be1591ad2d2bafd15ac22d1e459bf1503c"
+      },
+      {
+        "source_document": "tools/penf_hl_static_transport.py",
+        "sha256": "59b5d70b93254724d76609b54f89e9608e7dab4b180b27aa26638f61ecdf63ad"
+      },
+      {
+        "source_document": "docs/color/HSL_EXECUTION_CONTEXT.md",
+        "sha256": "22562a8ceeccfc7dabf5e4cafb59ecd3ccb4d78a6f47ad31a6ee3dbd6e7d4d6f"
+      },
+      {
+        "source_document": "docs/color/LUT_BOUNDARIES_AND_ALL_COLORS.md",
+        "sha256": "24026bd5ef815bace2b8ef3773e8c60638ffa77bee1bd26c73a20adcc4c31a43"
+      }
+    ],
+    "sha256": "a45e27e66c9e01c2e5510ac29db4892c7223936da334cf2d72182226ed35f5a2"
+  },
+  {
+    "path": "docs/color/pen-f/GRAIN.md",
+    "sources": [
+      {
+        "source_document": "docs/color/MONO_GRAIN.md",
+        "sha256": "b74387538500ff7df2cc22108c75e136f7a33c045cbce1bb1617fdefc2e6ecde"
+      },
+      {
+        "source_document": "docs/color/COLOR_GRAIN_EXPERIMENT.md",
+        "sha256": "535af3a753ff5f8b3f6d183fafbd5338d3f9aea757eee2647000f37013ff2cda"
+      },
+      {
+        "source_document": "docs/color/CAMERA_COLOR_GRAIN.md",
+        "sha256": "f5c7c68d8e1c55583828112cb9a15c7cea706bc9457349be893327cfe7b91db5"
+      },
+      {
+        "source_document": "docs/color/CREATIVE_PROCESSING_JOBS.md",
+        "sha256": "b3bebcc76e163d42eced7d6ae757d613b02bff071d0982b8f2cb2abaaa3a3a53"
+      }
+    ],
+    "sha256": "456c32555d32f83bdf13af87ee1c433b55a111143dd84c0739b9d989d39a799e"
+  },
+  {
+    "path": "docs/color/pen-f/HSL_TABLES.md",
+    "sources": [
+      {
+        "source_document": "docs/color/PHOTO_REFERENCE_AND_SECTORS.md",
+        "sha256": "98e022381eb1d5bab536dbfe9561adca2b623cbff9540aab4738ab8d3242849d"
+      },
+      {
+        "source_document": "analysis/red250_index_mapping_20261009/REPORT.md",
+        "sha256": "4fc41091c8e2468cb5a1a266e078290964553be693afc36cf9529fa3e3c66fe2"
+      },
+      {
+        "source_document": "docs/color/HSL_JOB_ARRAY_CONSUMER.md",
+        "sha256": "da3518202bf19ed9e2dcdd9e318015ccfd7f406fa2335b4dabcdd9f4fb9bf578"
+      },
+      {
+        "source_document": "docs/color/LUT_BOUNDARIES_AND_ALL_COLORS.md",
+        "sha256": "24026bd5ef815bace2b8ef3773e8c60638ffa77bee1bd26c73a20adcc4c31a43"
+      },
+      {
+        "source_document": "docs/color/HSL_RANGE7.md",
+        "sha256": "5df3de0de94ab09ec8387f96efca5e5948873940d114363d67db2c5fffa2d0b0"
+      }
+    ],
+    "sha256": "021769e0dfa319ae994f3ff8ecfbb1efcf6712549a963214569c66545223a829"
+  },
+  {
+    "path": "docs/color/pen-f/ORF_METADATA.md",
+    "sources": [
+      {
+        "source_document": "docs/color/ORF_NATIVE_CMIO.md",
+        "sha256": "f1d17989575600095eac3b0d3d8616ac0796bebc23fc1f0b34a7edce14f13bf2"
+      },
+      {
+        "source_document": "docs/color/ORF_HSL_METADATA.md",
+        "sha256": "6a03f6194174d2ffe58add70930e18503ccdc6213a231ad998adf51eb64e5ef8"
+      },
+      {
+        "source_document": "docs/color/WORKSPACE.md",
+        "sha256": "5a3d19f11d12583af90a5102181b94c839f64fd4336c0d7461a362f391c11f5d"
+      },
+      {
+        "source_document": "docs/color/HSL_RANGE7.md",
+        "sha256": "5df3de0de94ab09ec8387f96efca5e5948873940d114363d67db2c5fffa2d0b0"
+      }
+    ],
+    "sha256": "2bd65801281f4906526803d2c67ffef08808cc0b4c8d936348ed8719ebf88c42"
+  },
+  {
+    "path": "docs/color/pen-f/SETTINGS_STORAGE.md",
+    "sources": [
+      {
+        "source_document": "docs/color/HSL_PERSISTENT_CELLS.md",
+        "sha256": "1168f6e371bba6210ce49ef0b8d661589b24bce3d467287bfcde6c6d7fdeb231"
+      },
+      {
+        "source_document": "docs/color/HSL_BANK_PERSISTENCE_AND_BACKUP.md",
+        "sha256": "3a05de0ddda30ecaa4743bd2d3f0f9f2b0b969064e91144a9e0fde1345328d77"
+      },
+      {
+        "source_document": "docs/color/PROFILE_LIFECYCLE_MAP.md",
+        "sha256": "020066addfa379168c04f5661b6b02fde67460bf29f8f61b224094c447341f8e"
+      },
+      {
+        "source_document": "docs/color/COLOR_BUTTONS_AND_PROFILE_BANKS.md",
+        "sha256": "29e7a289f52ec420ce5c1543be25085d0a8181e1ab6339f66ba848a9c0f44653"
+      },
+      {
+        "source_document": "docs/color/IMAGE_PARAMETER_OWNERSHIP.md",
+        "sha256": "0edb6c1000c26a6e36281e9e57c5735571bc06a13ca7175dcae1196fe2259a31"
+      },
+      {
+        "source_document": "docs/color/HSL_RANGE7.md",
+        "sha256": "5df3de0de94ab09ec8387f96efca5e5948873940d114363d67db2c5fffa2d0b0"
+      }
+    ],
+    "sha256": "aea3e0b97000de47dd0e2f164bed1794d8b7ca392fe1b98795973ac3588abfe1"
+  },
+  {
+    "path": "docs/color/pen-f/SHADING.md",
+    "sources": [
+      {
+        "source_document": "analysis/shading_effect_20261014/REPORT.md",
+        "sha256": "ce5ef241e5490130f860ca7685e1eae57ca5290f268ff4ef9aa5258392b97d6b"
+      },
+      {
+        "source_document": "docs/color/CREATIVE_PROCESSING_JOBS.md",
+        "sha256": "b3bebcc76e163d42eced7d6ae757d613b02bff071d0982b8f2cb2abaaa3a3a53"
+      },
+      {
+        "source_document": "omw-vignette/spec/31-vignette.md",
+        "sha256": "27cf5032f3ad10028948febb7482f641d30bc8959234ccd15b96cd894112c272"
+      }
+    ],
+    "sha256": "5722b42088fc1ef87c6f4ebf1810f377a7dd94501aa145cdc707e0145116cbe9"
+  },
+  {
+    "path": "docs/color/pen-f/SHARPENING.md",
+    "sources": [
+      {
+        "source_document": "docs/color/SHARPENING.md",
+        "sha256": "2eae28a2ec15e4fcb789a73e9ed6849d5d4265e59aa4c674c0aad86053a45e84"
+      },
+      {
+        "source_document": "docs/color/WORKSPACE_SHARPENING_EXPERIMENT.md",
+        "sha256": "01e9812c4f857f28b300b9733133454c24d24b37b860328dcfd2f77f356703a9"
+      }
+    ],
+    "sha256": "a3c3576cbd86d798e4024969b07702140afcf99032d6bec5ba360002c1182104"
+  },
+  {
+    "path": "docs/color/pen-f/STRUCTURES.md",
+    "sources": [
+      {
+        "source_document": "docs/color/HSL_BANK_PERSISTENCE_AND_BACKUP.md",
+        "sha256": "3a05de0ddda30ecaa4743bd2d3f0f9f2b0b969064e91144a9e0fde1345328d77"
+      },
+      {
+        "source_document": "docs/color/PROFILE_CONTEXT_AND_IMAGE_SNAPSHOT.md",
+        "sha256": "579238d8f746bacd3150cd4c48b6dfa5a9c1254c4d45cb625979e97a584d938e"
+      },
+      {
+        "source_document": "docs/color/HSL_PERSISTENT_CELLS.md",
+        "sha256": "1168f6e371bba6210ce49ef0b8d661589b24bce3d467287bfcde6c6d7fdeb231"
+      },
+      {
+        "source_document": "docs/color/HSL_RANGE7.md",
+        "sha256": "5df3de0de94ab09ec8387f96efca5e5948873940d114363d67db2c5fffa2d0b0"
+      },
+      {
+        "source_document": "docs/color/STOCK_COLOR_EDIT_CHAIN.md",
+        "sha256": "b76e0378ed3fcc4cbb344aab1e70dfa7002dabe59539bf6cf33b98ca897f9557"
+      },
+      {
+        "source_document": "docs/color/COLOR_NOTIFICATIONS_AND_STATE_REQUEST.md",
+        "sha256": "77eb0c853cab96737023811469ba8fef7642de29720d8d97c9b3cfeb7217497c"
+      },
+      {
+        "source_document": "docs/color/COLOR_EXECUTION_CONTEXT.md",
+        "sha256": "8e8b51dea5326e64553768e10af36f70ab31fd838f8112839b3fba99ba8229c2"
+      },
+      {
+        "source_document": "docs/color/COLOR_REQUEST_AND_REPLY.md",
+        "sha256": "86d965bf75f709ecd677ae8153b710c747f9d2410731e608d4d7b4c56533efed"
+      },
+      {
+        "source_document": "docs/color/CURRENT_COLOR_REFRESH_AND_VIEWER.md",
+        "sha256": "1a67a0d83ad7b1c5ba7cf1a09f98d5c2db34581ff7405b67d6ac825d6ecd51c8"
+      },
+      {
+        "source_document": "docs/color/IMAGE_PARAMETER_OWNERSHIP.md",
+        "sha256": "0edb6c1000c26a6e36281e9e57c5735571bc06a13ca7175dcae1196fe2259a31"
+      },
+      {
+        "source_document": "docs/color/HSL_STATIC_TRANSPORT.md",
+        "sha256": "5263fce593d43f6f1824f97979dc2d626d39aa9a9696ec0c6a5769140e30e5db"
+      },
+      {
+        "source_document": "docs/color/HSL_CAPTURE_GUARD_DIAGNOSIS.md",
+        "sha256": "4b45a3e0cef5725591483933fb2734be1591ad2d2bafd15ac22d1e459bf1503c"
+      },
+      {
+        "source_document": "docs/color/HSL_EXECUTION_CONTEXT.md",
+        "sha256": "22562a8ceeccfc7dabf5e4cafb59ecd3ccb4d78a6f47ad31a6ee3dbd6e7d4d6f"
+      }
+    ],
+    "sha256": "2b2a6c516d3d38dba2673a0517f1924d24e61be8a8398af76b7c3159f1d6d0d6"
+  },
+  {
+    "path": "docs/features/FLASH.md",
+    "sources": [
+      {
+        "source_document": "docs/deferred/FLASH_HARDWARE_AND_DRIVER_COMPARISON.md",
+        "sha256": "a8d1827993b542c3c193ee5aa49c53611ec5fe87b3be9e4a29260eb2dd2cb776"
+      },
+      {
+        "source_document": "docs/deferred/EXTERNAL_FLASH_RECONNAISSANCE.md",
+        "sha256": "37ee611ad7c6381a9c060a140eadf786f3a1e9aa8bd8c6ab0523a9a21d4e0418"
+      }
+    ],
+    "sha256": "d60f4937c43219661014e8235b09cf15662ae51ef9d18eb95a9a3f69d5fd9c26"
+  },
+  {
+    "path": "docs/features/HISTORICAL_HACKS.md",
+    "sources": [
+      {
+        "source_document": "docs/patches/HISTORICAL_HACK_DIFFS.md",
+        "sha256": "9946c5f8c62748db6878bd3217d637848f84b7a5343f5119b1981f96ccfbf008"
+      },
+      {
+        "source_document": "research/xdel_olympus_20260924/firmware-index.md",
+        "sha256": "42c9a4e8e6749ff086b9b2693270fe0d0f468e5cd41516df0fa209fabee49d65"
+      },
+      {
+        "source_document": "research/xdel_olympus_20260924/README.md",
+        "sha256": "5d78ffde653b7c2bbd1eee0ca63a3f1c2e43147cabcc31fdfafc92c1931b4138"
+      },
+      {
+        "source_document": "docs/safety/OM3_CODE_SPACE_PRECEDENT.md",
+        "sha256": "26e284177f37d09cc5b4b5a32c495968fb39d78ee6040e25fce477220fcc17d0"
+      }
+    ],
+    "sha256": "b2e4dd8b6c8f420bbc7d2b127eaf56abf98e5c8584cc582e156a53df01e29637"
+  },
+  {
+    "path": "docs/features/om-5/BURST.md",
+    "sources": [
+      {
+        "source_document": "docs/deferred/OM5_BURST_FEASIBILITY.md",
+        "sha256": "27eb32bade9071f6bfb784ab604157b63b355b2b44af84b0504d4995777c0814"
+      }
+    ],
+    "sha256": "8799ae212fdf30087ea7eaa154a38e3571d117e05701408676cafc636d7d3add"
+  },
+  {
+    "path": "docs/format/CONTAINERS.md",
+    "sources": [
+      {
+        "source_document": "tools/oly_container.py",
+        "sha256": "ab842e186049074848a24dda432e8a5b85d52390fd22af9d059bf630def9cb6b"
+      },
+      {
+        "source_document": "docs/safety/REPACK_AND_LAYOUT_PREFLIGHT.md",
+        "sha256": "3a78460ac3ae718772df11eee0a710b0ea348f21aecb15ce70246e1114bb480c"
+      },
+      {
+        "source_document": "docs/patches/HISTORICAL_HACK_DIFFS.md",
+        "sha256": "9946c5f8c62748db6878bd3217d637848f84b7a5343f5119b1981f96ccfbf008"
+      }
+    ],
+    "sha256": "c77d676e2e129fbf46d10bd7f86052bbd71f2caeae772652cd0c398bfdd74647"
+  },
+  {
+    "path": "docs/format/pen-f/ADDRESS_SPACES.md",
+    "sources": [
+      {
+        "source_document": "docs/safety/REPACK_AND_LAYOUT_PREFLIGHT.md",
+        "sha256": "3a78460ac3ae718772df11eee0a710b0ea348f21aecb15ce70246e1114bb480c"
+      },
+      {
+        "source_document": "docs/safety/BOOT_INTEGRITY_AND_CODE_SPACE.md",
+        "sha256": "98a3c98269a50e19a19981bf7997cc2436ef2f8e215ec8e8bf02a3cb3d7314a5"
+      },
+      {
+        "source_document": "docs/boot/BOOT_RECOVERY_MAP.md",
+        "sha256": "9809944f03010514fe8515daa1a9a71a5ef9749ee779833674d9f20eda9137e6"
+      }
+    ],
+    "sha256": "074c24080c3814b0f30b7911ee997bd8aae40a5f4bd1630297f5d72df494b312"
+  },
+  {
+    "path": "docs/protocols/pen-f/SETTINGS_BACKUP.md",
+    "sources": [
+      {
+        "source_document": "docs/color/HSL_WORKSPACE_BACKUP_IMPLEMENTATION.md",
+        "sha256": "c2c273255ef1f4a1d3368122e3957e2f03dca705b35a2c7d6f840773d1de23fe"
+      },
+      {
+        "source_document": "docs/color/WORKSPACE_HSL_BACKUP_ROUNDTRIP.md",
+        "sha256": "84fb38a85d41785cec4e4deaf93685328c77853a719f958090d7024cbfe84040"
+      },
+      {
+        "source_document": "analysis/workspace_settings_physical_20261017/REPORT.md",
+        "sha256": "379f5b4efbec6771fd480b826237547a6219e6e5016a1ec11f3c936aa8e14fcc"
+      }
+    ],
+    "sha256": "2977283aaf4ee5dd6a19ba66b9a7c9594cfdc12f662ae8a2c4afddc0daa09ab3"
+  },
+  {
+    "path": "docs/protocols/pen-f/USB_UPDATE.md",
+    "sources": [
+      {
+        "source_document": "docs/boot/WORKSPACE_USB_INITIATION.md",
+        "sha256": "ac7244e438e5467fb725c43c44b0705b6cb16bc3311b57fd3aa271264459e7f1"
+      }
+    ],
+    "sha256": "4caa6aa488d7850abc6537f87c5deafd013be4d14e1d9ae1b7cdb81641fc0b7a"
+  },
+  {
+    "path": "docs/protocols/pen-f/WIFI.md",
+    "sources": [
+      {
+        "source_document": "analysis/penf_wifi_profiles_20261015/REPORT.txt",
+        "sha256": "bd1cfad49b54e5ffd826548c11603283ad2c4be104b0c72cc5a0cbef93ab79d8"
+      },
+      {
+        "source_document": "analysis/penf_wifi_recipe_20261015/REPORT.txt",
+        "sha256": "b46c24dbacc42058a2c4860f3785c3bcbff03a0f233ee1255707030fbacd89ae"
+      },
+      {
+        "source_document": "analysis/penf_wifi_workflow_camera_20261017/REPORT.md",
+        "sha256": "2b476edf6191a6bd011f87d2290f78353b4407d1d48515abf2a7e62154456d4d"
+      }
+    ],
+    "sha256": "0553a066c036c0685b356445d0daae1307dd8196eadfc72a74e5c45f8452e949"
+  },
+  {
+    "path": "docs/safety/CODE_SPACE.md",
+    "sources": [
+      {
+        "source_document": "docs/safety/BOOT_INTEGRITY_AND_CODE_SPACE.md",
+        "sha256": "98a3c98269a50e19a19981bf7997cc2436ef2f8e215ec8e8bf02a3cb3d7314a5"
+      },
+      {
+        "source_document": "docs/safety/DIAGNOSTIC_TRANSPORT_AND_LIFETIME.md",
+        "sha256": "aae8ab142528d210e13a784ce1f1b32218aa07c573bf2fddc215d83a6b913c3d"
+      },
+      {
+        "source_document": "docs/safety/OM3_CODE_SPACE_PRECEDENT.md",
+        "sha256": "26e284177f37d09cc5b4b5a32c495968fb39d78ee6040e25fce477220fcc17d0"
+      }
+    ],
+    "sha256": "fd2043a96ee5d4b3e4911ef3c8cab048bcc0108a56e4a6a6108929464075a71e"
+  },
+  {
+    "path": "docs/safety/VALIDATION.md",
+    "sources": [
+      {
+        "source_document": "docs/safety/COLOR2_HSL_ALIGNMENT_REGRESSION.md",
+        "sha256": "4187c487035c32e2c1f27f6bfa40240b2d386c2b5235aa72eef5aa14316feff5"
+      },
+      {
+        "source_document": "docs/safety/REPACK_AND_LAYOUT_PREFLIGHT.md",
+        "sha256": "3a78460ac3ae718772df11eee0a710b0ea348f21aecb15ce70246e1114bb480c"
+      },
+      {
+        "source_document": "docs/color/HSL_CAPTURE_GUARD_DIAGNOSIS.md",
+        "sha256": "4b45a3e0cef5725591483933fb2734be1591ad2d2bafd15ac22d1e459bf1503c"
+      },
+      {
+        "source_document": "docs/color/CREATIVE_PROCESSING_JOBS.md",
+        "sha256": "b3bebcc76e163d42eced7d6ae757d613b02bff071d0982b8f2cb2abaaa3a3a53"
+      }
+    ],
+    "sha256": "d0f4c4d757447ee4281ba64658d2a11bccc68c3f2842e91bb52affb6705c4a05"
+  },
+  {
+    "path": "docs/tooling/ida/README.md",
+    "sources": [
+      {
+        "source_document": "docs/tooling/IDA_SETUP.md",
+        "sha256": "c3936c0ccd7fd15e7fc661aa30fd73d3d50d2e897701d43032a5ec273b8ae43c"
+      },
+      {
+        "source_document": "analysis/ida49/verification.json",
+        "sha256": "6dc67f500cfedf717ac118870eec05b4bbd8f6bf56b69dd41ccebf58ad33d3e1"
+      }
+    ],
+    "sha256": "54c0f1e2bb0ee1b6acbac5cc77207150a6462503f3feed258bf90dfccb8e0d1d"
+  },
+  {
+    "path": "docs/tooling/pen-f/RESOURCES.md",
+    "sources": [
+      {
+        "source_document": "docs/color/HSL_LABEL_PREVIEW.md",
+        "sha256": "518f0e19360853edbcfb0d0f50520dd5165b1eb4e5210135b3020b1c91231e5c"
+      },
+      {
+        "source_document": "docs/safety/COLOR2_HSL_UI_LAYOUT_REVIEW.md",
+        "sha256": "84ad4fe4d9f59e5bef3ae6cf997e964e58045c2eb5cab5403b4a9449f03c2957"
+      },
+      {
+        "source_document": "docs/safety/VALUE_BITMAP_RESOURCE_REVIEW.md",
+        "sha256": "e36dd626c7924d5d701b08b010a819c6836c81d0cf5378ba0a3d9e06cf26c81d"
+      },
+      {
+        "source_document": "docs/safety/VALUE_BITMAP_REGULAR_RESOURCE_REVIEW.md",
+        "sha256": "36d03e3a832edcaa0be6d7d45288dbb9e57e942cc27ce0ca446f4a19131b450e"
+      }
+    ],
+    "sha256": "dfe37c4787d08d19c3835618eeca82ebd962bbeb35d09ef860dc755f1574169d"
+  },
+  {
+    "path": "patches/hsl/pen-f/README.md",
+    "sources": [
+      {
+        "source_document": "analysis/hsl_alpha_20261017/package/patch-map.json",
+        "sha256": "4d3d8ca8561b046a3a09a96b996649c3bae5ab5bc0cef576252f8c349bdab6f4"
+      },
+      {
+        "source_document": "analysis/hsl_alpha_20261017/package/inputs.json",
+        "sha256": "f3298f1781e3725114f0f500219fc4bd8e8256997ae1fcdf4200635327bb19fd"
+      }
+    ],
+    "sha256": "120475e39427db183f4f3ab07997ba85c92fb270e57507d16405720d9e790b76"
+  },
+  {
+    "path": "provenance/README.md",
+    "sources": [],
+    "sha256": "804a885de54f9448bd7413291fc00d9ffa62b4f70336d2a9bccce9eadd7fd9d1"
+  },
+  {
+    "path": "provenance/SOURCES.md",
+    "sources": [
+      {
+        "source_document": "research/xdel_olympus_20260924/README.md",
+        "sha256": "5d78ffde653b7c2bbd1eee0ca63a3f1c2e43147cabcc31fdfafc92c1931b4138"
+      },
+      {
+        "source_document": "research/om3_patcher_20260929/provenance.json",
+        "sha256": "5096bbaa0bf9b146dc76d9a49ad8a157040f93068b98cb7597d5896e43663a7a"
+      },
+      {
+        "source_document": "docs/boot/WORKSPACE_USB_INITIATION.md",
+        "sha256": "ac7244e438e5467fb725c43c44b0705b6cb16bc3311b57fd3aa271264459e7f1"
+      }
+    ],
+    "sha256": "5dc999edb46027f8105df2374e37ba431d928b8b29e7ec29df6a5b4d68cd8f30"
+  }
+]

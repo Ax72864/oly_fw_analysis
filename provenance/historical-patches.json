@@ -1,0 +1,641 @@
+[
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e-m1-ii-v34.zip",
+    "member": "e1259999.bin",
+    "bytes": 93050944,
+    "sha256": "63120941042b9ca36ac97a6546e7f8f79399dcebd0a6157d17d121d6a0fdeb79",
+    "stock_sha256": "c081564086227ee4c92b8d9e55bfd9b75e57a9667f65e9ab9f12940a1c9426f9",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_125_3400_0000_0000.BIN",
+    "encoded_changed_bytes": 18,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 14,
+        "decoded_spans": [
+          {
+            "offset": "0x33399f",
+            "bytes": 12
+          },
+          {
+            "offset": "0x635a7b",
+            "bytes": 2
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x10e",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x102",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e-m1-ii-v36.zip",
+    "member": "E1259999.BIN",
+    "bytes": 93050944,
+    "sha256": "79a01d8648f1bfbe282047ca16efc46e15c7a33c2024ff874d51bb0f0b446105",
+    "stock_sha256": "5fcd7314d808c06f8c867700e39eaaea4c0f240b86bfab94d4bb484c50ed0c07",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_125_3600_0000_0000.BIN",
+    "encoded_changed_bytes": 14,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 10,
+        "decoded_spans": [
+          {
+            "offset": "0x3339b3",
+            "bytes": 1
+          },
+          {
+            "offset": "0x3339b6",
+            "bytes": 1
+          },
+          {
+            "offset": "0x3339b8",
+            "bytes": 6
+          },
+          {
+            "offset": "0x635a2a",
+            "bytes": 2
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x10e",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x102",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e-m1-iii-v12.zip",
+    "member": "e1399999.bin",
+    "bytes": 109838336,
+    "sha256": "4786323ca6a558c4ad03a67ae064feb46138a79938e5ae1f7434f8487a846cc2",
+    "stock_sha256": "e1ebee7df66b4632b16eea8036f444823fc496857a4059af9e79fe918046ec92",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_139_1201_0000_0000.BIN",
+    "encoded_changed_bytes": 36,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 14,
+        "decoded_spans": [
+          {
+            "offset": "0x3232ed",
+            "bytes": 12
+          },
+          {
+            "offset": "0x677430",
+            "bytes": 2
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x10e",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x102",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x107",
+        "headers_identical": false,
+        "trailer_metadata_identical": false,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e-m10ii_v13.rar",
+    "member": "e1209999.bin",
+    "bytes": 69599232,
+    "sha256": "0d5d3c47c8b7d8b80ddf329df1aae8b8325c67a7ce069d2bf48c0a702aec991b",
+    "stock_sha256": "275ac4d31393a30b7569102f9fd53e51e679643f29293229927b8f1577563a10",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_120_1300_0000_0000.BIN",
+    "encoded_changed_bytes": 16,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 12,
+        "decoded_spans": [
+          {
+            "offset": "0x50d50c",
+            "bytes": 12
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e-m1_v46.rar",
+    "member": "e1099999.bin",
+    "bytes": 69206016,
+    "sha256": "f054725d1d01a58f4cdc978fc99bd39c4b3dfc83219c9d8e6ea168af332bd337",
+    "stock_sha256": "0fa4b14cb6361eddfbe6f9e94b4f5e3ded428a522fda79d2ce747bab34b21339",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_109_4600_0000_0000.BIN",
+    "encoded_changed_bytes": 17,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 14,
+        "decoded_spans": [
+          {
+            "offset": "0x1d215d",
+            "bytes": 2
+          },
+          {
+            "offset": "0x378839",
+            "bytes": 12
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x102",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e-m1ii_v30.rar",
+    "member": "e1259999.bin",
+    "bytes": 93050944,
+    "sha256": "845a3e73cf143cbd7400f5bbec41675540930e5ab7cd1c5a2ed8e7a68b30b49e",
+    "stock_sha256": "36a36af129baea94b4df983c8f14ea90acaeb9905cf420252efdad2fa9844317",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_125_3001_0000_0000.BIN",
+    "encoded_changed_bytes": 18,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 14,
+        "decoded_spans": [
+          {
+            "offset": "0x3333b8",
+            "bytes": 12
+          },
+          {
+            "offset": "0x631d6f",
+            "bytes": 2
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x10e",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x102",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e-m5-iii-v14.zip",
+    "member": "e1379999.bin",
+    "bytes": 118620160,
+    "sha256": "24e7cca97d75d00ac383e277ec2738527c57684ce3c39015e17beadf6fd8e66a",
+    "stock_sha256": "7f0414de124546c03135209af493c49876a7bfb977542cad72bc60f13000ff8b",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_137_1400_0000_0000.BIN",
+    "encoded_changed_bytes": 18,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 14,
+        "decoded_spans": [
+          {
+            "offset": "0x316b1c",
+            "bytes": 12
+          },
+          {
+            "offset": "0x63d61d",
+            "bytes": 2
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x10e",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x102",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e-m5ii_v41.zip",
+    "member": "e1189999.bin",
+    "bytes": 89522176,
+    "sha256": "f07cd122c7273d467edb6d7260b7ddb9c90cdc2c4bd95efb8d5131ace12368ee",
+    "stock_sha256": "c03050db130b051e446fa08dec1ad6f29afc890308888383428f4938a57edef0",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_118_4100_0000_0000.BIN",
+    "encoded_changed_bytes": 10,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 6,
+        "decoded_spans": [
+          {
+            "offset": "0x3f2ad5",
+            "bytes": 2
+          },
+          {
+            "offset": "0x534866",
+            "bytes": 2
+          },
+          {
+            "offset": "0x53486c",
+            "bytes": 2
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x102",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e_m10ii_v14.rar",
+    "member": "e1209999.bin",
+    "bytes": 69599232,
+    "sha256": "cef7a8c1b47a894c7e4538d76f47ccd8d76ad8e637404f7022a2f601c1e2f577",
+    "stock_sha256": "ff9d302318ecf6e06c0b31c181fc6a185e93623e819749db31cec7977fa92052",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_120_1400_0000_0000.BIN",
+    "encoded_changed_bytes": 16,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 12,
+        "decoded_spans": [
+          {
+            "offset": "0x50d52b",
+            "bytes": 12
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/e_m10iii_v12.rar",
+    "member": "e1309999.bin",
+    "bytes": 91445280,
+    "sha256": "d59f9b632bca2efc9fd2a1d5f10a57d4a335bb7375015a52d1b9c6c11249363e",
+    "stock_sha256": "a2283338a79f8d0fa212d9a6d2677b9b686f6a9cd4bd664fd9b0709af63f94e1",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_130_1200_0000_0000.BIN",
+    "encoded_changed_bytes": 18,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 14,
+        "decoded_spans": [
+          {
+            "offset": "0x3213bc",
+            "bytes": 12
+          },
+          {
+            "offset": "0x6055d7",
+            "bytes": 2
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x10e",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/pen-e-pl9_v11.rar",
+    "member": "e1339999.bin",
+    "bytes": 104552480,
+    "sha256": "131960883affe65e3200489359486ce643fc19cd0272e1dbccd69ff4f9c25f27",
+    "stock_sha256": "aefab05396c43ecba0551b94a5d31f7e52350c18d6f4bf1d02d75761108e6028",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_133_1101_0000_0000.BIN",
+    "encoded_changed_bytes": 18,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 14,
+        "decoded_spans": [
+          {
+            "offset": "0x312c09",
+            "bytes": 12
+          },
+          {
+            "offset": "0x5f79ab",
+            "bytes": 2
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x10e",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x102",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  },
+  {
+    "source_url": "http://xdel.ru/downloads/olympus-firmware/patched/pen_f_v31.zip",
+    "member": "e1229999.bin",
+    "bytes": 87031808,
+    "sha256": "c3b287871164efcf98dd23c1ba45246fa5fd815cb89d52d378903d5a5c53561d",
+    "stock_sha256": "212a1c14ac5ebf615ce18896f45d5382eabc99d700acd24fa21841eafeea4b4c",
+    "checksums_valid": true,
+    "exact_roundtrip": true,
+    "stock_filename": "OLY_E_122_3100_0000_0000.BIN",
+    "encoded_changed_bytes": 8,
+    "components": [
+      {
+        "kind": "0x100",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 4,
+        "decoded_spans": [
+          {
+            "offset": "0x5452ff",
+            "bytes": 2
+          },
+          {
+            "offset": "0x545305",
+            "bytes": 2
+          }
+        ]
+      },
+      {
+        "kind": "0x101",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x106",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      },
+      {
+        "kind": "0x102",
+        "headers_identical": true,
+        "trailer_metadata_identical": true,
+        "decoded_changed_bytes": 0,
+        "decoded_spans": []
+      }
+    ]
+  }
+]

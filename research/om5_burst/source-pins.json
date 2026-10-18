@@ -1,0 +1,22 @@
+{
+  "om5": {
+    "source": "research/flash_comparison/om5_download/OLY_E_144_1200_0000_0000.BIN",
+    "source_sha256": "a0c91f3ac7caaf0925b2af609e711183cf3b5982b3333224bcef26c0c5943d11",
+    "main_sha256": "cf4babeab5f516514e4a9b6032b0374e643830511e083b9cdd26bcb02980af88"
+  },
+  "em1iii": {
+    "source": "research/xdel_olympus_20260924/extracted/original/em1mk3/OLY_E_139_1600_0000_0000.BIN",
+    "source_sha256": "4f9ea315a2f2280dd5746abc39b5e4b038f183836eadfbe9d96b266e49a09aac",
+    "main_sha256": "3f8bcc3248e63a823dd978607f019f2063ead83080b9c93cddc836d556ff42dd"
+  },
+  "em1ii": {
+    "source": "research/xdel_olympus_20260924/extracted/original/em1mk2/OLY_E_125_3700_0000_0000.BIN",
+    "source_sha256": "691a8a8e90af75b3848b70856a3a49ef24d72394cdfd2766fa37bdfe6325de70",
+    "main_sha256": "0a41fb8e1105751f7817e5664f2edf2a1bdf399f070e91b4e3c84e6943113803"
+  },
+  "em5iii": {
+    "source": "research/xdel_olympus_20260924/extracted/original/em5mk3/OLY_E_137_1700_0000_0000.BIN",
+    "source_sha256": "939260fc22b4217fce64274eb5a6707d307a499804d8a316b6b39019c4afded2",
+    "main_sha256": "4097f57751ac30c24589448865b2824891a754744eae63ab14359fd46c1cf4be"
+  }
+}

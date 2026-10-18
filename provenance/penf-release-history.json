@@ -1,0 +1,57 @@
+{
+  "model": "Olympus PEN-F / 1220",
+  "release_history_url": "https://dl01.om-digitalsolutions.net/ww/ud2/ENU/0001/1220/index31a.html",
+  "filename_index_url": "https://web.archive.org/web/20230408024106id_/https://lightsnowdev.com/Olympus/PEN/PEN-F.html",
+  "releases": [
+    {
+      "public_version": "1.1",
+      "file_build": "1101",
+      "original_filename": "OLY_E_122_1101_0000_0000.BIN",
+      "public_release_date": "2016-12-01",
+      "official_changes": "STF-8 / FL-900R support; video exposure stability.",
+      "original_url": "http://dl01.olympus-imaging.com/OLYMPUS_MASTER/FIRMWARES/0001/1220/OLY_E_122_1101_0000_0000.BIN"
+    },
+    {
+      "public_version": "2.0",
+      "file_build": "2002",
+      "original_filename": "OLY_E_122_2002_0000_0000.BIN",
+      "public_release_date": "2017-05-08",
+      "official_changes": "Profoto support; settings/profile backup; Art Filter preview; minimum Auto ISO shutter speed; AF targeting pad improvements.",
+      "original_url": "http://dl01.olympus-imaging.com/OLYMPUS_MASTER/FIRMWARES/0001/1220/OLY_E_122_2002_0000_0000.BIN"
+    },
+    {
+      "public_version": "2.1",
+      "file_build": "2100",
+      "original_filename": "OLY_E_122_2100_0000_0000.BIN",
+      "public_release_date": "2017-06-29",
+      "official_changes": "Stability with the display closed.",
+      "original_url": "http://dl01.olympus-imaging.com/OLYMPUS_MASTER/FIRMWARES/0001/1220/OLY_E_122_2100_0000_0000.BIN"
+    },
+    {
+      "public_version": "3.0",
+      "file_build": "3000",
+      "original_filename": "OLY_E_122_3000_0000_0000.BIN",
+      "public_release_date": "2018-02-28",
+      "official_changes": "Bleach Bypass; shading in COLOR/CRT; profile import from JPEG; Panasonic 200mm AF correction.",
+      "original_url": "http://dl01.olympus-imaging.com/OLYMPUS_MASTER/FIRMWARES/0001/1220/OLY_E_122_3000_0000_0000.BIN"
+    },
+    {
+      "public_version": "3.1",
+      "file_build": "3100",
+      "original_filename": "OLY_E_122_3100_0000_0000.BIN",
+      "public_release_date": "2019-01-24",
+      "official_changes": "FC-WR support; UHS-II card stability.",
+      "original_url": "http://dl01.olympus-imaging.com/OLYMPUS_MASTER/FIRMWARES/0001/1220/OLY_E_122_3100_0000_0000.BIN",
+      "sha256": "212a1c14ac5ebf615ce18896f45d5382eabc99d700acd24fa21841eafeea4b4c"
+    },
+    {
+      "public_version": "3.1",
+      "file_build": "3101",
+      "original_filename": "OLY_E_122_3101_0000_0000.BIN",
+      "public_release_date": "2019-01-24",
+      "official_changes": "Same public 3.1 release notes; catalog file date 2020-01-28. Build revision not explained.",
+      "original_url": "http://dl01.olympus-imaging.com/OLYMPUS_MASTER/FIRMWARES/0001/1220/OLY_E_122_3101_0000_0000.BIN",
+      "sha256": "77398610b379f80238117f31a6d5bbf65d608b49ec563666c64d84367e969f2c"
+    }
+  ]
+}

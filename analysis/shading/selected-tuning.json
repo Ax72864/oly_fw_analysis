@@ -1,0 +1,28 @@
+{
+  "curve": "rational",
+  "midpoint": 0.8,
+  "protection": 1,
+  "power": 1,
+  "levels": [
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "workspace_values": [
+    -6,
+    -12,
+    -18,
+    -24,
+    -30
+  ],
+  "native_amounts": [
+    412,
+    567,
+    721,
+    876,
+    1024
+  ],
+  "source_document_sha256": "16910af45a270c36b0767d3d8726a40a8ca05d463ef87899b3be5ddc66884b22"
+}

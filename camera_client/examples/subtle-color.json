@@ -1,0 +1,17 @@
+{
+  "format": "penf-color-recipe-v1",
+  "name": "Protocol demonstration, not an optimized look",
+  "settings": {
+    "saturation": [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+    "hue": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "lightness": [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+    "contrast": 0,
+    "highlights": -1,
+    "midtones": 0,
+    "shadows": 1
+  },
+  "recommendations": {
+    "white_balance": "Keep the current WB mode for this example",
+    "exposure_compensation": "Set the physical dial yourself if desired"
+  }
+}

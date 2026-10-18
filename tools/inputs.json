@@ -1,0 +1,178 @@
+{
+  "scope": "Input contracts for analysis tools; optional path lists also appear in each probe source.",
+  "paths_relative_to": "repository root unless a CLI argument supplies another path",
+  "native_penf": {
+    "stock_container": {
+      "path": "firmware_files/OLY_E_122_3101_0000_0000.BIN",
+      "sha256": "77398610b379f80238117f31a6d5bbf65d608b49ec563666c64d84367e969f2c",
+      "included": false
+    },
+    "main": {
+      "path": "analysis/penf_3.1/00_0100_403a0020.decoded.bin",
+      "sha256": "a2eb1d1f1afe47cce148e9aae0a04dfb82547d9de9437d342e012341140913f4",
+      "cpu_base": "0x60021020",
+      "included": false,
+      "prepare": "oly_container.py --out analysis/penf_3.1"
+    },
+    "resources": {
+      "path": "analysis/penf_3.1/01_0101_41800020.decoded.bin",
+      "included": false,
+      "prepare": "Produced alongside main by the same exact container decode"
+    },
+    "engine": {
+      "path": "toolchains/mn103-gnu-build/penf-mn103",
+      "included": false,
+      "prepare": "build_mn103_emulator.py with pinned upstream archive; see docs/tooling/EMULATOR.md"
+    },
+    "objdump": {
+      "default_path": "toolchains/binutils-2.45-build/binutils/objdump",
+      "included": false,
+      "prepare": "Use an MN103-capable GNU objdump; tools exposing --objdump accept another path"
+    }
+  },
+  "support_inputs": [
+    {
+      "path": "analysis/preset_startup_final/audit.json",
+      "original_sha256": "430c00262c809df6d88f89b3b52743741fb2248de343a8272765ec38e9d351c0",
+      "role": "Small factual audit/configuration used by reference probes; no firmware byte payload is supplied",
+      "sha256": "2034a6f09e90c4b79a61e062710d24b9f6583200a62d80ee3181c762429bdcb7",
+      "included": true
+    },
+    {
+      "path": "analysis/code_space/verified/audit.json",
+      "original_sha256": "fb73d3bf255b7b87837b205c9de23962f8f8c694e3b7e9d9601b7324014e0cf4",
+      "role": "Small factual audit/configuration used by reference probes; no firmware byte payload is supplied",
+      "sha256": "37c605d5f844a1bb9168c53a06a1140fece4ab1ad5fd19792785a73de3702d05",
+      "included": true
+    },
+    {
+      "path": "analysis/code_space/reference_review/review.json",
+      "original_sha256": "4a54b70bf46c4411591ce3d2a41068ebbe9097e2f3c609ab792b0fd1c3ca6fd9",
+      "role": "Small factual audit/configuration used by reference probes; no firmware byte payload is supplied",
+      "sha256": "886fcb87e076059317f71a8a0295c72bebb1cb01cb31deb14e3395f94f7bc03b",
+      "included": true
+    },
+    {
+      "path": "analysis/update_entry_final/audit.json",
+      "original_sha256": "7f587460f8e8eda44c869a034eb583f53c27bc07feb0d52c33f27042c824f625",
+      "role": "Small factual audit/configuration used by reference probes; no firmware byte payload is supplied",
+      "sha256": "b5c12f4dc2f179b9b5fcd4473be876e74828dd51047702dc853ff5e1ac07ef34",
+      "included": true
+    },
+    {
+      "path": "analysis/profile_tables/profile-tables.json",
+      "original_sha256": "22e04c0fd0b82544bc3cef49bffc8116189435a03c1f67db328a45399adcd66c",
+      "role": "Small factual audit/configuration used by reference probes; no firmware byte payload is supplied",
+      "sha256": "04dca0160b2c346a9d8f3a7c4dd33d33498717adfcef2044bde60e53ed593e4b",
+      "included": true
+    },
+    {
+      "path": "analysis/color_grain/measurements.json",
+      "original_sha256": "783c76b1ccfe44fca2497a293aeed1c6df6cc3238114b6029c7518581bb6c85f",
+      "role": "Observed grain mask hash and scalar characteristics; full table is read from the supplied firmware",
+      "sha256": "7b3b929482d82e81571e2748b5c68b9ce5ef8826e063a010e8de798ea3778ea2",
+      "included": true
+    },
+    {
+      "path": "analysis/shading/selected-tuning.json",
+      "original_sha256": "16910af45a270c36b0767d3d8726a40a8ca05d463ef87899b3be5ddc66884b22",
+      "role": "Small factual audit/configuration used by reference probes; no firmware byte payload is supplied",
+      "sha256": "f6ad2fb606d185e74de33c770b127590d0b6a0c6ed27a72117dd374941d7c253",
+      "included": true,
+      "original_path": "analysis/shading_effect_20261014/tuner-20261017/selected-tuning.json"
+    },
+    {
+      "path": "research/om5_burst/source-pins.json",
+      "original_sha256": "6451d2b9ddb22eaf8f9addd96eefd41378051356d4b21f55c1d9af1462d5b46f",
+      "role": "Small factual audit/configuration used by reference probes; no firmware byte payload is supplied",
+      "sha256": "6451d2b9ddb22eaf8f9addd96eefd41378051356d4b21f55c1d9af1462d5b46f",
+      "included": true,
+      "original_path": "research/om5_burst_20261004/source-pins.json"
+    }
+  ],
+  "checkpoint_inputs": [
+    {
+      "path": "analysis/application_boot/camera-units-final/run/state.json.gz",
+      "sha256": "ac8fc90113f00d70fd5a565fe7b25b34ca3613a220e6a8b05b900d931b5d73ad",
+      "included": false,
+      "consumers": [
+        "penf_profile_lifecycle_probe.py",
+        "penf_profile_context_probe.py",
+        "penf_settings_backup_probe.py"
+      ],
+      "note": "Original exact startup checkpoint. Contains firmware/RAM bytes. Regenerating after source changes requires fixture requalification, not disabling hash checks."
+    },
+    {
+      "path": "analysis/sd_mount/stock-final/run/state.json.gz",
+      "included": false,
+      "consumers": [
+        "penf_color_controls_probe.py"
+      ],
+      "note": "Connected SD mount replay checkpoint; source-only import works without it."
+    }
+  ],
+  "optional_reference_inputs": [
+    {
+      "family": "PEN-F older main and stock",
+      "paths": [
+        "firmware_archive/stock/OLY_E_122_3100_0000_0000.BIN",
+        "analysis/preset_startup_final/penf3100.main.bin",
+        "analysis/historical_patch_3100/stock-3100-main.bin"
+      ],
+      "included": false,
+      "note": "Historical 3100 image aliases used by separate audit functions, not interchangeable with 3101."
+    },
+    {
+      "family": "E-P7 and OM-3 COLOR comparison",
+      "paths": [
+        "analysis/ep7_1100/00_0100_406a0020.decoded.bin",
+        "analysis/om3_1100/00_0100_50000020.decoded.bin",
+        "analysis/om3_1100/02_0106_458c0020.decoded.bin",
+        "research/ep7_om3/ep7_catalog/OLY_E_142_1100_0000_0000.BIN",
+        "research/ep7_om3/om3_download/OLY_E_147_1100_0000_0000.BIN"
+      ],
+      "included": false,
+      "note": "Exact hashes and runtime bases are in compare_color_generations.MODELS. Catalog response/request files are not required by the curated comparison."
+    },
+    {
+      "family": "Historical hacked-image comparisons",
+      "included": false,
+      "note": "See historical_hack_audit.py, om3_patch_audit.py, om3_code_space_audit.py and em1ii_boot_audit.py for exact identities/default paths. Original third-party patch manifest and stock/hacked images must be obtained separately."
+    },
+    {
+      "family": "OM-5 burst and flash",
+      "paths": [
+        "research/om5_burst/source-pins.json",
+        "analysis/om5_1200/00_0100_40780020.decoded.bin"
+      ],
+      "included": false,
+      "note": "The small source-pins document is retained, referenced camera binaries are not."
+    },
+    {
+      "family": "Processor manual",
+      "paths": [
+        "research/mn103-core-mode/mn103sa7d-a7g.txt"
+      ],
+      "included": false,
+      "note": "Optional original manual-text hash used by processing_dispatch main report; the helper routines do not read it."
+    }
+  ],
+  "test_fixtures": [
+    {
+      "path": "tests/fixtures/color-builder-reference.json",
+      "included": true,
+      "role": "Numeric Workspace coefficient observations and independent saturation predictions, with source hashes."
+    },
+    {
+      "path": "camera_client/tests/fixtures/native-readers.json",
+      "included": true,
+      "role": "Compact scalar native command observations; no request buffers, private snapshots or memory dumps."
+    },
+    {
+      "path": "camera_client/examples/subtle-color.json",
+      "included": true,
+      "role": "Synthetic protocol demonstration, not a captured user recipe."
+    }
+  ],
+  "outputs": "Prefer generated/ for new outputs. Full raw reports can contain embedded firmware bytes, regardless of JSON file extension."
+}

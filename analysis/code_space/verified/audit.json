@@ -1,0 +1,1101 @@
+{
+  "main_sha256": "a2eb1d1f1afe47cce148e9aae0a04dfb82547d9de9437d342e012341140913f4",
+  "older_main_sha256": "3d5963c6d9385aafc99ff51892ec706bef1c4783a84f586179271a64b8401bfd",
+  "candidates": [
+    {
+      "section": 1,
+      "padding_start": "0x601caa04",
+      "end_exclusive": "0x601cb000",
+      "raw_bytes": 1532,
+      "proposed_start": "0x601caa50",
+      "proposed_end_exclusive": "0x601cafc0",
+      "proposed_bytes": 1392,
+      "preserved_prefix_bytes": 76,
+      "preserved_suffix_bytes": 64,
+      "logical_flash_start": "0x40549a50",
+      "identical_padding_in_3100": true,
+      "same_descriptor_in_3100": true,
+      "literal_reference_candidates": [
+        {
+          "component": "0x106",
+          "alias": "runtime",
+          "offset": "0x256aac",
+          "value": "0x601cab4c"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime_uncached",
+          "offset": "0x527268",
+          "value": "0xa01caccd"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime_uncached",
+          "offset": "0x8c8764",
+          "value": "0xa01cacb4"
+        },
+        {
+          "component": "0x106",
+          "alias": "runtime_uncached",
+          "offset": "0x49abef",
+          "value": "0xa01caac2"
+        },
+        {
+          "component": "0x106",
+          "alias": "runtime_uncached",
+          "offset": "0x4aa6cc",
+          "value": "0xa01caf76"
+        },
+        {
+          "component": "0x100",
+          "alias": "logical_flash",
+          "offset": "0xd7ba2c",
+          "value": "0x40549d73"
+        },
+        {
+          "component": "0x106",
+          "alias": "logical_flash",
+          "offset": "0x2f0325",
+          "value": "0x40549dc1"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0xd8ca7e",
+          "value": "0x40549d26"
+        },
+        {
+          "component": "0x100",
+          "alias": "flash_alias",
+          "offset": "0x11032ee",
+          "value": "0x80549bf8"
+        },
+        {
+          "component": "0x106",
+          "alias": "flash_alias",
+          "offset": "0xa5f075",
+          "value": "0x80549ec6"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xd39cd",
+          "value": "0x80549dd6"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0x106816",
+          "value": "0x80549dc6"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0x12b2f2",
+          "value": "0x80549d06"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0x626b06",
+          "value": "0x80549dd6"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0x64368e",
+          "value": "0x80549dd6"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xd1fb7e",
+          "value": "0x80549c8d"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xd83a31",
+          "value": "0x80549be2"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xe07ed9",
+          "value": "0x80549be2"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xe14398",
+          "value": "0x80549b66"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xe30011",
+          "value": "0x80549be2"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xe5a836",
+          "value": "0x80549b66"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xfce4d7",
+          "value": "0x80549be2"
+        }
+      ],
+      "relative_transfer_candidates": [],
+      "proven_unused": false,
+      "known_reserved_overlaps": []
+    },
+    {
+      "section": 2,
+      "padding_start": "0x60427c30",
+      "end_exclusive": "0x60428000",
+      "raw_bytes": 976,
+      "proposed_start": "0x60427c70",
+      "proposed_end_exclusive": "0x60427fc0",
+      "proposed_bytes": 848,
+      "preserved_prefix_bytes": 64,
+      "preserved_suffix_bytes": 64,
+      "logical_flash_start": "0x407a6c70",
+      "identical_padding_in_3100": true,
+      "same_descriptor_in_3100": true,
+      "literal_reference_candidates": [
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x20d001",
+          "value": "0x60427cf2"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b24f4",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b268b",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2799",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2810",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2886",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b28c2",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2902",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2954",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b29ed",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2a30",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2a5d",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2aa9",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2b26",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2ba9",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2c4c",
+          "value": "0x60427c86"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2c58",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2c91",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2d34",
+          "value": "0x60427c86"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2d40",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2d78",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2df5",
+          "value": "0x60427ca8"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2e18",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b2fac",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b3008",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b3080",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b308b",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b32a6",
+          "value": "0x60427c82"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b32e2",
+          "value": "0x60427ca9"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b330c",
+          "value": "0x60427ca9"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0x7b3328",
+          "value": "0x60427ca9"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x18ca66",
+          "value": "0xa0427e80"
+        },
+        {
+          "component": "0x100",
+          "alias": "logical_flash",
+          "offset": "0x2e5e6f",
+          "value": "0x407a6edc"
+        },
+        {
+          "component": "0x106",
+          "alias": "flash_alias",
+          "offset": "0xa53c9d",
+          "value": "0x807a6eaf"
+        }
+      ],
+      "relative_transfer_candidates": [],
+      "proven_unused": false,
+      "known_reserved_overlaps": []
+    },
+    {
+      "section": 3,
+      "padding_start": "0x6069b26c",
+      "end_exclusive": "0x6069b800",
+      "raw_bytes": 1428,
+      "proposed_start": "0x6069b2b0",
+      "proposed_end_exclusive": "0x6069b7c0",
+      "proposed_bytes": 1296,
+      "preserved_prefix_bytes": 68,
+      "preserved_suffix_bytes": 64,
+      "logical_flash_start": "0x40a1a2b0",
+      "identical_padding_in_3100": true,
+      "same_descriptor_in_3100": true,
+      "literal_reference_candidates": [
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0xa70d3b",
+          "value": "0x6069b4a5"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0xa70d4f",
+          "value": "0x6069b4a5"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0xa70d63",
+          "value": "0x6069b4a4"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0xa70d77",
+          "value": "0x6069b4a4"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0xa70d8b",
+          "value": "0x6069b4a4"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0xa70d9f",
+          "value": "0x6069b4a4"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0xa70ef8",
+          "value": "0x6069b481"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0xa70f1d",
+          "value": "0x6069b481"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime",
+          "offset": "0xa70f42",
+          "value": "0x6069b481"
+        },
+        {
+          "component": "0x106",
+          "alias": "runtime",
+          "offset": "0x5d6073",
+          "value": "0x6069b771"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0x2eba41",
+          "value": "0x6069b589"
+        },
+        {
+          "component": "0x106",
+          "alias": "runtime_uncached",
+          "offset": "0x42ee7e",
+          "value": "0xa069b3e1"
+        },
+        {
+          "component": "0x106",
+          "alias": "runtime_uncached",
+          "offset": "0x55f441",
+          "value": "0xa069b769"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x2bad9",
+          "value": "0xa069b529"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x82a595",
+          "value": "0xa069b595"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x981403",
+          "value": "0xa069b7ba"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0xccc0a8",
+          "value": "0xa069b48f"
+        },
+        {
+          "component": "0x100",
+          "alias": "logical_flash",
+          "offset": "0x2ea267",
+          "value": "0x40a1a6dc"
+        },
+        {
+          "component": "0x106",
+          "alias": "logical_flash",
+          "offset": "0xcc16c5",
+          "value": "0x40a1a48b"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0x4b4d4e",
+          "value": "0x40a1a402"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0xd32b03",
+          "value": "0x40a1a402"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0xf78112",
+          "value": "0x40a1a496"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0xfa440d",
+          "value": "0x40a1a496"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0xffb248",
+          "value": "0x40a1a43a"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0xffb41a",
+          "value": "0x40a1a496"
+        },
+        {
+          "component": "0x106",
+          "alias": "flash_alias",
+          "offset": "0xb0a397",
+          "value": "0x80a1a3f0"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xe98d7",
+          "value": "0x80a1a574"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xfe5e3",
+          "value": "0x80a1a574"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0x1c64f9",
+          "value": "0x80a1a500"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0x1fdc0b",
+          "value": "0x80a1a500"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0x2233d7",
+          "value": "0x80a1a500"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xcd2595",
+          "value": "0x80a1a580"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xd0b6d2",
+          "value": "0x80a1a580"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xd2157a",
+          "value": "0x80a1a580"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xdd7392",
+          "value": "0x80a1a75e"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xdd78ad",
+          "value": "0x80a1a75e"
+        },
+        {
+          "component": "0x102",
+          "alias": "flash_alias",
+          "offset": "0xe4cbdf",
+          "value": "0x80a1a73e"
+        }
+      ],
+      "relative_transfer_candidates": [
+        {
+          "site": "0x60693edc",
+          "target": "0x6069b6b4",
+          "encoding": "jmp16",
+          "source_hex": "a4609b91f38b99b04d6580d7c1a8424eccd877fbdbc3ca82a4192d71a9db70f5",
+          "qualification": "Raw encoding match; source may be data or misaligned."
+        },
+        {
+          "site": "0x60694713",
+          "target": "0x6069b638",
+          "encoding": "jmp16",
+          "source_hex": "0ad67dcd9ad4f5376364df51e193be4ecc256fe9e6409bb86e536ee144687950",
+          "qualification": "Raw encoding match; source may be data or misaligned."
+        },
+        {
+          "site": "0x60695dd6",
+          "target": "0x6069b71f",
+          "encoding": "call16",
+          "source_hex": "43c137f3eec1ef509512e72feec3f149cd4959e11dd33cfd787874baa7afefd0",
+          "qualification": "Raw encoding match; source may be data or misaligned."
+        },
+        {
+          "site": "0x60697204",
+          "target": "0x6069b428",
+          "encoding": "jmp16",
+          "source_hex": "2b4b5fadef193fefd8609b1173749831cc2442157caa41cd4fdb77745426d11d",
+          "qualification": "Raw encoding match; source may be data or misaligned."
+        },
+        {
+          "site": "0x606982e2",
+          "target": "0x6069b57a",
+          "encoding": "call16",
+          "source_hex": "6c333e7a2c2587e636433e7b86f85b68cd9832c9f12b316f815a514c3f98535d",
+          "qualification": "Raw encoding match; source may be data or misaligned."
+        },
+        {
+          "site": "0x60699582",
+          "target": "0x6069b383",
+          "encoding": "call16",
+          "source_hex": "5cf417be6bbdbda046ca4fda7f7d47cacd011e231fc706fc51b043d780343fe2",
+          "qualification": "Raw encoding match; source may be data or misaligned."
+        },
+        {
+          "site": "0x6069b238",
+          "target": "0x6069b2b3",
+          "encoding": "branch8",
+          "source_hex": "f3ad4098938ef958939d36484bba8f5bca7b850e874662a83e7d5460d87e5460",
+          "qualification": "Raw encoding match; source may be data or misaligned."
+        }
+      ],
+      "proven_unused": false,
+      "known_reserved_overlaps": []
+    },
+    {
+      "section": 4,
+      "padding_start": "0x60a4fe6c",
+      "end_exclusive": "0x60a50000",
+      "raw_bytes": 404,
+      "proposed_start": "0x60a4feb0",
+      "proposed_end_exclusive": "0x60a4ffc0",
+      "proposed_bytes": 272,
+      "preserved_prefix_bytes": 68,
+      "preserved_suffix_bytes": 64,
+      "logical_flash_start": "0x40dceeb0",
+      "identical_padding_in_3100": true,
+      "same_descriptor_in_3100": true,
+      "literal_reference_candidates": [
+        {
+          "component": "0x106",
+          "alias": "runtime",
+          "offset": "0xa52f57",
+          "value": "0x60a4ff37"
+        },
+        {
+          "component": "0x106",
+          "alias": "runtime",
+          "offset": "0xa8656f",
+          "value": "0x60a4ff8d"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime_uncached",
+          "offset": "0x26ac28",
+          "value": "0xa0a4fecd"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x6bb85e",
+          "value": "0xa0a4feb5"
+        },
+        {
+          "component": "0x106",
+          "alias": "logical_flash",
+          "offset": "0x591e4e",
+          "value": "0x40dcefaa"
+        }
+      ],
+      "relative_transfer_candidates": [],
+      "proven_unused": false,
+      "known_reserved_overlaps": []
+    },
+    {
+      "section": 5,
+      "padding_start": "0x60fdc29c",
+      "end_exclusive": "0x60fdc800",
+      "raw_bytes": 1380,
+      "proposed_start": "0x60fdc2e0",
+      "proposed_end_exclusive": "0x60fdc7c0",
+      "proposed_bytes": 1248,
+      "preserved_prefix_bytes": 68,
+      "preserved_suffix_bytes": 64,
+      "logical_flash_start": "0x4135b2e0",
+      "identical_padding_in_3100": true,
+      "same_descriptor_in_3100": true,
+      "literal_reference_candidates": [
+        {
+          "component": "0x100",
+          "alias": "runtime_uncached",
+          "offset": "0x8204a0",
+          "value": "0xa0fdc3cd"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime_uncached",
+          "offset": "0x880952",
+          "value": "0xa0fdc4cd"
+        },
+        {
+          "component": "0x100",
+          "alias": "runtime_uncached",
+          "offset": "0x880cac",
+          "value": "0xa0fdc4cd"
+        },
+        {
+          "component": "0x106",
+          "alias": "runtime_uncached",
+          "offset": "0x44e08e",
+          "value": "0xa0fdc691"
+        },
+        {
+          "component": "0x106",
+          "alias": "runtime_uncached",
+          "offset": "0x7f8a25",
+          "value": "0xa0fdc5fb"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x28d3be",
+          "value": "0xa0fdc394"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x4b22b6",
+          "value": "0xa0fdc608"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x7b65c5",
+          "value": "0xa0fdc5fc"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x91de49",
+          "value": "0xa0fdc55c"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0xec9328",
+          "value": "0xa0fdc703"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x103ef52",
+          "value": "0xa0fdc3e4"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0x6d10",
+          "value": "0x4135b747"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0x760354",
+          "value": "0x4135b300"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0x940c74",
+          "value": "0x4135b386"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0xec408f",
+          "value": "0x4135b39f"
+        },
+        {
+          "component": "0x100",
+          "alias": "flash_alias",
+          "offset": "0x6600ed",
+          "value": "0x8135b2f6"
+        }
+      ],
+      "relative_transfer_candidates": [],
+      "proven_unused": false,
+      "known_reserved_overlaps": []
+    },
+    {
+      "section": 6,
+      "padding_start": "0x610f1e54",
+      "end_exclusive": "0x610f2000",
+      "raw_bytes": 428,
+      "proposed_start": "0x610f1ea0",
+      "proposed_end_exclusive": "0x610f1fc0",
+      "proposed_bytes": 288,
+      "preserved_prefix_bytes": 76,
+      "preserved_suffix_bytes": 64,
+      "logical_flash_start": "0x41470ea0",
+      "identical_padding_in_3100": true,
+      "same_descriptor_in_3100": true,
+      "literal_reference_candidates": [
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0x5c71b6",
+          "value": "0x610f1f7d"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xa41177",
+          "value": "0x610f1f59"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xbb8777",
+          "value": "0x610f1f59"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0xe602b5",
+          "value": "0xa10f1ec4"
+        }
+      ],
+      "relative_transfer_candidates": [],
+      "proven_unused": false,
+      "known_reserved_overlaps": []
+    },
+    {
+      "section": 8,
+      "padding_start": "0x6115b014",
+      "end_exclusive": "0x6115b800",
+      "raw_bytes": 2028,
+      "proposed_start": "0x6115b060",
+      "proposed_end_exclusive": "0x6115b7c0",
+      "proposed_bytes": 1888,
+      "preserved_prefix_bytes": 76,
+      "preserved_suffix_bytes": 64,
+      "logical_flash_start": "0x414da060",
+      "identical_padding_in_3100": true,
+      "same_descriptor_in_3100": true,
+      "literal_reference_candidates": [
+        {
+          "component": "0x106",
+          "alias": "runtime",
+          "offset": "0x2db22a",
+          "value": "0x6115b3d2"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0x6d9a41",
+          "value": "0x6115b58e"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0x7f482f",
+          "value": "0x6115b5bf"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xa09fe0",
+          "value": "0x6115b162"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xa6f7d5",
+          "value": "0x6115b0e1"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xab1a14",
+          "value": "0x6115b1d4"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xb815e0",
+          "value": "0x6115b162"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xbe6dd5",
+          "value": "0x6115b0e1"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xc29014",
+          "value": "0x6115b1d4"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xdc9b01",
+          "value": "0x6115b45d"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xded419",
+          "value": "0x6115b45d"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime",
+          "offset": "0xe0ae23",
+          "value": "0x6115b45d"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x5d51c7",
+          "value": "0xa115b74f"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0x658bcd",
+          "value": "0xa115b34a"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0xcc4d6d",
+          "value": "0xa115b747"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0xceb90d",
+          "value": "0xa115b50e"
+        },
+        {
+          "component": "0x102",
+          "alias": "runtime_uncached",
+          "offset": "0xf9caa9",
+          "value": "0xa115b447"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0x198805",
+          "value": "0x414da339"
+        },
+        {
+          "component": "0x102",
+          "alias": "logical_flash",
+          "offset": "0x610875",
+          "value": "0x414da64f"
+        },
+        {
+          "component": "0x100",
+          "alias": "flash_alias",
+          "offset": "0x9d641b",
+          "value": "0x814da560"
+        },
+        {
+          "component": "0x100",
+          "alias": "flash_alias",
+          "offset": "0x9e034b",
+          "value": "0x814da560"
+        },
+        {
+          "component": "0x100",
+          "alias": "flash_alias",
+          "offset": "0x9e5fd3",
+          "value": "0x814da560"
+        },
+        {
+          "component": "0x100",
+          "alias": "flash_alias",
+          "offset": "0x9e8687",
+          "value": "0x814da560"
+        },
+        {
+          "component": "0x100",
+          "alias": "flash_alias",
+          "offset": "0x9eaddb",
+          "value": "0x814da560"
+        },
+        {
+          "component": "0x100",
+          "alias": "flash_alias",
+          "offset": "0x9eddcb",
+          "value": "0x814da560"
+        },
+        {
+          "component": "0x100",
+          "alias": "flash_alias",
+          "offset": "0x9f03bf",
+          "value": "0x814da560"
+        }
+      ],
+      "relative_transfer_candidates": [],
+      "proven_unused": false,
+      "known_reserved_overlaps": []
+    }
+  ],
+  "known_reserved_ranges": [
+    {
+      "name": "small initialized globals",
+      "start": "0x61170fe0",
+      "end_exclusive": "0x61171628"
+    },
+    {
+      "name": "relocated library source",
+      "start": "0x6115da00",
+      "end_exclusive": "0x6115f200"
+    },
+    {
+      "name": "small object pool",
+      "start": "0x61173fc0",
+      "end_exclusive": "0x61221fc0"
+    },
+    {
+      "name": "startup pointer initializers",
+      "start": "0x615fc540",
+      "end_exclusive": "0x6161cf60"
+    },
+    {
+      "name": "startup clear 1",
+      "start": "0x6168b900",
+      "end_exclusive": "0x616fd314"
+    },
+    {
+      "name": "startup clear 2",
+      "start": "0x61bc2a40",
+      "end_exclusive": "0x61ca8d08"
+    },
+    {
+      "name": "CPU0 kernel object arena",
+      "start": "0x616fd340",
+      "end_exclusive": "0x6178e340"
+    },
+    {
+      "name": "CPU1 kernel object arena",
+      "start": "0x6178e340",
+      "end_exclusive": "0x617fe340"
+    },
+    {
+      "name": "CPU2 kernel object arena",
+      "start": "0x617fe340",
+      "end_exclusive": "0x6181e340"
+    }
+  ],
+  "source_document_sha256": "fb73d3bf255b7b87837b205c9de23962f8f8c694e3b7e9d9601b7324014e0cf4"
+}

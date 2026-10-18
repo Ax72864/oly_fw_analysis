@@ -1,0 +1,3219 @@
+[
+  {
+    "sha256": "f054725d1d01a58f4cdc978fc99bd39c4b3dfc83219c9d8e6ea168af332bd337",
+    "bytes": 69206016,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 17825728,
+        "kind": "0x100",
+        "header_build": "4600",
+        "model_bytes": "1090",
+        "container_address": "0x40300000",
+        "decoded_sha256": "a8a3fefd0c1a6d6b93f61c99299ee23b0b791fe041afc217e02a4afa4c01234a"
+      },
+      {
+        "offset": 17825792,
+        "payload_bytes": 14680000,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "1090",
+        "container_address": "0x41400000",
+        "decoded_sha256": "17c1cfb35808391f7eedfec2c864a26aae5d2a695abc85c97b4c18bffcc4ee01"
+      },
+      {
+        "offset": 32505856,
+        "payload_bytes": 26214336,
+        "kind": "0x106",
+        "header_build": "1000",
+        "model_bytes": "1090",
+        "container_address": "0x43600000",
+        "decoded_sha256": "3d2ed2820a59e5889b2a8b53630dac8f789b4414f117e574e859a071b9647cc8"
+      },
+      {
+        "offset": 58720256,
+        "payload_bytes": 10485696,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1090",
+        "container_address": "0x462e0000",
+        "decoded_sha256": "599ee1308339925ab8d4e9d564487dd1b3fd553270e5bea5f4c4a17f4907bad7"
+      }
+    ],
+    "model": "E-M1",
+    "role": "historical_patch",
+    "filenames": [
+      "e1099999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e-m1_v46.rar"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "0fa4b14cb6361eddfbe6f9e94b4f5e3ded428a522fda79d2ce747bab34b21339",
+    "bytes": 69206016,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 17825728,
+        "kind": "0x100",
+        "header_build": "4600",
+        "model_bytes": "1090",
+        "container_address": "0x40300000",
+        "decoded_sha256": "39375497f3d794b6f4baca270fef9747dc9311962c247dd7dfca7ce3f6695684"
+      },
+      {
+        "offset": 17825792,
+        "payload_bytes": 14680000,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "1090",
+        "container_address": "0x41400000",
+        "decoded_sha256": "17c1cfb35808391f7eedfec2c864a26aae5d2a695abc85c97b4c18bffcc4ee01"
+      },
+      {
+        "offset": 32505856,
+        "payload_bytes": 26214336,
+        "kind": "0x106",
+        "header_build": "1000",
+        "model_bytes": "1090",
+        "container_address": "0x43600000",
+        "decoded_sha256": "3d2ed2820a59e5889b2a8b53630dac8f789b4414f117e574e859a071b9647cc8"
+      },
+      {
+        "offset": 58720256,
+        "payload_bytes": 10485696,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1090",
+        "container_address": "0x462e0000",
+        "decoded_sha256": "599ee1308339925ab8d4e9d564487dd1b3fd553270e5bea5f4c4a17f4907bad7"
+      }
+    ],
+    "model": "E-M1",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_109_4600_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1/OLY_E_109_4600_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1/OLY_E_109_4600_0000_0000.BIN.lzma",
+      "https://dl01.om-digitalsolutions.net/OMDS/FIRMWARES/0001/1090/OLY_E_109_4600_0000_0000.BIN"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    },
+    "public_versions": [
+      "4.6"
+    ]
+  },
+  {
+    "sha256": "845a3e73cf143cbd7400f5bbec41675540930e5ab7cd1c5a2ed8e7a68b30b49e",
+    "bytes": 93050944,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 23068608,
+        "kind": "0x100",
+        "header_build": "3001",
+        "model_bytes": "1250",
+        "container_address": "0x40560000",
+        "decoded_sha256": "580c52de652b8c1d9718ac382f5c518b8df6be0ebfbff96df561d245099472bf"
+      },
+      {
+        "offset": 23068672,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x42060000",
+        "decoded_sha256": "758e052be9ada025e4e439a8213fdb8a5ff8fc035f70465ccc0ce1deefe35093"
+      },
+      {
+        "offset": 49283072,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x43960000",
+        "decoded_sha256": "38f9f0a087986925c48eaa8831cd99ba6bd4b97f27b8acf845786bdcb3fd23fc"
+      },
+      {
+        "offset": 88080384,
+        "payload_bytes": 251904,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1250",
+        "container_address": "0x40002800",
+        "decoded_sha256": "84aa6c195e7102ca47ae3588a86a507e77dcd3125e84ae9ec07004a2757f33ad"
+      },
+      {
+        "offset": 88332352,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1250",
+        "container_address": "0x470e0000",
+        "decoded_sha256": "65c5c0b582e7d91a9943a2335feb773306f8db730ae68687f634f9bb981d1399"
+      }
+    ],
+    "model": "E-M1 II",
+    "role": "historical_patch",
+    "filenames": [
+      "e1259999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e-m1ii_v30.rar"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "36a36af129baea94b4df983c8f14ea90acaeb9905cf420252efdad2fa9844317",
+    "bytes": 93050944,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 23068608,
+        "kind": "0x100",
+        "header_build": "3001",
+        "model_bytes": "1250",
+        "container_address": "0x40560000",
+        "decoded_sha256": "9c0d32363caafd5c77ef1828cf6fdbdee222f1e199719fdafd224862d0670cd7"
+      },
+      {
+        "offset": 23068672,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x42060000",
+        "decoded_sha256": "758e052be9ada025e4e439a8213fdb8a5ff8fc035f70465ccc0ce1deefe35093"
+      },
+      {
+        "offset": 49283072,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x43960000",
+        "decoded_sha256": "38f9f0a087986925c48eaa8831cd99ba6bd4b97f27b8acf845786bdcb3fd23fc"
+      },
+      {
+        "offset": 88080384,
+        "payload_bytes": 251904,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1250",
+        "container_address": "0x40002800",
+        "decoded_sha256": "84aa6c195e7102ca47ae3588a86a507e77dcd3125e84ae9ec07004a2757f33ad"
+      },
+      {
+        "offset": 88332352,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1250",
+        "container_address": "0x470e0000",
+        "decoded_sha256": "65c5c0b582e7d91a9943a2335feb773306f8db730ae68687f634f9bb981d1399"
+      }
+    ],
+    "model": "E-M1 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_125_3001_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3001_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3001_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "1758fbe924743314593b0f87fd983248f615fd0bb57a3fc8c6e08ca81b12f3bc",
+    "bytes": 93050944,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 23068608,
+        "kind": "0x100",
+        "header_build": "3200",
+        "model_bytes": "1250",
+        "container_address": "0x40560000"
+      },
+      {
+        "offset": 23068672,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x42060000"
+      },
+      {
+        "offset": 49283072,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x43960000"
+      },
+      {
+        "offset": 88080384,
+        "payload_bytes": 251904,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1250",
+        "container_address": "0x40002800"
+      },
+      {
+        "offset": 88332352,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1250",
+        "container_address": "0x470e0000"
+      }
+    ],
+    "model": "E-M1 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_125_3200_0000_0000.BIN"
+    ],
+    "source_urls": [],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": false,
+      "source_reports_exact_roundtrip": false
+    }
+  },
+  {
+    "sha256": "63120941042b9ca36ac97a6546e7f8f79399dcebd0a6157d17d121d6a0fdeb79",
+    "bytes": 93050944,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 23068608,
+        "kind": "0x100",
+        "header_build": "3400",
+        "model_bytes": "1250",
+        "container_address": "0x40560000",
+        "decoded_sha256": "3e50820fd6328eb190ea60c220119a3e135522e9f561e678b964236029e167da"
+      },
+      {
+        "offset": 23068672,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x42060000",
+        "decoded_sha256": "35f385b7350fa10d7277eb0eec4ac787efeeeac13937b4111160202f02395dde"
+      },
+      {
+        "offset": 49283072,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x43960000",
+        "decoded_sha256": "3aa09e4874b7bfeccfc0c9f4e8c7d9f9888ca23bb1c6baf6ce3b77a2f891914a"
+      },
+      {
+        "offset": 88080384,
+        "payload_bytes": 251904,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1250",
+        "container_address": "0x40002800",
+        "decoded_sha256": "b812f596d9b47f33e5bbeb6dfb9299b77f84e2812dd54d61ff7b725e3ff3a6f6"
+      },
+      {
+        "offset": 88332352,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1250",
+        "container_address": "0x470e0000",
+        "decoded_sha256": "65c5c0b582e7d91a9943a2335feb773306f8db730ae68687f634f9bb981d1399"
+      }
+    ],
+    "model": "E-M1 II",
+    "role": "historical_patch",
+    "filenames": [
+      "e1259999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e-m1-ii-v34.zip"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "c081564086227ee4c92b8d9e55bfd9b75e57a9667f65e9ab9f12940a1c9426f9",
+    "bytes": 93050944,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 23068608,
+        "kind": "0x100",
+        "header_build": "3400",
+        "model_bytes": "1250",
+        "container_address": "0x40560000",
+        "decoded_sha256": "f9218b57bdad23457a64ef90c80c1cb6f4ab43996e858f3d131ea6fb25c11b9d"
+      },
+      {
+        "offset": 23068672,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x42060000",
+        "decoded_sha256": "35f385b7350fa10d7277eb0eec4ac787efeeeac13937b4111160202f02395dde"
+      },
+      {
+        "offset": 49283072,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x43960000",
+        "decoded_sha256": "3aa09e4874b7bfeccfc0c9f4e8c7d9f9888ca23bb1c6baf6ce3b77a2f891914a"
+      },
+      {
+        "offset": 88080384,
+        "payload_bytes": 251904,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1250",
+        "container_address": "0x40002800",
+        "decoded_sha256": "b812f596d9b47f33e5bbeb6dfb9299b77f84e2812dd54d61ff7b725e3ff3a6f6"
+      },
+      {
+        "offset": 88332352,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1250",
+        "container_address": "0x470e0000",
+        "decoded_sha256": "65c5c0b582e7d91a9943a2335feb773306f8db730ae68687f634f9bb981d1399"
+      }
+    ],
+    "model": "E-M1 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_125_3400_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3400_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3400_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "16a0bc23798ce6cbeb11d7f8bdbf6586ea600dc72fc01443b3139bbdb25d5d15",
+    "bytes": 93050944,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 23068608,
+        "kind": "0x100",
+        "header_build": "3500",
+        "model_bytes": "1250",
+        "container_address": "0x40560000",
+        "decoded_sha256": "69142c01ade59c83eed7dbf9e64d4de4a5ee041c8154903d58181443bb21b569"
+      },
+      {
+        "offset": 23068672,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x42060000",
+        "decoded_sha256": "35f385b7350fa10d7277eb0eec4ac787efeeeac13937b4111160202f02395dde"
+      },
+      {
+        "offset": 49283072,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x43960000",
+        "decoded_sha256": "0081429da56892aa7ce41092cfd0ae56422ba84c31e2642924ce39540459b821"
+      },
+      {
+        "offset": 88080384,
+        "payload_bytes": 251904,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1250",
+        "container_address": "0x40002800",
+        "decoded_sha256": "b812f596d9b47f33e5bbeb6dfb9299b77f84e2812dd54d61ff7b725e3ff3a6f6"
+      },
+      {
+        "offset": 88332352,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1250",
+        "container_address": "0x470e0000",
+        "decoded_sha256": "65c5c0b582e7d91a9943a2335feb773306f8db730ae68687f634f9bb981d1399"
+      }
+    ],
+    "model": "E-M1 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_125_3500_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3500_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3500_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "79a01d8648f1bfbe282047ca16efc46e15c7a33c2024ff874d51bb0f0b446105",
+    "bytes": 93050944,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 23068608,
+        "kind": "0x100",
+        "header_build": "3600",
+        "model_bytes": "1250",
+        "container_address": "0x40560000",
+        "decoded_sha256": "cff8958d2627d7f9b26d048695ee360df66960f9887a25a23c00c052363d8658"
+      },
+      {
+        "offset": 23068672,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x42060000",
+        "decoded_sha256": "35f385b7350fa10d7277eb0eec4ac787efeeeac13937b4111160202f02395dde"
+      },
+      {
+        "offset": 49283072,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x43960000",
+        "decoded_sha256": "cb8bcc46a33ce30900769aa517f7739c2ad37bcc3b51852671224510dc664b5d"
+      },
+      {
+        "offset": 88080384,
+        "payload_bytes": 251904,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1250",
+        "container_address": "0x40002800",
+        "decoded_sha256": "b812f596d9b47f33e5bbeb6dfb9299b77f84e2812dd54d61ff7b725e3ff3a6f6"
+      },
+      {
+        "offset": 88332352,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1250",
+        "container_address": "0x470e0000",
+        "decoded_sha256": "65c5c0b582e7d91a9943a2335feb773306f8db730ae68687f634f9bb981d1399"
+      }
+    ],
+    "model": "E-M1 II",
+    "role": "historical_patch",
+    "filenames": [
+      "E1259999.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e-m1-ii-v36.zip"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "5fcd7314d808c06f8c867700e39eaaea4c0f240b86bfab94d4bb484c50ed0c07",
+    "bytes": 93050944,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 23068608,
+        "kind": "0x100",
+        "header_build": "3600",
+        "model_bytes": "1250",
+        "container_address": "0x40560000",
+        "decoded_sha256": "f462e042fa6743c639e594a11f95cbe07955c9022cfdca8b0a6f64c5697e11b2"
+      },
+      {
+        "offset": 23068672,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x42060000",
+        "decoded_sha256": "35f385b7350fa10d7277eb0eec4ac787efeeeac13937b4111160202f02395dde"
+      },
+      {
+        "offset": 49283072,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x43960000",
+        "decoded_sha256": "cb8bcc46a33ce30900769aa517f7739c2ad37bcc3b51852671224510dc664b5d"
+      },
+      {
+        "offset": 88080384,
+        "payload_bytes": 251904,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1250",
+        "container_address": "0x40002800",
+        "decoded_sha256": "b812f596d9b47f33e5bbeb6dfb9299b77f84e2812dd54d61ff7b725e3ff3a6f6"
+      },
+      {
+        "offset": 88332352,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1250",
+        "container_address": "0x470e0000",
+        "decoded_sha256": "65c5c0b582e7d91a9943a2335feb773306f8db730ae68687f634f9bb981d1399"
+      }
+    ],
+    "model": "E-M1 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_125_3600_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3600_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3600_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "691a8a8e90af75b3848b70856a3a49ef24d72394cdfd2766fa37bdfe6325de70",
+    "bytes": 93050944,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 23068608,
+        "kind": "0x100",
+        "header_build": "3700",
+        "model_bytes": "1250",
+        "container_address": "0x40560000",
+        "decoded_sha256": "0a41fb8e1105751f7817e5664f2edf2a1bdf399f070e91b4e3c84e6943113803"
+      },
+      {
+        "offset": 23068672,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x42060000",
+        "decoded_sha256": "35f385b7350fa10d7277eb0eec4ac787efeeeac13937b4111160202f02395dde"
+      },
+      {
+        "offset": 49283072,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1250",
+        "container_address": "0x43960000",
+        "decoded_sha256": "ed5208fb2bf833a364883d8df35d33e07a57f1254636881913efa322f118e8b8"
+      },
+      {
+        "offset": 88080384,
+        "payload_bytes": 251904,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1250",
+        "container_address": "0x40002800",
+        "decoded_sha256": "b812f596d9b47f33e5bbeb6dfb9299b77f84e2812dd54d61ff7b725e3ff3a6f6"
+      },
+      {
+        "offset": 88332352,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1250",
+        "container_address": "0x470e0000",
+        "decoded_sha256": "65c5c0b582e7d91a9943a2335feb773306f8db730ae68687f634f9bb981d1399"
+      }
+    ],
+    "model": "E-M1 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_125_3700_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3700_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk2/OLY_E_125_3700_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "4786323ca6a558c4ad03a67ae064feb46138a79938e5ae1f7434f8487a846cc2",
+    "bytes": 109838336,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 27262912,
+        "kind": "0x100",
+        "header_build": "1201",
+        "model_bytes": "1390",
+        "container_address": "0x40800000",
+        "decoded_sha256": "a690e266a32a249239be9851b8c9fb79475765de404d6ed092e5cc8af7e8468f"
+      },
+      {
+        "offset": 27262976,
+        "payload_bytes": 28311488,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x42400000",
+        "decoded_sha256": "432f7f91ab5e1aa01cbb16aaa64e3dac36481433e5497e009119c3ad26b8a268"
+      },
+      {
+        "offset": 55574528,
+        "payload_bytes": 52690880,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x43f00000",
+        "decoded_sha256": "f223ea3ba126939e6c9a6e193725e04c341c48a259008cab2bf97d7e4cd38e38"
+      },
+      {
+        "offset": 108265472,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1390",
+        "container_address": "0x0",
+        "decoded_sha256": "03840b38c99613cc3bb4cf07eb88d861e99dbe2abff64661f890da9b1c20e284"
+      },
+      {
+        "offset": 108527616,
+        "payload_bytes": 1048512,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x47140000",
+        "decoded_sha256": "5756425e9fd7cb3853207069e1c15c1250848cdf081c3b403a113828c587d242"
+      },
+      {
+        "offset": 109576192,
+        "payload_bytes": 262080,
+        "kind": "0xccd8",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x8000000",
+        "decoded_sha256": "3afbcef7a789947c5eccd7e270cea35bd27b7b7707db3e048a6a1cbcf607290d"
+      }
+    ],
+    "model": "E-M1 III",
+    "role": "historical_patch",
+    "filenames": [
+      "e1399999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e-m1-iii-v12.zip"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "e1ebee7df66b4632b16eea8036f444823fc496857a4059af9e79fe918046ec92",
+    "bytes": 109838336,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 27262912,
+        "kind": "0x100",
+        "header_build": "1201",
+        "model_bytes": "1390",
+        "container_address": "0x40800000",
+        "decoded_sha256": "b8fbf33132de70ffb8b6e56ac24851f67d489b66b065947913105bd337464687"
+      },
+      {
+        "offset": 27262976,
+        "payload_bytes": 28311488,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x42400000",
+        "decoded_sha256": "432f7f91ab5e1aa01cbb16aaa64e3dac36481433e5497e009119c3ad26b8a268"
+      },
+      {
+        "offset": 55574528,
+        "payload_bytes": 52690880,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x43f00000",
+        "decoded_sha256": "f223ea3ba126939e6c9a6e193725e04c341c48a259008cab2bf97d7e4cd38e38"
+      },
+      {
+        "offset": 108265472,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1390",
+        "container_address": "0x0",
+        "decoded_sha256": "03840b38c99613cc3bb4cf07eb88d861e99dbe2abff64661f890da9b1c20e284"
+      },
+      {
+        "offset": 108527616,
+        "payload_bytes": 1048512,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x47140000",
+        "decoded_sha256": "5756425e9fd7cb3853207069e1c15c1250848cdf081c3b403a113828c587d242"
+      },
+      {
+        "offset": 109576192,
+        "payload_bytes": 262080,
+        "kind": "0x107",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x8000000",
+        "decoded_sha256": "3afbcef7a789947c5eccd7e270cea35bd27b7b7707db3e048a6a1cbcf607290d"
+      }
+    ],
+    "model": "E-M1 III",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_139_1201_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk3/OLY_E_139_1201_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk3/OLY_E_139_1201_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "f356147fa8f9cbade45766c144ec546f435fc2fae9722f2bcc853dea4351c748",
+    "bytes": 109838336,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 27262912,
+        "kind": "0x100",
+        "header_build": "1300",
+        "model_bytes": "1390",
+        "container_address": "0x40800000",
+        "decoded_sha256": "c4c969caef89a7393133bb52531880c9973b963053ba6a5e6c5a51d77c658ebf"
+      },
+      {
+        "offset": 27262976,
+        "payload_bytes": 28311488,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x42400000",
+        "decoded_sha256": "432f7f91ab5e1aa01cbb16aaa64e3dac36481433e5497e009119c3ad26b8a268"
+      },
+      {
+        "offset": 55574528,
+        "payload_bytes": 52690880,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x43f00000",
+        "decoded_sha256": "9f609e4679bd1f25c1964a18b1197f24e3494f6097547983ad45f9ac3e0d7f31"
+      },
+      {
+        "offset": 108265472,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1390",
+        "container_address": "0x0",
+        "decoded_sha256": "03840b38c99613cc3bb4cf07eb88d861e99dbe2abff64661f890da9b1c20e284"
+      },
+      {
+        "offset": 108527616,
+        "payload_bytes": 1048512,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x47140000",
+        "decoded_sha256": "5756425e9fd7cb3853207069e1c15c1250848cdf081c3b403a113828c587d242"
+      },
+      {
+        "offset": 109576192,
+        "payload_bytes": 262080,
+        "kind": "0x107",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x8000000",
+        "decoded_sha256": "73b5e33b93675378ff3b767b51002bf903178b82bec220021528e9656b7ad6fb"
+      }
+    ],
+    "model": "E-M1 III",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_139_1300_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk3/OLY_E_139_1300_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk3/OLY_E_139_1300_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "0fbc7b82dff3e5cc7de2c6a0793fcee2b89941f89805df05c75796608214902a",
+    "bytes": 109838336,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 27262912,
+        "kind": "0x100",
+        "header_build": "1500",
+        "model_bytes": "1390",
+        "container_address": "0x40800000",
+        "decoded_sha256": "c04351fe71e5050fdd867cceab858ecd3e3080a14db4dbdd567d883d7d4abc15"
+      },
+      {
+        "offset": 27262976,
+        "payload_bytes": 28311488,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x42400000",
+        "decoded_sha256": "432f7f91ab5e1aa01cbb16aaa64e3dac36481433e5497e009119c3ad26b8a268"
+      },
+      {
+        "offset": 55574528,
+        "payload_bytes": 52690880,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x43f00000",
+        "decoded_sha256": "d0f3065a9a591c1e357f26c8b821315d25070d1b5e5492f76e5076de6ada1a20"
+      },
+      {
+        "offset": 108265472,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1390",
+        "container_address": "0x0",
+        "decoded_sha256": "03840b38c99613cc3bb4cf07eb88d861e99dbe2abff64661f890da9b1c20e284"
+      },
+      {
+        "offset": 108527616,
+        "payload_bytes": 1048512,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x47140000",
+        "decoded_sha256": "5756425e9fd7cb3853207069e1c15c1250848cdf081c3b403a113828c587d242"
+      },
+      {
+        "offset": 109576192,
+        "payload_bytes": 262080,
+        "kind": "0x107",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x8000000",
+        "decoded_sha256": "0f0f90933d52df1e7fccc410b5b3f3a34ebfcebd385c94a4f960d599b43a0d09"
+      }
+    ],
+    "model": "E-M1 III",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_139_1500_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk3/OLY_E_139_1500_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk3/OLY_E_139_1500_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "4f9ea315a2f2280dd5746abc39b5e4b038f183836eadfbe9d96b266e49a09aac",
+    "bytes": 109838336,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 27262912,
+        "kind": "0x100",
+        "header_build": "1600",
+        "model_bytes": "1390",
+        "container_address": "0x40800000",
+        "decoded_sha256": "3f8bcc3248e63a823dd978607f019f2063ead83080b9c93cddc836d556ff42dd"
+      },
+      {
+        "offset": 27262976,
+        "payload_bytes": 28311488,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x42400000",
+        "decoded_sha256": "432f7f91ab5e1aa01cbb16aaa64e3dac36481433e5497e009119c3ad26b8a268"
+      },
+      {
+        "offset": 55574528,
+        "payload_bytes": 52690880,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1390",
+        "container_address": "0x43f00000",
+        "decoded_sha256": "c4800800953e3374b940dcf0cd2985870feb9e2d718b1c235690358488953c55"
+      },
+      {
+        "offset": 108265472,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1390",
+        "container_address": "0x0",
+        "decoded_sha256": "03840b38c99613cc3bb4cf07eb88d861e99dbe2abff64661f890da9b1c20e284"
+      },
+      {
+        "offset": 108527616,
+        "payload_bytes": 1048512,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x47140000",
+        "decoded_sha256": "5756425e9fd7cb3853207069e1c15c1250848cdf081c3b403a113828c587d242"
+      },
+      {
+        "offset": 109576192,
+        "payload_bytes": 262080,
+        "kind": "0x107",
+        "header_build": "1000",
+        "model_bytes": "1390",
+        "container_address": "0x8000000",
+        "decoded_sha256": "0f0f90933d52df1e7fccc410b5b3f3a34ebfcebd385c94a4f960d599b43a0d09"
+      }
+    ],
+    "model": "E-M1 III",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_139_1600_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk3/OLY_E_139_1600_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1mk3/OLY_E_139_1600_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "84d81b2dbd80ea2e94ec70e35acbba0e3193ccee8b51db14976fd0d9c4e3590c",
+    "bytes": 70254592,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 18874304,
+        "kind": "0x100",
+        "header_build": "1400",
+        "model_bytes": "1130",
+        "container_address": "0x40300000",
+        "decoded_sha256": "e2b227662d782a2c75c6c6e872bc34fdfa45d34a9b1b2cee04a4435a00c54f0e"
+      },
+      {
+        "offset": 18874368,
+        "payload_bytes": 25165760,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "1130",
+        "container_address": "0x41500000",
+        "decoded_sha256": "6f4f15acebbcd6513f9e9fe6afea8bd3e1b839896f5a7d44f34838b8ab46fa9d"
+      },
+      {
+        "offset": 44040192,
+        "payload_bytes": 26214336,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1130",
+        "container_address": "0x42d00000",
+        "decoded_sha256": "7ddbf1b0610afe963220c9f424bd3b522656d949c38d60b48e954e86867ea1a9"
+      }
+    ],
+    "model": "E-M10",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_113_1400_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em10/OLY_E_113_1400_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em10/OLY_E_113_1400_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "0d5d3c47c8b7d8b80ddf329df1aae8b8325c67a7ce069d2bf48c0a702aec991b",
+    "bytes": 69599232,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 21364672,
+        "kind": "0x100",
+        "header_build": "1300",
+        "model_bytes": "1200",
+        "container_address": "0x40300000",
+        "decoded_sha256": "cd96028a6f547e7f4c8a735f5f2d7910b26eb6d2b5f6c96d22e5ebde5e749d4f"
+      },
+      {
+        "offset": 21364736,
+        "payload_bytes": 27262912,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1200",
+        "container_address": "0x41760000",
+        "decoded_sha256": "9060299579236c099ec3f318d186cddab004f27eb373b1e6da75e72c4e08179b"
+      },
+      {
+        "offset": 48627712,
+        "payload_bytes": 20971456,
+        "kind": "0x106",
+        "header_build": "1000",
+        "model_bytes": "1200",
+        "container_address": "0x43160000",
+        "decoded_sha256": "e8d8a612a04b3347fe25779561cc794d2ed48a4d68fd01d330c66c51075df86b"
+      }
+    ],
+    "model": "E-M10 II",
+    "role": "historical_patch",
+    "filenames": [
+      "e1209999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e-m10ii_v13.rar"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "275ac4d31393a30b7569102f9fd53e51e679643f29293229927b8f1577563a10",
+    "bytes": 69599232,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 21364672,
+        "kind": "0x100",
+        "header_build": "1300",
+        "model_bytes": "1200",
+        "container_address": "0x40300000",
+        "decoded_sha256": "44551b19483416e6157357d08167ec95057da1a637d653417267909d63ad29de"
+      },
+      {
+        "offset": 21364736,
+        "payload_bytes": 27262912,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1200",
+        "container_address": "0x41760000",
+        "decoded_sha256": "9060299579236c099ec3f318d186cddab004f27eb373b1e6da75e72c4e08179b"
+      },
+      {
+        "offset": 48627712,
+        "payload_bytes": 20971456,
+        "kind": "0x106",
+        "header_build": "1000",
+        "model_bytes": "1200",
+        "container_address": "0x43160000",
+        "decoded_sha256": "e8d8a612a04b3347fe25779561cc794d2ed48a4d68fd01d330c66c51075df86b"
+      }
+    ],
+    "model": "E-M10 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_120_1300_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em10mk2/OLY_E_120_1300_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em10mk2/OLY_E_120_1300_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "cef7a8c1b47a894c7e4538d76f47ccd8d76ad8e637404f7022a2f601c1e2f577",
+    "bytes": 69599232,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 21364672,
+        "kind": "0x100",
+        "header_build": "1400",
+        "model_bytes": "1200",
+        "container_address": "0x40300000",
+        "decoded_sha256": "2bc4fac76dad4fd4df8eda5b821efef7ea41b837315f04486b323cbb5b007964"
+      },
+      {
+        "offset": 21364736,
+        "payload_bytes": 27262912,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1200",
+        "container_address": "0x41760000",
+        "decoded_sha256": "9060299579236c099ec3f318d186cddab004f27eb373b1e6da75e72c4e08179b"
+      },
+      {
+        "offset": 48627712,
+        "payload_bytes": 20971456,
+        "kind": "0x106",
+        "header_build": "1000",
+        "model_bytes": "1200",
+        "container_address": "0x43160000",
+        "decoded_sha256": "5666caec18c928175d09244fe7f48f061fde3f118b113fe6d81e40afd2e6e64c"
+      }
+    ],
+    "model": "E-M10 II",
+    "role": "historical_patch",
+    "filenames": [
+      "e1209999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e_m10ii_v14.rar"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "ff9d302318ecf6e06c0b31c181fc6a185e93623e819749db31cec7977fa92052",
+    "bytes": 69599232,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 21364672,
+        "kind": "0x100",
+        "header_build": "1400",
+        "model_bytes": "1200",
+        "container_address": "0x40300000",
+        "decoded_sha256": "309682c05a96d3079ebcae598169d487fea7f8b2531d8ae99445d63e80ea7a39"
+      },
+      {
+        "offset": 21364736,
+        "payload_bytes": 27262912,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1200",
+        "container_address": "0x41760000",
+        "decoded_sha256": "9060299579236c099ec3f318d186cddab004f27eb373b1e6da75e72c4e08179b"
+      },
+      {
+        "offset": 48627712,
+        "payload_bytes": 20971456,
+        "kind": "0x106",
+        "header_build": "1000",
+        "model_bytes": "1200",
+        "container_address": "0x43160000",
+        "decoded_sha256": "5666caec18c928175d09244fe7f48f061fde3f118b113fe6d81e40afd2e6e64c"
+      }
+    ],
+    "model": "E-M10 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_120_1400_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em10mk2/OLY_E_120_1400_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em10mk2/OLY_E_120_1400_0000_0000.BIN.lzma",
+      "https://dl01.om-digitalsolutions.net/OMDS/FIRMWARES/0001/1200/OLY_E_120_1400_0000_0000.BIN"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    },
+    "public_versions": [
+      "1.4"
+    ]
+  },
+  {
+    "sha256": "d59f9b632bca2efc9fd2a1d5f10a57d4a335bb7375015a52d1b9c6c11249363e",
+    "bytes": 91445280,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 26214336,
+        "kind": "0x100",
+        "header_build": "1200",
+        "model_bytes": "1300",
+        "container_address": "0x406e0000",
+        "decoded_sha256": "0b05484f182339a71ebc23933ab0cf2dc2d7a6fec70a70368da7a3ba780b81d4"
+      },
+      {
+        "offset": 26214400,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1300",
+        "container_address": "0x421e0000",
+        "decoded_sha256": "f68113ae4406fa1b733939e847cf36e5523458954567a6f842d11f4c29d7c561"
+      },
+      {
+        "offset": 52428800,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1300",
+        "container_address": "0x43ae0000",
+        "decoded_sha256": "8bb4cf8e9c2c3e287d44ac0e5527a03b38b335c374d0b73234c20096f9483a5f"
+      },
+      {
+        "offset": 91226112,
+        "payload_bytes": 219104,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1300",
+        "container_address": "0x40002800",
+        "decoded_sha256": "fced72de252192fa08bae7a86939519a9508cd67e0af4f2dd1720af493130c49"
+      }
+    ],
+    "model": "E-M10 III",
+    "role": "historical_patch",
+    "filenames": [
+      "e1309999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e_m10iii_v12.rar"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "a2283338a79f8d0fa212d9a6d2677b9b686f6a9cd4bd664fd9b0709af63f94e1",
+    "bytes": 91445280,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 26214336,
+        "kind": "0x100",
+        "header_build": "1200",
+        "model_bytes": "1300",
+        "container_address": "0x406e0000",
+        "decoded_sha256": "8c3099214a3ec1aa29a9058997c4472072bdeddda8c8df93ec707d7a0bc31eb9"
+      },
+      {
+        "offset": 26214400,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1300",
+        "container_address": "0x421e0000",
+        "decoded_sha256": "f68113ae4406fa1b733939e847cf36e5523458954567a6f842d11f4c29d7c561"
+      },
+      {
+        "offset": 52428800,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1300",
+        "container_address": "0x43ae0000",
+        "decoded_sha256": "8bb4cf8e9c2c3e287d44ac0e5527a03b38b335c374d0b73234c20096f9483a5f"
+      },
+      {
+        "offset": 91226112,
+        "payload_bytes": 219104,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1300",
+        "container_address": "0x40002800",
+        "decoded_sha256": "fced72de252192fa08bae7a86939519a9508cd67e0af4f2dd1720af493130c49"
+      }
+    ],
+    "model": "E-M10 III",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_130_1200_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em10mk3/OLY_E_130_1200_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em10mk3/OLY_E_130_1200_0000_0000.BIN.lzma",
+      "https://dl01.om-digitalsolutions.net/OMDS/FIRMWARES/0001/1300/OLY_E_130_1200_0000_0000.BIN"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    },
+    "public_versions": [
+      "1.2"
+    ]
+  },
+  {
+    "sha256": "73b42ea52db8d7cd59b4450e93175529438b0bce6baa793ce009d5bc73d212cd",
+    "bytes": 111017984,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 26214336,
+        "kind": "0x100",
+        "header_build": "1100",
+        "model_bytes": "1400",
+        "container_address": "0x406a0000",
+        "decoded_sha256": "5f2bfb367a7d65278fae1338bb10181ca8de8ebbd9a83f9e89bec4db9ade1fa5"
+      },
+      {
+        "offset": 26214400,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1400",
+        "container_address": "0x421a0000",
+        "decoded_sha256": "3f6b8e8a1f57693ec2dd379dfcc6fce21b02ca33cc545129ba144f47c30250e2"
+      },
+      {
+        "offset": 52428800,
+        "payload_bytes": 45219776,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1400",
+        "container_address": "0x43aa0000",
+        "decoded_sha256": "eb84054d1a12494698e84beb5569aee7e10db73f29495d8a5b438bf4b0a320f3"
+      },
+      {
+        "offset": 97648640,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1400",
+        "container_address": "0x0",
+        "decoded_sha256": "4b4a42f0d7aabb5c742f72218cf041d2fcdfde22f9d801bc86e2a447afab4472"
+      },
+      {
+        "offset": 97910784,
+        "payload_bytes": 13107136,
+        "kind": "0x102",
+        "header_build": "0100",
+        "model_bytes": "1400",
+        "container_address": "0x468e0000",
+        "decoded_sha256": "f4c11f953fccd447ff9f5564d18fce14e9d0cbbf28e1cab61b253df436db830a"
+      }
+    ],
+    "model": "E-M10 IV",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_140_1100_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em10mk4/OLY_E_140_1100_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em10mk4/OLY_E_140_1100_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "dbceba1f614415ff8499b42dee0bec86220225dc63d08580c8478604f41c5817",
+    "bytes": 122028064,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 27262912,
+        "kind": "0x100",
+        "header_build": "1300",
+        "model_bytes": "1340",
+        "container_address": "0x407e0000",
+        "decoded_sha256": "3b6f7bc838d9e2f85d650cb0b75a778611e378dc5466c06a5acc31acc6716116"
+      },
+      {
+        "offset": 27262976,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x423e0000",
+        "decoded_sha256": "a55bb9eab56ec6c2601d7d0768d5a6055992ada3cd6a6018f9a50cb7994e330b"
+      },
+      {
+        "offset": 53477376,
+        "payload_bytes": 52690880,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x43ce0000",
+        "decoded_sha256": "8916f8c8f12fa19a71cc272c555da8c1d6e9cd8b327242d50c35fff1f39634ca"
+      },
+      {
+        "offset": 106168320,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1340",
+        "container_address": "0x0",
+        "decoded_sha256": "4b8d37e1859a40f767e23c2e2445d770181a7b307ab2e0aab011e7d13b073ada"
+      },
+      {
+        "offset": 106430464,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1340",
+        "container_address": "0x46f20000",
+        "decoded_sha256": "06e1fc3e38681c41f23daee42e54891661ca79b0f9eac1b8a38561874f2a900a"
+      },
+      {
+        "offset": 111149056,
+        "payload_bytes": 6291392,
+        "kind": "0x10f",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x523e0000",
+        "decoded_sha256": "3c6f4a814c47ad491fc53a9f32d1b62abffb035de807077972547d81fc5db94e"
+      },
+      {
+        "offset": 117440512,
+        "payload_bytes": 393152,
+        "kind": "0x107",
+        "header_build": "0005",
+        "model_bytes": "1340",
+        "container_address": "0x8000000",
+        "decoded_sha256": "9bd6d09d4a061e20c158db4bb254307341d96b63fd0cb6c5542e6879148a4b4d"
+      },
+      {
+        "offset": 117833728,
+        "payload_bytes": 4194272,
+        "kind": "0x111",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x90000000",
+        "decoded_sha256": "4eb49245bc5f37715af2a21f301ab42ffb53b4c6b0c9427caa38f27eeebf81b2"
+      }
+    ],
+    "model": "E-M1X",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_134_1300_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1x/OLY_E_134_1300_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1x/OLY_E_134_1300_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "e404562ef2ad2c2fe256adce55773ca0fa52f492778d9c531f43d5cff348dc61",
+    "bytes": 126222368,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 27262912,
+        "kind": "0x100",
+        "header_build": "2100",
+        "model_bytes": "1340",
+        "container_address": "0x407e0000",
+        "decoded_sha256": "c5f95528b1fe2aaf2307c233bd89fd6c3134bacac3bb3439f063dc5e4a1372e7"
+      },
+      {
+        "offset": 27262976,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x423e0000",
+        "decoded_sha256": "df1c0314e2d11dd5f8931159b01772a6bc6dfa5dc95b3cec4428146b8395f430"
+      },
+      {
+        "offset": 53477376,
+        "payload_bytes": 52690880,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x43ce0000",
+        "decoded_sha256": "4f707de5b0a5ddab33cf6c4e3b8977e2d9e111dec7f6fedf0c4bcd886bc060ba"
+      },
+      {
+        "offset": 106168320,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1340",
+        "container_address": "0x0",
+        "decoded_sha256": "b66c4b97fde299beeba49e0d65bef77e8d77eb12fa327aa2b4d6c3aecc204047"
+      },
+      {
+        "offset": 106430464,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1340",
+        "container_address": "0x46f20000",
+        "decoded_sha256": "06e1fc3e38681c41f23daee42e54891661ca79b0f9eac1b8a38561874f2a900a"
+      },
+      {
+        "offset": 111149056,
+        "payload_bytes": 10485696,
+        "kind": "0x10f",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x523e0000",
+        "decoded_sha256": "b42847054ee4456ab77a640db91ef5b3db4a36587cb39835bc01c26b20c7059b"
+      },
+      {
+        "offset": 121634816,
+        "payload_bytes": 393152,
+        "kind": "0x107",
+        "header_build": "0005",
+        "model_bytes": "1340",
+        "container_address": "0x8000000",
+        "decoded_sha256": "87720bd3e13f8c552b6a91c8736d522e5053f9001b2bb1f6251759bdbfc957a3"
+      },
+      {
+        "offset": 122028032,
+        "payload_bytes": 4194272,
+        "kind": "0x111",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x90000000",
+        "decoded_sha256": "9f57de9ff335db209a1d5179952a8ba6bf0771a62b2c3146d1c816a0b1143c6b"
+      }
+    ],
+    "model": "E-M1X",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_134_2100_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1x/OLY_E_134_2100_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1x/OLY_E_134_2100_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "275995ec4cbe58fc40d0a54f670fd4308e2261584fa4c0b1089206a4250cb712",
+    "bytes": 126222368,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 27262912,
+        "kind": "0x100",
+        "header_build": "2400",
+        "model_bytes": "1340",
+        "container_address": "0x407e0000",
+        "decoded_sha256": "7b0d72f88cfed079c6e3367a910856f9e4f69bc9e020f9c06d7ed0980bd66d3f"
+      },
+      {
+        "offset": 27262976,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x423e0000",
+        "decoded_sha256": "df1c0314e2d11dd5f8931159b01772a6bc6dfa5dc95b3cec4428146b8395f430"
+      },
+      {
+        "offset": 53477376,
+        "payload_bytes": 52690880,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x43ce0000",
+        "decoded_sha256": "121f210f56b3ae9744b4e51db26c5b770f2417df4679218d2236660453e57d78"
+      },
+      {
+        "offset": 106168320,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1340",
+        "container_address": "0x0",
+        "decoded_sha256": "b66c4b97fde299beeba49e0d65bef77e8d77eb12fa327aa2b4d6c3aecc204047"
+      },
+      {
+        "offset": 106430464,
+        "payload_bytes": 4718528,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1340",
+        "container_address": "0x46f20000",
+        "decoded_sha256": "06e1fc3e38681c41f23daee42e54891661ca79b0f9eac1b8a38561874f2a900a"
+      },
+      {
+        "offset": 111149056,
+        "payload_bytes": 10485696,
+        "kind": "0x10f",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x523e0000",
+        "decoded_sha256": "b42847054ee4456ab77a640db91ef5b3db4a36587cb39835bc01c26b20c7059b"
+      },
+      {
+        "offset": 121634816,
+        "payload_bytes": 393152,
+        "kind": "0x107",
+        "header_build": "0005",
+        "model_bytes": "1340",
+        "container_address": "0x8000000",
+        "decoded_sha256": "dbe849ba727d546f2cb56f3d3b05a3d8d046090caf8a7375328a3510f7d473f0"
+      },
+      {
+        "offset": 122028032,
+        "payload_bytes": 4194272,
+        "kind": "0x111",
+        "header_build": "0100",
+        "model_bytes": "1340",
+        "container_address": "0x90000000",
+        "decoded_sha256": "006f6285443db99a5d8883645d86ab6cb1be1d7bc1e6bd37ef774013ce37cd9e"
+      }
+    ],
+    "model": "E-M1X",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_134_2400_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em1x/OLY_E_134_2400_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em1x/OLY_E_134_2400_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "41ecbfdba0b89ed59b6ad77339921aea3efb5a1f1949533d119b8d67f3afb085",
+    "bytes": 46596096,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 14155712,
+        "kind": "0x100",
+        "header_build": "1500",
+        "model_bytes": "0970",
+        "container_address": "0x902c0000",
+        "decoded_sha256": "10e69c8de7028ac48de7481dae61d92aa7a0b926439f24b934143dcc0383f657"
+      },
+      {
+        "offset": 14155776,
+        "payload_bytes": 65472,
+        "kind": "0x107",
+        "header_build": "0550",
+        "model_bytes": "0970",
+        "container_address": "0x40060000",
+        "decoded_sha256": "34ca85b1330d851bb77e1e321ab4ce85f85e714e7c7e98ba19ab97a4007f4f96"
+      },
+      {
+        "offset": 14221312,
+        "payload_bytes": 23068608,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "0970",
+        "container_address": "0x92e40000",
+        "decoded_sha256": "b6c4405eab75b4bfd2842644a04be959102cafc4ed5c4a90d52667e0b1e95138"
+      },
+      {
+        "offset": 37289984,
+        "payload_bytes": 2490304,
+        "kind": "0x106",
+        "header_build": "0550",
+        "model_bytes": "0970",
+        "container_address": "0x94440000",
+        "decoded_sha256": "34b391d432e6e99f518d665ab9c084023935339fd90f1a170f204daa313c6896"
+      },
+      {
+        "offset": 39780352,
+        "payload_bytes": 6815680,
+        "kind": "0x104",
+        "header_build": "0550",
+        "model_bytes": "0970",
+        "container_address": "0x946a0000",
+        "decoded_sha256": "7359b907bc4dc152af20c7bfe5b8775378ed82ba36f0d15a74c68e7e1835c9cc"
+      }
+    ],
+    "model": "E-M5",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_097_1500_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://dl01.olympus-imaging.com/OLYMPUS_MASTER/FIRMWARES/0001/0970/OLY_E_097_1500_0000_0000.BIN"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": false,
+      "source_reports_exact_roundtrip": false
+    },
+    "public_versions": [
+      "1.5"
+    ]
+  },
+  {
+    "sha256": "cb158dbdd8092856e8060354b008369f7d33dff32a1204e966ef0d5bce85e535",
+    "bytes": 46596096,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 14155712,
+        "kind": "0x100",
+        "header_build": "2300",
+        "model_bytes": "0970",
+        "container_address": "0x902c0000",
+        "decoded_sha256": "4edb88f3b552ef2fb9066ce7d1ca8bf5b44494f4c21865ac02dcac39e833fcf9"
+      },
+      {
+        "offset": 14155776,
+        "payload_bytes": 65472,
+        "kind": "0x107",
+        "header_build": "0550",
+        "model_bytes": "0970",
+        "container_address": "0x40060000",
+        "decoded_sha256": "78e78ac0a67e193918ba188ed6407153708b88faf7d6faef1db9e7d78e5ecb7a"
+      },
+      {
+        "offset": 14221312,
+        "payload_bytes": 23068608,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "0970",
+        "container_address": "0x92e40000",
+        "decoded_sha256": "1e52bbc63e3a26ab90a6d774f7436051ba3910e02a70691e8c76b06beadde4c6"
+      },
+      {
+        "offset": 37289984,
+        "payload_bytes": 2490304,
+        "kind": "0x106",
+        "header_build": "0550",
+        "model_bytes": "0970",
+        "container_address": "0x94440000",
+        "decoded_sha256": "34b391d432e6e99f518d665ab9c084023935339fd90f1a170f204daa313c6896"
+      },
+      {
+        "offset": 39780352,
+        "payload_bytes": 6815680,
+        "kind": "0x104",
+        "header_build": "0550",
+        "model_bytes": "0970",
+        "container_address": "0x946a0000",
+        "decoded_sha256": "7359b907bc4dc152af20c7bfe5b8775378ed82ba36f0d15a74c68e7e1835c9cc"
+      }
+    ],
+    "model": "E-M5",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_097_2300_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em5/OLY_E_097_2300_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em5/OLY_E_097_2300_0000_0000.BIN.lzma",
+      "https://dl01.om-digitalsolutions.net/OMDS/FIRMWARES/0001/0970/OLY_E_097_2300_0000_0000.BIN"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    },
+    "public_versions": [
+      "2.3"
+    ]
+  },
+  {
+    "sha256": "f07cd122c7273d467edb6d7260b7ddb9c90cdc2c4bd95efb8d5131ace12368ee",
+    "bytes": 89522176,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 21364672,
+        "kind": "0x100",
+        "header_build": "4100",
+        "model_bytes": "1180",
+        "container_address": "0x40300000",
+        "decoded_sha256": "7f137a8a007666957524262012b03f0b8cfd01b657d094f4ef24784a37f90af7"
+      },
+      {
+        "offset": 21364736,
+        "payload_bytes": 27262912,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1180",
+        "container_address": "0x41760000",
+        "decoded_sha256": "9fd354fbf4421883eb8728169874ada1ed0952de5ad64260d8b6258f30dd8f8a"
+      },
+      {
+        "offset": 48627712,
+        "payload_bytes": 20971456,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1180",
+        "container_address": "0x43160000",
+        "decoded_sha256": "cc8bbf146d3095328e985ddbc36ddb768d6f814c2d2f2185747c9d15cf2f1825"
+      },
+      {
+        "offset": 69599232,
+        "payload_bytes": 19922880,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1180",
+        "container_address": "0x46260000",
+        "decoded_sha256": "47e6c64079ff2d543e30fe05fe302757e02a91986ac82c4c1ccff4dab7e403a3"
+      }
+    ],
+    "model": "E-M5 II",
+    "role": "historical_patch",
+    "filenames": [
+      "e1189999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e-m5ii_v41.zip"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "c03050db130b051e446fa08dec1ad6f29afc890308888383428f4938a57edef0",
+    "bytes": 89522176,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 21364672,
+        "kind": "0x100",
+        "header_build": "4100",
+        "model_bytes": "1180",
+        "container_address": "0x40300000",
+        "decoded_sha256": "ecd9603c4a264a358d91ef110a05f9236055e6369399f7c7de5985b21a2fd96a"
+      },
+      {
+        "offset": 21364736,
+        "payload_bytes": 27262912,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1180",
+        "container_address": "0x41760000",
+        "decoded_sha256": "9fd354fbf4421883eb8728169874ada1ed0952de5ad64260d8b6258f30dd8f8a"
+      },
+      {
+        "offset": 48627712,
+        "payload_bytes": 20971456,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1180",
+        "container_address": "0x43160000",
+        "decoded_sha256": "cc8bbf146d3095328e985ddbc36ddb768d6f814c2d2f2185747c9d15cf2f1825"
+      },
+      {
+        "offset": 69599232,
+        "payload_bytes": 19922880,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1180",
+        "container_address": "0x46260000",
+        "decoded_sha256": "47e6c64079ff2d543e30fe05fe302757e02a91986ac82c4c1ccff4dab7e403a3"
+      }
+    ],
+    "model": "E-M5 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_118_4100_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em5mk2/OLY_E_118_4100_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em5mk2/OLY_E_118_4100_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "24e7cca97d75d00ac383e277ec2738527c57684ce3c39015e17beadf6fd8e66a",
+    "bytes": 118620160,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 25034688,
+        "kind": "0x100",
+        "header_build": "1400",
+        "model_bytes": "1370",
+        "container_address": "0x40780000",
+        "decoded_sha256": "17ac4bfa57c720976e0ff68927f77fe6de4d4673726a5659f49395ef9ebfca15"
+      },
+      {
+        "offset": 25034752,
+        "payload_bytes": 31457216,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1370",
+        "container_address": "0x42160000",
+        "decoded_sha256": "767591ea609342dfa76daf520667ca50fa4566da69e0e38dcb2d967962c830fa"
+      },
+      {
+        "offset": 56492032,
+        "payload_bytes": 52428736,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1370",
+        "container_address": "0x43f60000",
+        "decoded_sha256": "6212eaae92a07a1b1a77a6be55fbe7c2bbd5689c557239374fcee489624d061f"
+      },
+      {
+        "offset": 108920832,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1370",
+        "container_address": "0x0",
+        "decoded_sha256": "8dad7936216fc6c48a7c88a9036ecacf5c7688eedd60fd077313c8ead7de814c"
+      },
+      {
+        "offset": 109182976,
+        "payload_bytes": 9437120,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1370",
+        "container_address": "0x47180000",
+        "decoded_sha256": "6227a2f8947ed99d341c890de1722fc39d09f74c4bb0c40014d4299c6a064771"
+      }
+    ],
+    "model": "E-M5 III",
+    "role": "historical_patch",
+    "filenames": [
+      "e1379999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/e-m5-iii-v14.zip"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "7f0414de124546c03135209af493c49876a7bfb977542cad72bc60f13000ff8b",
+    "bytes": 118620160,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 25034688,
+        "kind": "0x100",
+        "header_build": "1400",
+        "model_bytes": "1370",
+        "container_address": "0x40780000",
+        "decoded_sha256": "4062cb57faa962fc531d3d336dfe1338adf87d22123d7404e048080e9d627754"
+      },
+      {
+        "offset": 25034752,
+        "payload_bytes": 31457216,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1370",
+        "container_address": "0x42160000",
+        "decoded_sha256": "767591ea609342dfa76daf520667ca50fa4566da69e0e38dcb2d967962c830fa"
+      },
+      {
+        "offset": 56492032,
+        "payload_bytes": 52428736,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1370",
+        "container_address": "0x43f60000",
+        "decoded_sha256": "6212eaae92a07a1b1a77a6be55fbe7c2bbd5689c557239374fcee489624d061f"
+      },
+      {
+        "offset": 108920832,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1370",
+        "container_address": "0x0",
+        "decoded_sha256": "8dad7936216fc6c48a7c88a9036ecacf5c7688eedd60fd077313c8ead7de814c"
+      },
+      {
+        "offset": 109182976,
+        "payload_bytes": 9437120,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1370",
+        "container_address": "0x47180000",
+        "decoded_sha256": "6227a2f8947ed99d341c890de1722fc39d09f74c4bb0c40014d4299c6a064771"
+      }
+    ],
+    "model": "E-M5 III",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_137_1400_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em5mk3/OLY_E_137_1400_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em5mk3/OLY_E_137_1400_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "bf8ec5b6358f28528dde5484c8c5a2787f4daec07f053e3050b4838b49118e92",
+    "bytes": 118620160,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 25034688,
+        "kind": "0x100",
+        "header_build": "1500",
+        "model_bytes": "1370",
+        "container_address": "0x40780000",
+        "decoded_sha256": "b34e288bfb7e491ed27393dbc049f6223624140cb5f5d6226bef69913ab97f88"
+      },
+      {
+        "offset": 25034752,
+        "payload_bytes": 31457216,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1370",
+        "container_address": "0x42160000",
+        "decoded_sha256": "767591ea609342dfa76daf520667ca50fa4566da69e0e38dcb2d967962c830fa"
+      },
+      {
+        "offset": 56492032,
+        "payload_bytes": 52428736,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1370",
+        "container_address": "0x43f60000",
+        "decoded_sha256": "633e819d26e7b3583f7b7e28610be62176f9d4e79767d6a262865c2217f3b832"
+      },
+      {
+        "offset": 108920832,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1370",
+        "container_address": "0x0",
+        "decoded_sha256": "8dad7936216fc6c48a7c88a9036ecacf5c7688eedd60fd077313c8ead7de814c"
+      },
+      {
+        "offset": 109182976,
+        "payload_bytes": 9437120,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1370",
+        "container_address": "0x47180000",
+        "decoded_sha256": "6227a2f8947ed99d341c890de1722fc39d09f74c4bb0c40014d4299c6a064771"
+      }
+    ],
+    "model": "E-M5 III",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_137_1500_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em5mk3/OLY_E_137_1500_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em5mk3/OLY_E_137_1500_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "939260fc22b4217fce64274eb5a6707d307a499804d8a316b6b39019c4afded2",
+    "bytes": 118620160,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 25034688,
+        "kind": "0x100",
+        "header_build": "1700",
+        "model_bytes": "1370",
+        "container_address": "0x40780000",
+        "decoded_sha256": "4097f57751ac30c24589448865b2824891a754744eae63ab14359fd46c1cf4be"
+      },
+      {
+        "offset": 25034752,
+        "payload_bytes": 31457216,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1370",
+        "container_address": "0x42160000",
+        "decoded_sha256": "767591ea609342dfa76daf520667ca50fa4566da69e0e38dcb2d967962c830fa"
+      },
+      {
+        "offset": 56492032,
+        "payload_bytes": 52428736,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1370",
+        "container_address": "0x43f60000",
+        "decoded_sha256": "b548e03e20bbc3fe2979dc18bafd0b6ff2a014196ccbb8b80df5bfae62659778"
+      },
+      {
+        "offset": 108920832,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1370",
+        "container_address": "0x0",
+        "decoded_sha256": "8dad7936216fc6c48a7c88a9036ecacf5c7688eedd60fd077313c8ead7de814c"
+      },
+      {
+        "offset": 109182976,
+        "payload_bytes": 9437120,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1370",
+        "container_address": "0x47180000",
+        "decoded_sha256": "6227a2f8947ed99d341c890de1722fc39d09f74c4bb0c40014d4299c6a064771"
+      }
+    ],
+    "model": "E-M5 III",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_137_1700_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/em5mk3/OLY_E_137_1700_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/em5mk3/OLY_E_137_1700_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "9d1610124ad98f6edae4540182205f06c9c703d9033ef0c4f19847193f95eaeb",
+    "bytes": 111017984,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 26214336,
+        "kind": "0x100",
+        "header_build": "1100",
+        "model_bytes": "1420",
+        "container_address": "0x406a0000",
+        "decoded_sha256": "5dd9af164b4590c7e82f6905c919b3cc450bb58f2d5742ab2a0e3a4eb2e26190"
+      },
+      {
+        "offset": 26214400,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1420",
+        "container_address": "0x421a0000",
+        "decoded_sha256": "8606cb90e06b67aee31a1b4319b585905b66e4e3ee29c903bd328aa33b362868"
+      },
+      {
+        "offset": 52428800,
+        "payload_bytes": 45219776,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1420",
+        "container_address": "0x43aa0000",
+        "decoded_sha256": "d0c658cb00b32783e68bcba9e24b0e2a2d9077adf995126a3d7a70ebdca3ceba"
+      },
+      {
+        "offset": 97648640,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1420",
+        "container_address": "0x0",
+        "decoded_sha256": "00f47b0990257a9719109b8d41a1910677615c6e1622b3ca43061d6fabc8805f"
+      },
+      {
+        "offset": 97910784,
+        "payload_bytes": 13107136,
+        "kind": "0x102",
+        "header_build": "0100",
+        "model_bytes": "1420",
+        "container_address": "0x467e0000",
+        "decoded_sha256": "c7f5ac1ddfafceeecd05607b6ebd512315bf1a3807b2660eef201f38b927f21f"
+      }
+    ],
+    "model": "E-P7",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_142_1100_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "https://dl01.om-digitalsolutions.net/OMDS/FIRMWARES/0001/1420/OLY_E_142_1100_0000_0000.BIN",
+      "https://dl01.om-digitalsolutions.net/ww/ud2/ENU/0001/1420/index01a.html",
+      "https://fw01.om-digitalsolutions.net/ww_inform/fcache.do"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    },
+    "public_versions": [
+      "1.1"
+    ]
+  },
+  {
+    "sha256": "a76e05f50a83f7ac33ca1dfd43b9b2b67d2fa2b2067bb6e1551d7175a9d5e188",
+    "bytes": 35061824,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 5373888,
+        "kind": "0x100",
+        "header_build": "1302",
+        "model_bytes": "0740",
+        "container_address": "0x40060000",
+        "decoded_sha256": "f07d90813077eca483702d087068648372704b8f943476487ed3c98d959cbb90"
+      },
+      {
+        "offset": 5373952,
+        "payload_bytes": 23068608,
+        "kind": "0x101",
+        "header_build": "1000",
+        "model_bytes": "0740",
+        "container_address": "0x40960000",
+        "decoded_sha256": "0dc8f25c107cd20c4709aec9392cb0672597b4c4cb3bd3a1b52a0fb076fcfbe9"
+      },
+      {
+        "offset": 28442624,
+        "payload_bytes": 2490304,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "0740",
+        "container_address": "0x41f60000",
+        "decoded_sha256": "dbc9985f01a22b3ff80c3c74d3e67b6c9dcfe27875adcd7afe28e4ccfee18cb8"
+      },
+      {
+        "offset": 30932992,
+        "payload_bytes": 4063168,
+        "kind": "0x102",
+        "header_build": "0100",
+        "model_bytes": "0740",
+        "container_address": "0x40580000",
+        "decoded_sha256": "ccd8c1a44cd73bce3799e66e4aff4859977f9166f7c02df879f1b6174932f7a7"
+      }
+    ],
+    "model": "E-PL1",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_074_1302_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl1/OLY_E_074_1302_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl1/OLY_E_074_1302_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": false,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "5cad87f7b9d6b589a23bbfec4a30a76f456bae0bc687d57740319f73db0c2e84",
+    "bytes": 35061824,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 5373888,
+        "kind": "0x100",
+        "header_build": "1202",
+        "model_bytes": "0880",
+        "container_address": "0x40060000",
+        "decoded_sha256": "c1c5e52bdb587442114b05437f42065988847dacde0b5126e3fcdac9a12a693f"
+      },
+      {
+        "offset": 5373952,
+        "payload_bytes": 23068608,
+        "kind": "0x101",
+        "header_build": "1000",
+        "model_bytes": "0880",
+        "container_address": "0x40960000",
+        "decoded_sha256": "680176a4188321c9da5b88baedb61ecf0afd3f0cfd555f96c5fa07c1cddd9d6c"
+      },
+      {
+        "offset": 28442624,
+        "payload_bytes": 2490304,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "0880",
+        "container_address": "0x41f60000",
+        "decoded_sha256": "dbc9985f01a22b3ff80c3c74d3e67b6c9dcfe27875adcd7afe28e4ccfee18cb8"
+      },
+      {
+        "offset": 30932992,
+        "payload_bytes": 4063168,
+        "kind": "0x102",
+        "header_build": "0100",
+        "model_bytes": "0880",
+        "container_address": "0x40580000",
+        "decoded_sha256": "ccd8c1a44cd73bce3799e66e4aff4859977f9166f7c02df879f1b6174932f7a7"
+      }
+    ],
+    "model": "E-PL1s",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_088_1202_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl1s/OLY_E_088_1202_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl1s/OLY_E_088_1202_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": false,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "89b70dd65c6739de1cd762777205953ee15864df73369b84815df7ed8a0eb4b1",
+    "bytes": 46596160,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 14155712,
+        "kind": "0x100",
+        "header_build": "1600",
+        "model_bytes": "0860",
+        "container_address": "0x402c0000",
+        "decoded_sha256": "c291722827a5120fc06ca288b439cae82ebf597ac2cd83eba30a7f0fe6a72687"
+      },
+      {
+        "offset": 14155776,
+        "payload_bytes": 23068608,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "0860",
+        "container_address": "0x42700000",
+        "decoded_sha256": "af5a35e02304183c9e716af99b9fb619abb13f5a71e41146986bf9d833e2e20f"
+      },
+      {
+        "offset": 37224448,
+        "payload_bytes": 2490304,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "0860",
+        "container_address": "0x43d00000",
+        "decoded_sha256": "ae9d7a1cc5f0d3bfeedb4dfecedc70be8a423e9bea7070cee16363fb30eaacfb"
+      },
+      {
+        "offset": 39714816,
+        "payload_bytes": 6815680,
+        "kind": "0x104",
+        "header_build": "0100",
+        "model_bytes": "0860",
+        "container_address": "0x43f60000",
+        "decoded_sha256": "218b6003e490efc432851e831086cf8f1237f2fde3fade4be93dd89425459941"
+      }
+    ],
+    "model": "E-PL3",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_086_1600_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl3/OLY_E_086_1600_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl3/OLY_E_086_1600_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": false,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "1355c2b8beaaae348654a208e1c0220a9a9273bd88dac408fd6fd01a0ccd0c01",
+    "bytes": 43319360,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 14155712,
+        "kind": "0x100",
+        "header_build": "1600",
+        "model_bytes": "1000",
+        "container_address": "0x402c0000",
+        "decoded_sha256": "557b3daebe34598d1c03b78e9c1107855c36651c46cda2cc3414aed9e18f96a7"
+      },
+      {
+        "offset": 14155776,
+        "payload_bytes": 22937536,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "1000",
+        "container_address": "0x43c40000",
+        "decoded_sha256": "97a3e75d2e25fe440bc753c5a0909a28d3f6279311699c78bc2365af308fb724"
+      },
+      {
+        "offset": 37093376,
+        "payload_bytes": 2490304,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1000",
+        "container_address": "0x45220000",
+        "decoded_sha256": "972d0cfea93a231b562d7dbd9212c0859413ba484e683e95365abb6a1b0e622e"
+      },
+      {
+        "offset": 39583744,
+        "payload_bytes": 3669952,
+        "kind": "0x104",
+        "header_build": "0100",
+        "model_bytes": "1000",
+        "container_address": "0x45480000",
+        "decoded_sha256": "02980862f7c5057c30aaa10b643065e6fcaf1eda21f1c466afd38c1026f8508c"
+      }
+    ],
+    "model": "E-PL5",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_100_1600_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl5/OLY_E_100_1600_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl5/OLY_E_100_1600_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": false,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "f7b76ac82d545148bfc1c00bc165fb855b2e7d044dcaae1033601496e1bd116f",
+    "bytes": 43319360,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 14155712,
+        "kind": "0x100",
+        "header_build": "1400",
+        "model_bytes": "1120",
+        "container_address": "0x402c0000",
+        "decoded_sha256": "7c3a36096ef51329d5e64395c11caa0d7b7345c8a636929177fc57fcb642bb9c"
+      },
+      {
+        "offset": 14155776,
+        "payload_bytes": 22937536,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "1120",
+        "container_address": "0x43c40000",
+        "decoded_sha256": "77bc71466df9dc3573e5b3f86bd9716ed7c7f5bb909c5bfe8f895d79cc64fc34"
+      },
+      {
+        "offset": 37093376,
+        "payload_bytes": 2490304,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1120",
+        "container_address": "0x45220000",
+        "decoded_sha256": "972d0cfea93a231b562d7dbd9212c0859413ba484e683e95365abb6a1b0e622e"
+      },
+      {
+        "offset": 39583744,
+        "payload_bytes": 3669952,
+        "kind": "0x104",
+        "header_build": "0100",
+        "model_bytes": "1120",
+        "container_address": "0x45480000",
+        "decoded_sha256": "02980862f7c5057c30aaa10b643065e6fcaf1eda21f1c466afd38c1026f8508c"
+      }
+    ],
+    "model": "E-PL6",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_112_1400_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl6/OLY_E_112_1400_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl6/OLY_E_112_1400_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": false,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "cd9b09af9705e31570252fd7501f92fc11c1e6fd555e30e103f4f05e9944501b",
+    "bytes": 66060288,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 18874304,
+        "kind": "0x100",
+        "header_build": "1400",
+        "model_bytes": "1150",
+        "container_address": "0x40300000",
+        "decoded_sha256": "273606f5728084e52748cd83774f9b7c4a72352f5d26e3881fcece7647dbb8e5"
+      },
+      {
+        "offset": 18874368,
+        "payload_bytes": 20971456,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "1150",
+        "container_address": "0x41500000",
+        "decoded_sha256": "77f538fe164bb19bcb191784afc409755ec1f72414b2aac6a590f70f80f51252"
+      },
+      {
+        "offset": 39845888,
+        "payload_bytes": 26214336,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1150",
+        "container_address": "0x42900000",
+        "decoded_sha256": "d8723991cec817d1fbc8167940f5081a8202c7f1e37e0ecba8a9de217e7776b3"
+      }
+    ],
+    "model": "E-PL7",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_115_1400_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl7/OLY_E_115_1400_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl7/OLY_E_115_1400_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "923aab3d8e761c3b4a3108bcc6059b10ff6a9055a0630e0aea8a4707c59daeeb",
+    "bytes": 66060288,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 18874304,
+        "kind": "0x100",
+        "header_build": "1100",
+        "model_bytes": "1260",
+        "container_address": "0x40300000",
+        "decoded_sha256": "14c68eba790445f4b33692a80eafd10b1265eb6633c1e180b6089c8c225fedbd"
+      },
+      {
+        "offset": 18874368,
+        "payload_bytes": 20971456,
+        "kind": "0x101",
+        "header_build": "0000",
+        "model_bytes": "1260",
+        "container_address": "0x41500000",
+        "decoded_sha256": "a15bd6e4284dc90f8157c42237792f9eb533322f45fe8428c20bf18977044566"
+      },
+      {
+        "offset": 39845888,
+        "payload_bytes": 26214336,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1260",
+        "container_address": "0x42900000",
+        "decoded_sha256": "a348c343f84d32a7f0958307935bea84fb29f9846a694ae07383d8b414ca0dc2"
+      }
+    ],
+    "model": "E-PL8",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_126_1100_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl8/OLY_E_126_1100_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl8/OLY_E_126_1100_0000_0000.BIN.lzma",
+      "https://dl01.om-digitalsolutions.net/OMDS/FIRMWARES/0001/1260/OLY_E_126_1100_0000_0000.BIN"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    },
+    "public_versions": [
+      "1.1"
+    ]
+  },
+  {
+    "sha256": "131960883affe65e3200489359486ce643fc19cd0272e1dbccd69ff4f9c25f27",
+    "bytes": 104552480,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 26214336,
+        "kind": "0x100",
+        "header_build": "1101",
+        "model_bytes": "1330",
+        "container_address": "0x406e0000",
+        "decoded_sha256": "be527b16e4811e271f88cadae17be6aec25f8dc8a66abf5162ed59b0946385b7"
+      },
+      {
+        "offset": 26214400,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1330",
+        "container_address": "0x421e0000",
+        "decoded_sha256": "ee9a9c3ad1974dd212483ca7d012e51ae23083ce0119589a3b42996aa13ccf1e"
+      },
+      {
+        "offset": 52428800,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1330",
+        "container_address": "0x43ae0000",
+        "decoded_sha256": "abd9d3f3e8598b3844b9b8d2c06d07ef49d5dbdb4cf00ca5dcaf096dcca659b8"
+      },
+      {
+        "offset": 91226112,
+        "payload_bytes": 219104,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1330",
+        "container_address": "0x40002800",
+        "decoded_sha256": "1c942d2fb6b8830f0195a0be7464880838ddf08c5f038bad626aed8e72789678"
+      },
+      {
+        "offset": 91445280,
+        "payload_bytes": 13107136,
+        "kind": "0x102",
+        "header_build": "0100",
+        "model_bytes": "1330",
+        "container_address": "0x468e0000",
+        "decoded_sha256": "a0d6a08e79f8a1c731959695ada1f26d52ea1e1c0fc9f234618f795ced061c0f"
+      }
+    ],
+    "model": "E-PL9",
+    "role": "historical_patch",
+    "filenames": [
+      "e1339999.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/pen-e-pl9_v11.rar"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "aefab05396c43ecba0551b94a5d31f7e52350c18d6f4bf1d02d75761108e6028",
+    "bytes": 104552480,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 26214336,
+        "kind": "0x100",
+        "header_build": "1101",
+        "model_bytes": "1330",
+        "container_address": "0x406e0000",
+        "decoded_sha256": "8e39c335d54fd8ddea189db82fe708159f43f9995bba42c2cd47dd22b8814267"
+      },
+      {
+        "offset": 26214400,
+        "payload_bytes": 26214336,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1330",
+        "container_address": "0x421e0000",
+        "decoded_sha256": "ee9a9c3ad1974dd212483ca7d012e51ae23083ce0119589a3b42996aa13ccf1e"
+      },
+      {
+        "offset": 52428800,
+        "payload_bytes": 38797248,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1330",
+        "container_address": "0x43ae0000",
+        "decoded_sha256": "abd9d3f3e8598b3844b9b8d2c06d07ef49d5dbdb4cf00ca5dcaf096dcca659b8"
+      },
+      {
+        "offset": 91226112,
+        "payload_bytes": 219104,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1330",
+        "container_address": "0x40002800",
+        "decoded_sha256": "1c942d2fb6b8830f0195a0be7464880838ddf08c5f038bad626aed8e72789678"
+      },
+      {
+        "offset": 91445280,
+        "payload_bytes": 13107136,
+        "kind": "0x102",
+        "header_build": "0100",
+        "model_bytes": "1330",
+        "container_address": "0x468e0000",
+        "decoded_sha256": "a0d6a08e79f8a1c731959695ada1f26d52ea1e1c0fc9f234618f795ced061c0f"
+      }
+    ],
+    "model": "E-PL9",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_133_1101_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl9/OLY_E_133_1101_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penepl9/OLY_E_133_1101_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "f60b5bbd305e67caf5d1b5e80eb426f6d911de244abb3aaa68f420ef61e05449",
+    "bytes": 240517120,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 33554368,
+        "kind": "0x100",
+        "header_build": "1300",
+        "model_bytes": "1460",
+        "container_address": "0x50000000"
+      },
+      {
+        "offset": 33554432,
+        "payload_bytes": 60817344,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1460",
+        "container_address": "0x41ec0000"
+      },
+      {
+        "offset": 94371840,
+        "payload_bytes": 143523776,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1460",
+        "container_address": "0x458c0000"
+      },
+      {
+        "offset": 237895680,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1460",
+        "container_address": "0x0"
+      },
+      {
+        "offset": 238157824,
+        "payload_bytes": 2097088,
+        "kind": "0x102",
+        "header_build": "0100",
+        "model_bytes": "1460",
+        "container_address": "0x4e1a0000"
+      },
+      {
+        "offset": 240254976,
+        "payload_bytes": 262080,
+        "kind": "0x107",
+        "header_build": "0000",
+        "model_bytes": "1430",
+        "container_address": "0x8000000"
+      }
+    ],
+    "model": "OM-1 II",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_146_1300_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "https://dl01.om-digitalsolutions.net/dslr/1460/v1300/OLY_E_146_1300_0000_0000.BIN"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": false,
+      "source_reports_exact_roundtrip": false
+    }
+  },
+  {
+    "sha256": "8c133084414533159f587bf46bfb4152714c4074312a47c8d8503e33d605696d",
+    "bytes": 240517120,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 33554368,
+        "kind": "0x100",
+        "header_build": "1100",
+        "model_bytes": "1470",
+        "container_address": "0x50000000",
+        "decoded_sha256": "5e8d376e9111a44ac0352f26030d7c1b17026d42c45f3600cfa02a0e8c5b7d59"
+      },
+      {
+        "offset": 33554432,
+        "payload_bytes": 60817344,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1470",
+        "container_address": "0x41ec0000",
+        "decoded_sha256": "6d2bef74b4b2fa089f271529482f96505a170b91e79ab9b1a13f3ce8f7918226"
+      },
+      {
+        "offset": 94371840,
+        "payload_bytes": 143523776,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1470",
+        "container_address": "0x458c0000",
+        "decoded_sha256": "3d9fd4426b45fbe4b715599422af38c6d22392c08543a69f63c28291c5a0b059"
+      },
+      {
+        "offset": 237895680,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1470",
+        "container_address": "0x0",
+        "decoded_sha256": "b9200daf346a53aaae9fd2908740f5f17d867309ba958e703e70169cb114ca87"
+      },
+      {
+        "offset": 238157824,
+        "payload_bytes": 2097088,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1470",
+        "container_address": "0x4e1a0000",
+        "decoded_sha256": "494cd9ef134a91503a12e852e56fc6c42b7c94c07116b889991b38c0fcf74c09"
+      },
+      {
+        "offset": 240254976,
+        "payload_bytes": 262080,
+        "kind": "0x107",
+        "header_build": "0000",
+        "model_bytes": "1470",
+        "container_address": "0x8000000",
+        "decoded_sha256": "9a9e7abef58daf72da495f8e18140043ecf2632b0ae5ea820e83be2ae2d0e377"
+      }
+    ],
+    "model": "OM-3",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_147_1100_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "https://dl01.om-digitalsolutions.net/dslr/1470/v1100/ENU/index01a.html",
+      "https://dl01.om-digitalsolutions.net/dslr/1470/v1100/OLY_E_147_1100_0000_0000.BIN",
+      "https://fw01.om-digitalsolutions.net/ww_inform/fcache.do"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    },
+    "public_versions": [
+      "1.1"
+    ]
+  },
+  {
+    "sha256": "a0c91f3ac7caaf0925b2af609e711183cf3b5982b3333224bcef26c0c5943d11",
+    "bytes": 92274688,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 24903616,
+        "kind": "0x100",
+        "header_build": "1200",
+        "model_bytes": "1440",
+        "container_address": "0x40780000"
+      },
+      {
+        "offset": 24903680,
+        "payload_bytes": 14024640,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1440",
+        "container_address": "0x42140000"
+      },
+      {
+        "offset": 38928384,
+        "payload_bytes": 45744064,
+        "kind": "0x106",
+        "header_build": "0100",
+        "model_bytes": "1440",
+        "container_address": "0x42ea0000"
+      },
+      {
+        "offset": 84672512,
+        "payload_bytes": 262080,
+        "kind": "0x10e",
+        "header_build": "0001",
+        "model_bytes": "1440",
+        "container_address": "0x0"
+      },
+      {
+        "offset": 84934656,
+        "payload_bytes": 7339968,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1440",
+        "container_address": "0x45cc0000"
+      }
+    ],
+    "model": "OM-5",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_144_1200_0000_0000.BIN"
+    ],
+    "source_urls": [
+      "https://dl01.om-digitalsolutions.net/dslr/1440/v1200/OLY_E_144_1200_0000_0000.BIN",
+      "https://fw01.om-digitalsolutions.net/ww_inform/fcache.do",
+      "https://dl01.om-digitalsolutions.net/dslr/1440/v1200/ENU/index02a.html"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": false,
+      "source_reports_exact_roundtrip": false
+    }
+  },
+  {
+    "sha256": "c3b287871164efcf98dd23c1ba45246fa5fd815cb89d52d378903d5a5c53561d",
+    "bytes": 87031808,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 21364672,
+        "kind": "0x100",
+        "header_build": "3100",
+        "model_bytes": "1220",
+        "container_address": "0x403a0000",
+        "decoded_sha256": "61a260b5f69845897337c72ca237918f37eec389e3dca21e80014b0fdd14c389"
+      },
+      {
+        "offset": 21364736,
+        "payload_bytes": 23068608,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1220",
+        "container_address": "0x41800000",
+        "decoded_sha256": "e06330df45867f192e708254c996f93f622793583dd52a938ac7414e8cbc076e"
+      },
+      {
+        "offset": 44433408,
+        "payload_bytes": 21626816,
+        "kind": "0x106",
+        "header_build": "1000",
+        "model_bytes": "1220",
+        "container_address": "0x42e00000",
+        "decoded_sha256": "97e40d1cc5c01df717c4372b52e5225945ce5111e58aa2914785310cf4407654"
+      },
+      {
+        "offset": 66060288,
+        "payload_bytes": 20971456,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1220",
+        "container_address": "0x46160000",
+        "decoded_sha256": "a48ee600f668055249bca1967483b35bb14a20e6f1b79b46425001b4469b021b"
+      }
+    ],
+    "model": "PEN-F",
+    "role": "historical_patch",
+    "filenames": [
+      "e1229999.bin",
+      "penf31-historical-patched.bin"
+    ],
+    "source_urls": [
+      "http://xdel.ru/downloads/olympus-firmware/patched/pen_f_v31.zip"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    }
+  },
+  {
+    "sha256": "212a1c14ac5ebf615ce18896f45d5382eabc99d700acd24fa21841eafeea4b4c",
+    "bytes": 87031808,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 21364672,
+        "kind": "0x100",
+        "header_build": "3100",
+        "model_bytes": "1220",
+        "container_address": "0x403a0000",
+        "decoded_sha256": "3d5963c6d9385aafc99ff51892ec706bef1c4783a84f586179271a64b8401bfd"
+      },
+      {
+        "offset": 21364736,
+        "payload_bytes": 23068608,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1220",
+        "container_address": "0x41800000",
+        "decoded_sha256": "e06330df45867f192e708254c996f93f622793583dd52a938ac7414e8cbc076e"
+      },
+      {
+        "offset": 44433408,
+        "payload_bytes": 21626816,
+        "kind": "0x106",
+        "header_build": "1000",
+        "model_bytes": "1220",
+        "container_address": "0x42e00000",
+        "decoded_sha256": "97e40d1cc5c01df717c4372b52e5225945ce5111e58aa2914785310cf4407654"
+      },
+      {
+        "offset": 66060288,
+        "payload_bytes": 20971456,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1220",
+        "container_address": "0x46160000",
+        "decoded_sha256": "a48ee600f668055249bca1967483b35bb14a20e6f1b79b46425001b4469b021b"
+      }
+    ],
+    "model": "PEN-F",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_122_3100_0000_0000.BIN",
+      "archived-stock-3100.bin"
+    ],
+    "source_urls": [
+      "http://dl01.olympus-imaging.com/OLYMPUS_MASTER/FIRMWARES/0001/1220/OLY_E_122_3100_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penf/OLY_E_122_3100_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penf/OLY_E_122_3100_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    },
+    "public_versions": [
+      "3.1"
+    ]
+  },
+  {
+    "sha256": "77398610b379f80238117f31a6d5bbf65d608b49ec563666c64d84367e969f2c",
+    "bytes": 87031808,
+    "components": [
+      {
+        "offset": 0,
+        "payload_bytes": 21364672,
+        "kind": "0x100",
+        "header_build": "3101",
+        "model_bytes": "1220",
+        "container_address": "0x403a0000",
+        "decoded_sha256": "a2eb1d1f1afe47cce148e9aae0a04dfb82547d9de9437d342e012341140913f4"
+      },
+      {
+        "offset": 21364736,
+        "payload_bytes": 23068608,
+        "kind": "0x101",
+        "header_build": "0100",
+        "model_bytes": "1220",
+        "container_address": "0x41800000",
+        "decoded_sha256": "e06330df45867f192e708254c996f93f622793583dd52a938ac7414e8cbc076e"
+      },
+      {
+        "offset": 44433408,
+        "payload_bytes": 21626816,
+        "kind": "0x106",
+        "header_build": "1000",
+        "model_bytes": "1220",
+        "container_address": "0x42e00000",
+        "decoded_sha256": "be3c04d34297eeeb1ad84d8e186d8549e131080a65889e9ebbade77b6fcc078d"
+      },
+      {
+        "offset": 66060288,
+        "payload_bytes": 20971456,
+        "kind": "0x102",
+        "header_build": "1000",
+        "model_bytes": "1220",
+        "container_address": "0x46160000",
+        "decoded_sha256": "a48ee600f668055249bca1967483b35bb14a20e6f1b79b46425001b4469b021b"
+      }
+    ],
+    "model": "PEN-F",
+    "role": "stock_reference",
+    "filenames": [
+      "OLY_E_122_3101_0000_0000.BIN",
+      "official-penf-3101.bin"
+    ],
+    "source_urls": [
+      "http://dl01.olympus-imaging.com/OLYMPUS_MASTER/FIRMWARES/0001/1220/OLY_E_122_3101_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penf/OLY_E_122_3101_0000_0000.BIN",
+      "http://xdel.ru/downloads/olympus-firmware/original/penf/OLY_E_122_3101_0000_0000.BIN.lzma"
+    ],
+    "verification": {
+      "header_walk_complete": true,
+      "source_reports_checksum_validation": true,
+      "source_reports_exact_roundtrip": true
+    },
+    "public_versions": [
+      "3.1"
+    ]
+  }
+]

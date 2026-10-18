@@ -1,0 +1,182 @@
+{
+  "source_sha256": "3a57cc3f2872bca7b3c4987db772277460d052e69ff886c9454ac924dc5276b0",
+  "scope": "Scalar native probe observations only; no captured settings or memory dumps.",
+  "readers": {
+    "stock_discovery": {
+      "xml": "<?xml version=\"1.0\"?><response><value>00000000</value></response>"
+    },
+    "extension_discovery": {
+      "xml": "<?xml version=\"1.0\"?><response><value>48534C31</value></response>"
+    },
+    "direct_reads": [
+      {
+        "mode": "0x83a3",
+        "value": -7,
+        "native": {
+          "result": 4294967289
+        }
+      },
+      {
+        "mode": "0xc3a3",
+        "value": 7,
+        "native": {
+          "result": 7
+        }
+      },
+      {
+        "mode": "0x83a3",
+        "value": 0,
+        "native": {
+          "result": 0
+        }
+      },
+      {
+        "mode": "0xc3a3",
+        "value": -3,
+        "native": {
+          "result": 4294967293
+        }
+      },
+      {
+        "mode": "0x83ae",
+        "value": -7,
+        "native": {
+          "result": 4294967289
+        }
+      },
+      {
+        "mode": "0xc3ae",
+        "value": 7,
+        "native": {
+          "result": 7
+        }
+      },
+      {
+        "mode": "0x83ae",
+        "value": 0,
+        "native": {
+          "result": 0
+        }
+      },
+      {
+        "mode": "0xc3ae",
+        "value": -3,
+        "native": {
+          "result": 4294967293
+        }
+      },
+      {
+        "mode": "0x83af",
+        "value": -7,
+        "native": {
+          "result": 4294967289
+        }
+      },
+      {
+        "mode": "0xc3af",
+        "value": 7,
+        "native": {
+          "result": 7
+        }
+      },
+      {
+        "mode": "0x83af",
+        "value": 0,
+        "native": {
+          "result": 0
+        }
+      },
+      {
+        "mode": "0xc3af",
+        "value": -3,
+        "native": {
+          "result": 4294967293
+        }
+      },
+      {
+        "mode": "0x83ba",
+        "value": -7,
+        "native": {
+          "result": 4294967289
+        }
+      },
+      {
+        "mode": "0xc3ba",
+        "value": 7,
+        "native": {
+          "result": 7
+        }
+      },
+      {
+        "mode": "0x83ba",
+        "value": 0,
+        "native": {
+          "result": 0
+        }
+      },
+      {
+        "mode": "0xc3ba",
+        "value": -3,
+        "native": {
+          "result": 4294967293
+        }
+      },
+      {
+        "mode": "0x83bb",
+        "value": -7,
+        "native": {
+          "result": 4294967289
+        }
+      },
+      {
+        "mode": "0xc3bb",
+        "value": 7,
+        "native": {
+          "result": 7
+        }
+      },
+      {
+        "mode": "0x83bb",
+        "value": 0,
+        "native": {
+          "result": 0
+        }
+      },
+      {
+        "mode": "0xc3bb",
+        "value": -3,
+        "native": {
+          "result": 4294967293
+        }
+      },
+      {
+        "mode": "0x83c6",
+        "value": -7,
+        "native": {
+          "result": 4294967289
+        }
+      },
+      {
+        "mode": "0xc3c6",
+        "value": 7,
+        "native": {
+          "result": 7
+        }
+      },
+      {
+        "mode": "0x83c6",
+        "value": 0,
+        "native": {
+          "result": 0
+        }
+      },
+      {
+        "mode": "0xc3c6",
+        "value": -3,
+        "native": {
+          "result": 4294967293
+        }
+      }
+    ]
+  }
+}
