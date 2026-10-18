@@ -208,8 +208,8 @@
     {
       "path": "patches/hsl/pen-f/README.md",
       "origin": "original documentation, fixture or utility",
-      "sha256": "120475e39427db183f4f3ab07997ba85c92fb270e57507d16405720d9e790b76",
-      "bytes": 5074
+      "sha256": "f563c9246b8f8851fa380755c5e028b1da20646084b9184d90ca64f5c4a5b11b",
+      "bytes": 5080
     },
     {
       "path": "patches/hsl/pen-f/SOURCES.json",

@@ -54,7 +54,7 @@ The patched BIN SHA-256 is
 The restore SHA-256 is
 `e13f9813d01d15441082ed907966aec54356d70ba0f75ae9b6c2b259ff01f26a`.
 Installation instructions and physical test scope belong to the
-[corresponding release](https://github.com/fishcu/pen-f-hsl/releases/tag/alpha-20261017).
+[corresponding release](https://github.com/fishcu/oly_fw_analysis/releases/tag/alpha-20261017).
 The builder does not connect to or flash a camera.
 
 ## Source organization

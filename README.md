@@ -28,6 +28,9 @@ Supply the firmware files required by each tool. A matching version label is
 not enough: check the exact hash. The [update and recovery reference](docs/boot/pen-f/RECOVERY.md)
 explains the limits of checksum and recovery evidence.
 
-Ready-to-install PEN-F HSL releases are maintained separately at
-[fishcu/pen-f-hsl](https://github.com/fishcu/pen-f-hsl).
+Ready-to-install PEN-F HSL packages are available under
+[Releases](https://github.com/fishcu/oly_fw_analysis/releases):
+[17 October 2026](https://github.com/fishcu/oly_fw_analysis/releases/tag/alpha-20261017)
+and [13 October 2026](https://github.com/fishcu/oly_fw_analysis/releases/tag/alpha-20261013).
+Each includes the patched firmware, stock restore, instructions and checksums.
 See [license information](RIGHTS-AND-PROVENANCE.md) before reusing code.
