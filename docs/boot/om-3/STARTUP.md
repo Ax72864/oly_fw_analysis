@@ -91,6 +91,10 @@ bank offsets, property-service get/set round-trip for **1482/1483**
 offline builds. See `docs/features/om-3/SHUTTER_SOUND.md` and `POWER_SWITCH.md`.
 Do **not** treat `deeper_idle` as the pre-flash bar.
 
+Update/recovery landmarks (SD `E147????BIN`, `FIRMUP_SRV`, TPC firmup strings)
+and explicit gaps versus a flashable research package:
+[RECOVERY.md](RECOVERY.md). This harness still does not flash a camera.
+
 ## Simulation boundary (what this is / is not)
 
 **This is a CPU + MMIO offline harness**, not a camera GUI emulator.

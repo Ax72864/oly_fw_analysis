@@ -7,7 +7,7 @@ camera with the same processor.
 | Topic | Reference |
 | --- | --- |
 | Update files | [Components, decoding and checksums](format/CONTAINERS.md) · [PEN-F address spaces](format/pen-f/ADDRESS_SPACES.md) · [OM-3 address spaces](format/om-3/ADDRESS_SPACES.md) |
-| Startup and recovery | [PEN-F startup](boot/pen-f/STARTUP.md) · [OM-3 startup / boot harness](boot/om-3/STARTUP.md) · [SD update and recovery limits](boot/pen-f/RECOVERY.md) · [Buttons and dials](boot/pen-f/INPUTS.md) |
+| Startup and recovery | [PEN-F startup](boot/pen-f/STARTUP.md) · [OM-3 startup / boot harness](boot/om-3/STARTUP.md) · [SD update and recovery limits](boot/pen-f/RECOVERY.md) · [OM-3 update / recovery landmarks](boot/om-3/RECOVERY.md) · [Buttons and dials](boot/pen-f/INPUTS.md) |
 | Camera interfaces | [USB firmware update](protocols/pen-f/USB_UPDATE.md) · [Settings backup](protocols/pen-f/SETTINGS_BACKUP.md) · [PEN-F Wi-Fi](protocols/pen-f/WIFI.md) · [OM-3 Wi-Fi](protocols/om-3/WIFI.md) |
 | Color processing | [Modes and generations](color/MODES.md) · [OM-3 COLOR](color/om-3/COLOR.md) · [HSL tables and scales](color/pen-f/HSL_TABLES.md) · [Processing jobs](color/pen-f/CREATIVE_PROCESSING_JOBS.md) |
 | Profile integration | [Editor and display](color/pen-f/EDITOR.md) · [Saved settings](color/pen-f/SETTINGS_STORAGE.md) · [Per-image parameters](color/pen-f/CAPTURE_PARAMETERS.md) · [ORF metadata](color/pen-f/ORF_METADATA.md) |
