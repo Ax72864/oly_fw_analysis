@@ -1,7 +1,10 @@
 # OM-3 startup (build 1100)
 
-Addresses refer to OM-3 build **1100** unless stated otherwise. Use the offline
-harness for debugging; it is not a complete board boot.
+Addresses refer to OM-3 build **1100** unless stated otherwise. The offline
+harness starts at the downloaded main entry and can auto-stub unmodeled
+MMIO/RAM so long runs reach `stable_under_budget`. That outcome means the
+instruction budget finished without an unhandled fault — **not** a claimed
+UI/RTOS idle, and not silicon-qualified timing.
 
 ## Entry
 
@@ -17,32 +20,63 @@ Observed early entry helpers:
 | `0x600210b5` | Read controller word `0x98e0009c`, store to `0x628ac680` |
 | `0x600210aa` | RMW halfword at `0x8070` |
 | `0x60021046` | Store via `a2=0x98100000` offset 8 → write `0x98100008` |
+| `0x600210a0` | SP switch (`mov a0,sp`) then jump to `0x600210c5` |
+| `0x60021530` / `0x600215e9` | DMA/copy ready poll on `0x9bc00004` bit0 |
+| `0x600216b1` | Historical frontier write to `0x988004a0` |
+| `0x60022e99` | Storage busy clear poll on `0x98d002f0` bit0 |
+| `0x600333e9` | 4-core ready mask poll on `0x97f00000` (expect `0xf`) |
+| `0x600335fa` | Peer doorbell poll on `0x8958` bit4 |
+| `0x60036a13` | Intentional `bra self` halt reached by `idle` under budget |
 
 ## Debug harness
 
+Requires the MN103 engine from `tools/build_mn103_emulator.py` and the pinned
+stock main under `analysis/om3_1100/`.
+
 ```bash
-# First frontier (stop on unmodeled access)
+# First unmodeled access (no auto-stub)
 python tools/om3_boot.py prefix --out generated/om3-boot-prefix
 
-# Continue with a larger budget / breakpoints
-python tools/om3_boot.py run --limit 200000 --breakpoint 0x600216b1 --out generated/om3-boot-run
+# Past the old 0x988004a0 / pc=0x600216b1 frontier; auto-stub + completions
+python tools/om3_boot.py advance --limit 2000000 --out generated/om3-boot-advance
 
-# Idle peers are not ported yet (explicit incomplete status)
-python tools/om3_boot.py idle
+# Large budget; seek stable_under_budget for debugging
+python tools/om3_boot.py idle --out generated/om3-boot-idle
+
+# Breakpoint helper
+python tools/om3_boot.py run --breakpoint 0x600335fa --out generated/om3-boot-bp
 ```
 
-How to extend toward idle:
+Reports land in `--out` as `om3-boot.json`, `auto-stubs.json`, and `events.json`.
 
-1. Read `fault.address` / `fault.pc` from the JSON report.
-2. Disassemble the PC window with MN103 `objdump`.
-3. Add only that register/RAM model in `OM3BootState` with an assumption note.
-4. Re-run; do not copy PEN-F peer schedules until addresses are remapped.
+Observed `idle` result (stock 1100, synthetic peers/completions):
+`outcome=stable_under_budget`, `pc=0x60036a13` (`bra self`), DRAM SP around
+`0x62f08fe4`, after the historical `0x988004a0` / `pc=0x600216b1` frontier.
 
-`penf_boot_*` multi-core idle / console / SD peers are **not** interchangeable.
+### What the harness models
+
+Seed / service stubs (logged; synthetic):
+
+- Early MMIO: `0x98e0009c` strap, `0x988004a0` clock gate, IRQ/UART shadows
+- DMA engine page `0x9bc00000` with `+0x04` ready
+- Early SRAM `0x97f00000..0x97f01fff` and secondary `rwx` window `0x50000000`
+- Auto-stub of DRAM (cached + `0xa0000000` uncached alias), MMIO pages, main promote
+- Completions each chunk: storage busy clear, controller `0x98e000f4=0`,
+  `0x8958 |= 0x10`, ready mask `0x97f00000 |= 0xf`, peer bytes `0x97f00095..97=1`,
+  dummy peer CPU objects at `0x97f00008..14` whose `+0x14c` points at a `-1`
+  word (skip sentinel for `0x60031cc9`)
+
+### How to extend further
+
+1. Read `fault` / final `pc` from the JSON report (or use `--breakpoint`).
+2. Disassemble the PC window with `mn10300-elf-objdump`.
+3. Add a seed, completion, or narrower stub in `OM3BootState` with an assumption note.
+4. Re-run `advance` / `idle`. Do not copy PEN-F peer schedules until addresses are remapped.
 
 ## Gaps versus PEN-F
 
-PEN-F has a deep connected boot (`penf_boot_sd_mount`, `penf_boot_console_idle`,
-mode-dial ADC models, …). OM-3 currently has a main-image debugging front-end
-plus qualified code-space loader probes. Physical OK+power / USB wake selection
-is not established.
+PEN-F has connected multi-core idle (`penf_boot_console_idle`, SD mount, mode-dial
+ADC, …). OM-3 `idle` can reach the firmware’s own `0x60036a13` self-branch with
+assumed peer readiness and auto-stubs — useful for debugging, but not a full
+four-core schedule, ISP, NAND physics, Wi-Fi, or USB gadget. Physical OK+power /
+USB wake selection is not established.
