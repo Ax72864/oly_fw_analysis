@@ -21,7 +21,17 @@ STOCK_SHA = '8c133084414533159f587bf46bfb4152714c4074312a47c8d8503e33d605696d'
 MANIFEST_SHA = '8f520edb97995c7b5de3b43da725b33bff9a5f1ddb52d31d439a01609369505e'
 DEFAULT_MANIFEST = Path('research/om3_patcher_20260929/extracted/OM-3 patcher/patches/om3_pc_remote_v22.json')
 DEFAULT_STOCK = Path('firmware_archive/reference/OM-3/1.1/OLY_E_147_1100_0000_0000.BIN')
-OBJDUMP = Path('toolchains/binutils-2.45-build/binutils/objdump')
+
+
+def _resolve_objdump():
+    base = Path('toolchains/binutils-2.45-build/binutils/objdump')
+    for candidate in (base, base.with_suffix('.exe')):
+        if candidate.is_file():
+            return candidate
+    return base
+
+
+OBJDUMP = _resolve_objdump()
 
 
 def require(value, message):
