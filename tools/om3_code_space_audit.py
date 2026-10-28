@@ -12,9 +12,10 @@ import struct
 
 from oly_container import sha256
 from om3_patch_audit import BASE, disassemble, require
+from om3_probe import OM3Probe, call
 from penf_code_space_audit import pointer_candidates, branch_candidates
-from penf_emulator import ROOT, Region, firmware
-from penf_probe import ProbeState, CALLER
+from penf_emulator import ROOT, firmware
+from penf_probe import CALLER  # used by call()/native probes
 
 STOCK = ROOT/'analysis/om3_1100/00_0100_50000020.decoded.bin'
 PATCHED = ROOT/'analysis/om3_patch_v22/verified/patched-main-analysis-only.bin'
@@ -29,19 +30,6 @@ LOADED_BITS = 0xa32de590
 CAVES = [(1, 0x6031e920, 0x6031efeb),
          (4, 0x60a8f100, 0x60a8f800),
          (9, 0x619a9680, 0x619a9800)]
-
-
-class OM3Probe(ProbeState):
-    def __init__(self, image, target, mask=0, frame=0, registers=None):
-        super().__init__(target, mask, frame, bytes(128), registers or {})
-        # Replace the entire pinned PEN-F image; no PEN-F address models run.
-        self.regions = [Region(r.name, BASE, image, 'rx') if r.name == 'main'
-                        else r for r in self.regions]
-
-
-def call(state, target, mask=0, frame=0, **registers):
-    state.write(CALLER, b'\xdd'+struct.pack('<i', target-CALLER)+bytes((mask, frame))+b'\xcb')
-    state.regs = dict(pc=CALLER, sp=0x18018000, psw=0, **registers)
 
 
 def exclude(state, low, high):

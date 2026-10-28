@@ -47,6 +47,22 @@ python3 tools/om_firmware_catalog.py --model-id 1220 --model-name PEN-F \
   --out generated/catalog --download
 ```
 
+OM-3 stock build **1100** (catalog model id `1470`) is pinned in
+`tools/inputs.json` under `native_om3`. Download, place and decode without
+committing the BIN:
+
+```bash
+python3 tools/om_firmware_catalog.py --model-id 1470 --model-name OM-3 \
+  --out generated/om3-catalog --download
+# copy OLY_E_147_1100_0000_0000.BIN to
+# firmware_archive/reference/OM-3/1.1/ (and optionally research/ep7_om3/om3_download/)
+python3 tools/oly_container.py \
+  firmware_archive/reference/OM-3/1.1/OLY_E_147_1100_0000_0000.BIN \
+  --expect-sha256 8c133084414533159f587bf46bfb4152714c4074312a47c8d8503e33d605696d \
+  --code-base 0x60021020 --out analysis/om3_1100
+python3 tools/om3_probe.py --out generated/om3-probe-smoke
+```
+
 ## Execute bounded native probes
 
 Build the [pinned GNU emulator](docs/tooling/EMULATOR.md), then:

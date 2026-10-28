@@ -12,10 +12,15 @@ Python 3.12, a C/C++ build environment, GNU make and the GNU simulator's host
 build dependencies are required. IDA and Wine are not needed. The builder
 performs no downloads and installs nothing outside `toolchains/`.
 
-Obtain the [pinned upstream archive](https://gnu.googlesource.com/binutils-gdb/+archive/87ffb882e0f4d73401a0746177ffabb8e8bbe4ac.tar.gz).
-Required SHA-256:
-`a5e7cd02f844bb2873c25e0ac8e9a5b50a72c3e8e6570a6b7821d2e4c21178ad`.
-Then run from the repository root:
+Obtain the [pinned upstream archive](https://gnu.googlesource.com/binutils-gdb/+archive/87ffb882e0f4d73401a0746177ffabb8e8bbe4ac.tar.gz)
+at revision `87ffb882e0f4d73401a0746177ffabb8e8bbe4ac`. Accepted archive SHA-256 digests:
+
+- `a5e7cd02f844bb2873c25e0ac8e9a5b50a72c3e8e6570a6b7821d2e4c21178ad` (historical pin)
+- `c9506ffb995ce66f1a1332928732913f03e29d1dcfa604d208b5a62021639e1c` (googlesource repack observed 2026-10-28)
+
+After extraction, `build_mn103_emulator.py` also requires the pristine MN103
+sources `sim/mn10300/interp.c` and `sim/mn10300/mn10300.igen` to match the
+digests recorded in `prepare_mn103_sim.py`. Then run from the repository root:
 
 ```bash
 python3 tools/build_mn103_emulator.py --archive /path/to/binutils-gdb-87ffb882.tar.gz

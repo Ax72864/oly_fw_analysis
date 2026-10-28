@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from functools import lru_cache
 import hashlib
 import json
+import os
 from pathlib import Path
 import struct
 import subprocess
@@ -17,7 +18,27 @@ import subprocess
 from penf_landmarks import BASE, MAIN_SHA256
 
 ROOT = Path(__file__).resolve().parents[1]
-ENGINE = ROOT / 'toolchains/mn103-gnu-build/penf-mn103'
+
+
+def _resolve_engine():
+    build = ROOT / 'toolchains/mn103-gnu-build'
+    for name in ('penf-mn103', 'penf-mn103.exe'):
+        candidate = build / name
+        if candidate.is_file():
+            return candidate
+    return build / 'penf-mn103'
+
+
+ENGINE = _resolve_engine()
+
+
+def _engine_env():
+    """MSYS2-built engines need usr/bin on PATH for msys-2.0.dll under Windows."""
+    env = dict(os.environ)
+    msys_bin = Path(r'C:\msys64\usr\bin')
+    if os.name == 'nt' and msys_bin.is_dir():
+        env['PATH'] = str(msys_bin) + os.pathsep + env.get('PATH', '')
+    return env
 IMAGE = ROOT / 'analysis/penf_3.1/00_0100_403a0020.decoded.bin'
 REGISTERS = ['d0', 'd1', 'd2', 'd3', 'a0', 'a1', 'a2', 'a3', 'sp', 'pc',
              'mdr', 'psw', 'lir', 'lar', 'mdrq'] + [f'extra{i}' for i in range(15, 32)]
@@ -132,7 +153,8 @@ def execute(regions, registers, stop_pc, *, limit=10000, trace_limit=0, timeout=
         names[r.name] = index
     if sum(len(r.data) for r in regions) > 256*1024*1024:
         raise ValueError('Memory allocation exceeds harness limit')
-    proc = subprocess.run([str(ENGINE)], input=payload, capture_output=True, timeout=timeout)
+    proc = subprocess.run([str(ENGINE)], input=payload, capture_output=True, timeout=timeout,
+                          env=_engine_env())
     if proc.returncode:
         raise RuntimeError(f'Engine failed ({proc.returncode}): {proc.stderr.decode(errors="replace")}')
     try:

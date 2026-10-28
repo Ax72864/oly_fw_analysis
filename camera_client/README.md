@@ -1,3 +1,8 @@
+# Camera Wi-Fi research clients
+
+- **PEN-F** (`penf_wifi`): COLOR profile read/transfer research client (below).
+- **OM-3** (`om3_wifi`): read-only discovery; see [om3_wifi/README.md](om3_wifi/README.md).
+
 # PEN-F Wi-Fi research client
 
 A Python command-line client for reading COLOR profiles and transferring

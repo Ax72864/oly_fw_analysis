@@ -6,14 +6,14 @@ camera with the same processor.
 
 | Topic | Reference |
 | --- | --- |
-| Update files | [Components, decoding and checksums](format/CONTAINERS.md) · [Address spaces and section loading](format/pen-f/ADDRESS_SPACES.md) |
-| Startup and recovery | [Startup structure](boot/pen-f/STARTUP.md) · [SD update and recovery limits](boot/pen-f/RECOVERY.md) · [Buttons and dials](boot/pen-f/INPUTS.md) |
-| Camera interfaces | [USB firmware update](protocols/pen-f/USB_UPDATE.md) · [Settings backup](protocols/pen-f/SETTINGS_BACKUP.md) · [Wi-Fi settings](protocols/pen-f/WIFI.md) |
-| Color processing | [Modes and generations](color/MODES.md) · [HSL tables and scales](color/pen-f/HSL_TABLES.md) · [Processing jobs](color/pen-f/CREATIVE_PROCESSING_JOBS.md) |
+| Update files | [Components, decoding and checksums](format/CONTAINERS.md) · [PEN-F address spaces](format/pen-f/ADDRESS_SPACES.md) · [OM-3 address spaces](format/om-3/ADDRESS_SPACES.md) |
+| Startup and recovery | [PEN-F startup](boot/pen-f/STARTUP.md) · [OM-3 startup notes](boot/om-3/STARTUP.md) · [SD update and recovery limits](boot/pen-f/RECOVERY.md) · [Buttons and dials](boot/pen-f/INPUTS.md) |
+| Camera interfaces | [USB firmware update](protocols/pen-f/USB_UPDATE.md) · [Settings backup](protocols/pen-f/SETTINGS_BACKUP.md) · [PEN-F Wi-Fi](protocols/pen-f/WIFI.md) · [OM-3 Wi-Fi](protocols/om-3/WIFI.md) |
+| Color processing | [Modes and generations](color/MODES.md) · [OM-3 COLOR](color/om-3/COLOR.md) · [HSL tables and scales](color/pen-f/HSL_TABLES.md) · [Processing jobs](color/pen-f/CREATIVE_PROCESSING_JOBS.md) |
 | Profile integration | [Editor and display](color/pen-f/EDITOR.md) · [Saved settings](color/pen-f/SETTINGS_STORAGE.md) · [Per-image parameters](color/pen-f/CAPTURE_PARAMETERS.md) · [ORF metadata](color/pen-f/ORF_METADATA.md) |
 | Other image effects | [Grain](color/pen-f/GRAIN.md) · [Sharpening](color/pen-f/SHARPENING.md) · [Creative shading](color/pen-f/SHADING.md) |
-| Other camera features | [Silent burst and Pro Capture](features/om-5/BURST.md) · [External flash](features/FLASH.md) · [Published firmware hacks](features/HISTORICAL_HACKS.md) |
-| Modification techniques | [Code placement](safety/CODE_SPACE.md) · [Validation](safety/VALIDATION.md) · [Resource graphics](tooling/pen-f/RESOURCES.md) · [MN103 emulator](tooling/EMULATOR.md) |
+| Other camera features | [Silent burst and Pro Capture](features/om-5/BURST.md) · [External flash](features/FLASH.md) · [OM-3 flash](features/om-3/FLASH.md) · [OM-3 V22 audit](features/om-3/V22.md) · [Published firmware hacks](features/HISTORICAL_HACKS.md) |
+| Modification techniques | [Code placement](safety/CODE_SPACE.md) · [OM-3 caves](safety/om-3/CODE_SPACE.md) · [Validation](safety/VALIDATION.md) · [Resource graphics](tooling/pen-f/RESOURCES.md) · [MN103 emulator](tooling/EMULATOR.md) |
 | Source builds | [PEN-F HSL](../patches/hsl/pen-f/README.md) · [IDA/MN103 setup and automation](tooling/ida/README.md) |
 
 For address-level PEN-F 3101 work, use the [startup function map](boot/pen-f/FUNCTION_MAP.md),
@@ -24,6 +24,9 @@ ownership and the limits of the execution evidence.
 
 PEN-F build 3101 supplies most detailed function maps. E-M1 II and III, E-M5 II
 and III, E-P7, OM-3 and OM-5 provide comparisons for particular subsystems.
+OM-3 build 1100 now has its own topic pages under `**/om-3/`; they record
+container identity, COLOR landmarks, Wi-Fi discovery limits, flash parser rows
+and V22 code-space caves without claiming PEN-F-depth boot coverage.
 Coverage is a set of bounded observations, not a complete firmware decompilation.
 
 **Reading evidence:** “native execution” means original instructions executed in

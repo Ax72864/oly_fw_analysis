@@ -1,6 +1,33 @@
 {
   "scope": "Input contracts for analysis tools; optional path lists also appear in each probe source.",
   "paths_relative_to": "repository root unless a CLI argument supplies another path",
+  "native_om3": {
+    "stock_container": {
+      "path": "firmware_archive/reference/OM-3/1.1/OLY_E_147_1100_0000_0000.BIN",
+      "alternate_paths": [
+        "research/ep7_om3/om3_download/OLY_E_147_1100_0000_0000.BIN"
+      ],
+      "sha256": "8c133084414533159f587bf46bfb4152714c4074312a47c8d8503e33d605696d",
+      "model_id": "1470",
+      "public_version": "1.1",
+      "build": "1100",
+      "included": false,
+      "prepare": "om_firmware_catalog.py --model-id 1470 --model-name OM-3 --out generated/om3-catalog --download; copy into the path above; never commit the BIN"
+    },
+    "main": {
+      "path": "analysis/om3_1100/00_0100_50000020.decoded.bin",
+      "sha256": "5e8d376e9111a44ac0352f26030d7c1b17026d42c45f3600cfa02a0e8c5b7d59",
+      "cpu_base": "0x60021020",
+      "included": false,
+      "prepare": "oly_container.py firmware_archive/reference/OM-3/1.1/OLY_E_147_1100_0000_0000.BIN --expect-sha256 8c133084414533159f587bf46bfb4152714c4074312a47c8d8503e33d605696d --code-base 0x60021020 --out analysis/om3_1100"
+    },
+    "v22_manifest": {
+      "path": "research/om3_patcher_20260929/extracted/OM-3 patcher/patches/om3_pc_remote_v22.json",
+      "sha256": "8f520edb97995c7b5de3b43da725b33bff9a5f1ddb52d31d439a01609369505e",
+      "included": false,
+      "prepare": "Obtain the kred OM-3 V22 patcher archive (provenance/SOURCES.md); extract; do not commit third-party binaries"
+    }
+  },
   "native_penf": {
     "stock_container": {
       "path": "firmware_files/OLY_E_122_3101_0000_0000.BIN",
