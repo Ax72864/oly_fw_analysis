@@ -544,7 +544,8 @@ def main(argv=None):
 
     def add_common(p, default_limit):
         p.add_argument('--main', type=Path, default=STOCK_MAIN)
-        p.add_argument('--out', type=Path, help='new directory for the JSON report')
+        p.add_argument('--out', type=Path,
+                       help='report directory (created if missing; re-run overwrites om3-boot.json / auto-stubs.json / events.json)')
         p.add_argument('--limit', type=int, default=default_limit)
         p.add_argument('--breakpoint', action='append', default=[])
         p.add_argument('--strap-bits', type=int, default=7)
@@ -575,8 +576,9 @@ def main(argv=None):
     report = summarize(result, state, args.command, outcome)
     text = json.dumps(report, indent=2) + '\n'
     if args.out:
-        require(not args.out.exists(), 'Use a new output directory')
-        args.out.mkdir(parents=True)
+        if args.out.exists() and not args.out.is_dir():
+            raise ValueError(f'--out must be a directory, not a file: {args.out}')
+        args.out.mkdir(parents=True, exist_ok=True)
         (args.out / 'om3-boot.json').write_text(text)
         (args.out / 'auto-stubs.json').write_text(json.dumps(state.auto_stubs, indent=2) + '\n')
         (args.out / 'events.json').write_text(json.dumps(state.events[-50:], indent=2) + '\n')

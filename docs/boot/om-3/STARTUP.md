@@ -48,10 +48,28 @@ python tools/om3_boot.py run --breakpoint 0x600335fa --out generated/om3-boot-bp
 ```
 
 Reports land in `--out` as `om3-boot.json`, `auto-stubs.json`, and `events.json`.
+`--out` may be reused: the directory is created if missing, and those three files
+are overwritten on re-run. Omit `--out` to print only the compact stdout summary.
 
 Observed `idle` result (stock 1100, synthetic peers/completions):
 `outcome=stable_under_budget`, `pc=0x60036a13` (`bra self`), DRAM SP around
 `0x62f08fe4`, after the historical `0x988004a0` / `pc=0x600216b1` frontier.
+
+## Simulation boundary (what this is / is not)
+
+**This is a CPU + MMIO offline harness**, not a camera GUI emulator.
+
+| Have now | Do **not** have |
+| --- | --- |
+| MN103 instruction execution of stock main | On-screen live-view / menu window |
+| Logged MMIO/RAM stubs and peer assumptions | Touch, dial, OK/power as real inputs |
+| JSON PC/SP/fault reports for bring-up | Interactive setting changes “like the body” |
+| Breakpoints / instruction budgets | Display, lens, ISP, Wi-Fi, USB gadget fidelity |
+
+To debug firmware *paths* and *registers*, use `prefix` / `advance` / `idle` /
+`--breakpoint`. To behave like a handset UI, this tree still needs a display
+pipeline, input models, and much deeper peripheral fidelity (closer to a full
+PEN-F connected boot + UI, which OM-3 has not ported).
 
 ### What the harness models
 
