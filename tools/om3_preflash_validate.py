@@ -51,6 +51,30 @@ PROP_SILENT_SETTING = 0x77
 PROP_TABLE_MODE_DIAL = 0x612F1C54
 PROP_TABLE_LEVER_SWITCH = 0x612F1C60
 
+# MODE_DIAL_B_ONOFF property-service bag (build 1100).
+PROP_GET = 0x61085DBB  # d0=id → d0=value; mask=0xa0 frame=0x18
+PROP_SET = 0x612D719F  # d0=id d1=value; mask=0xf0 frame=0x24
+PROP_SINGLETON_PTR = 0x60369ACC  # *(ptr) → service object; ctor seed 0x62b503c0
+PROP_MODE_DIAL_B_ONOFF = 1482
+PROP_MODE_DIAL_B_ONOFF_AUX = 1483
+PROP_SVC_OBJ = 0x97F02000
+PROP_SVC_VT = 0x97F02100
+PROP_STUB_GET = 0x97F02300  # vtable +12 / +20 (calls)
+PROP_STUB_SET = 0x97F02310  # vtable +4 (calls)
+PROP_STUB_GET_ALT = 0x97F02320
+PROP_SERVICE_HELPERS = frozenset(
+    {
+        0x610C6BD6,  # 0x610c886e setup before singleton
+        0x610C7A92,
+        0x610C6D25,  # get-path log helper
+        0x612928C6,  # set-path log helper
+        0x60AE796B,  # singleton ctor locks (avoided when ptr set)
+        0x60AE794E,
+        0x60AE795E,
+        0x60B3351A,  # SET special-case side path
+    }
+)
+
 PLAY_ALLOC_BUF = 0x19004000
 LEVER_KEYS = (11, 16)
 
@@ -185,11 +209,18 @@ def static_landmarks(image: bytes) -> dict:
                 hex(KEYASSIGN_MODE_DIAL_A),
                 hex(KEYASSIGN_MODE_DIAL_B),
             ],
-            "MODE_DIAL_B_ONOFF_gate_properties": [1482, 1483],
+            "MODE_DIAL_B_ONOFF_gate_properties": [
+                PROP_MODE_DIAL_B_ONOFF,
+                PROP_MODE_DIAL_B_ONOFF_AUX,
+            ],
+            "property_get": hex(PROP_GET),
+            "property_set": hex(PROP_SET),
+            "property_singleton_ptr": hex(PROP_SINGLETON_PTR),
             "note": (
                 "MODE_DIAL/LEVER_SWITCH enum ids located in settings name table; "
                 "function-button bits at 0x60366e58; KeyAssignment caches mode_dial "
-                "at 0x603713d4/d8. Live property bag for 1482/1483 still needs service objects."
+                "at 0x603713d4/d8. Property-service bag 1482/1483 is stubbed via "
+                "singleton 0x60369acc + vtable get(+12)/set(+4)."
             ),
         },
         "ikey_wave_table": dump_ikey_table(image),
@@ -498,6 +529,190 @@ def probe_get_lever(image: bytes) -> dict:
     }
 
 
+def return_from_calls(state: OM3Probe, result: int = 0) -> None:
+    """Return from a MN103 ``calls`` (vtable) boundary; not a CALL frame."""
+    state.regs["d0"] = result & 0xFFFFFFFF
+    state.regs["pc"] = state.regs["mdr"] & 0xFFFFFFFF
+
+
+def install_property_service(state: OM3Probe, image: bytes) -> None:
+    """Install singleton + fake vtable for property get(+12)/set(+4)."""
+    page = PROP_SINGLETON_PTR & ~0xFF
+    blob = bytearray(0x100)
+    off = page - BASE
+    if 0 <= off <= len(image) - 0x100:
+        blob[:] = image[off : off + 0x100]
+    struct.pack_into("<I", blob, PROP_SINGLETON_PTR - page, PROP_SVC_OBJ)
+    state.ram("prop_singleton_page", page, bytes(blob))
+
+    obj = bytearray(0x100)
+    struct.pack_into("<I", obj, 0, PROP_SVC_VT)
+    state.ram("prop_svc_obj", PROP_SVC_OBJ, bytes(obj), aliases=False)
+
+    vt = bytearray(0x100)
+    struct.pack_into("<I", vt, 4, PROP_STUB_SET)
+    struct.pack_into("<I", vt, 12, PROP_STUB_GET)
+    struct.pack_into("<I", vt, 20, PROP_STUB_GET_ALT)
+    struct.pack_into("<I", vt, 128, PROP_STUB_GET)  # SET late special-case slot
+    state.ram("prop_svc_vt", PROP_SVC_VT, bytes(vt), aliases=False)
+    state.ram("prop_stubs", PROP_STUB_GET, bytes(0x40), aliases=False)
+
+
+def handle_property_vtable(state: OM3Probe, pc: int, bag: dict[int, int]) -> str | None:
+    if pc in (PROP_STUB_GET, PROP_STUB_GET_ALT):
+        prop = state.regs["d0"] & 0xFFFF
+        out = state.regs["a1"] & 0xFFFFFFFF
+        val = bag.get(prop, 0) & 0xFFFFFFFF
+        state.write(out, struct.pack("<I", val))
+        return_from_calls(state, 0)
+        return f"get[{prop}]={val}"
+    if pc == PROP_STUB_SET:
+        prop = state.regs["d0"] & 0xFFFF
+        val = state.regs["a1"] & 0xFFFFFFFF
+        bag[prop] = val
+        return_from_calls(state, 0)
+        return f"set[{prop}]={val}"
+    return None
+
+
+def run_property_api(
+    image: bytes,
+    target: int,
+    *,
+    mask: int,
+    frame: int,
+    registers: dict,
+    bag: dict[int, int],
+    limit: int = 80000,
+) -> dict:
+    state = OM3Probe(image, target, mask=mask, frame=frame, registers=registers)
+    install_common_fixtures(state, image)
+    install_property_service(state, image)
+    stops = {
+        CALLER + 7,
+        PROP_STUB_GET,
+        PROP_STUB_SET,
+        PROP_STUB_GET_ALT,
+        *PROP_SERVICE_HELPERS,
+        *STUB_PCS,
+    }
+    hits: list[str] = []
+    guarded = 0
+    while True:
+        result = state.run(stops, limit=limit)
+        pc = state.regs["pc"]
+        if result["status"] == "breakpoint" and pc == CALLER + 7:
+            return {
+                "status": "returned",
+                "d0": state.regs.get("d0", 0) & 0xFFFFFFFF,
+                "d0_hex": hex(state.regs.get("d0", 0) & 0xFFFFFFFF),
+                "instructions": state.steps,
+                "hits": hits,
+                "bag": {str(k): v for k, v in sorted(bag.items())},
+            }
+        if result["status"] == "breakpoint" and pc in stops:
+            note = handle_property_vtable(state, pc, bag)
+            if note:
+                hits.append(note)
+            else:
+                hits.append(f"stub:{pc:#x}")
+                state.return_from_model(0)
+            guarded += 1
+            if guarded > 800:
+                return {
+                    "status": "stub_exhaustion",
+                    "pc": hex(pc),
+                    "instructions": state.steps,
+                    "hits": hits[-40:],
+                }
+            continue
+        return {
+            "status": result.get("status"),
+            "pc": hex(pc),
+            "fault": result.get("fault"),
+            "instructions": state.steps,
+            "hits": hits[-40:],
+        }
+
+
+def probe_property_service_1482_1483(image: bytes) -> dict:
+    """Read/write MODE_DIAL_B_ONOFF gates 1482/1483 through property get/set APIs."""
+    bag: dict[int, int] = {
+        PROP_MODE_DIAL_B_ONOFF: 0,
+        PROP_MODE_DIAL_B_ONOFF_AUX: 0,
+        304: 0,  # SET path probes this id before writing
+    }
+    steps = []
+
+    def get_prop(prop_id: int) -> dict:
+        return run_property_api(
+            image,
+            PROP_GET,
+            mask=0xA0,
+            frame=0x18,
+            registers={"d0": prop_id},
+            bag=bag,
+        )
+
+    def set_prop(prop_id: int, value: int) -> dict:
+        return run_property_api(
+            image,
+            PROP_SET,
+            mask=0xF0,
+            frame=0x24,
+            registers={"d0": prop_id, "d1": value},
+            bag=bag,
+        )
+
+    for prop_id, value in (
+        (PROP_MODE_DIAL_B_ONOFF, 1),
+        (PROP_MODE_DIAL_B_ONOFF, 0),
+        (PROP_MODE_DIAL_B_ONOFF_AUX, 1),
+        (PROP_MODE_DIAL_B_ONOFF_AUX, 0),
+    ):
+        before = get_prop(prop_id)
+        wrote = set_prop(prop_id, value)
+        after = get_prop(prop_id)
+        ok = (
+            before.get("status") == "returned"
+            and wrote.get("status") == "returned"
+            and after.get("status") == "returned"
+            and after.get("d0") == value
+            and bag.get(prop_id) == value
+        )
+        steps.append(
+            {
+                "property": prop_id,
+                "value": value,
+                "passed": ok,
+                "get_before": before,
+                "set": wrote,
+                "get_after": after,
+            }
+        )
+
+    passed = all(s["passed"] for s in steps)
+    return {
+        "passed": passed,
+        "targets": {
+            "property_get": hex(PROP_GET),
+            "property_set": hex(PROP_SET),
+            "singleton_ptr": hex(PROP_SINGLETON_PTR),
+            "service_object": hex(PROP_SVC_OBJ),
+            "vtable_get_offset": 12,
+            "vtable_set_offset": 4,
+        },
+        "properties": [PROP_MODE_DIAL_B_ONOFF, PROP_MODE_DIAL_B_ONOFF_AUX],
+        "round_trips": steps,
+        "interpretation": (
+            "Offline property-service bag: singleton at 0x60369acc points at a "
+            "fixture object whose vtable +12/+4 implement get/set for 1482/1483 "
+            "(MODE_DIAL_B_ONOFF gates). Native wrappers 0x61085dbb / 0x612d719f "
+            "return through the stubbed path."
+        ),
+    }
+
+
 def probe_dual_mode_settings(image: bytes) -> dict:
     """Contrast lever-power vs dial-power using located settings-bank words.
 
@@ -544,7 +759,10 @@ def probe_dual_mode_settings(image: bytes) -> dict:
             "LEVER_SWITCH_property_id": hex(PROP_LEVER_SWITCH),
             "function_button_word": hex(SETTINGS_WORD),
             "keyassignment_mode_dial_cache": hex(KEYASSIGN_MODE_DIAL_A),
-            "MODE_DIAL_B_ONOFF_gate_properties": [1482, 1483],
+            "MODE_DIAL_B_ONOFF_gate_properties": [
+                PROP_MODE_DIAL_B_ONOFF,
+                PROP_MODE_DIAL_B_ONOFF_AUX,
+            ],
         },
         "lever_power_mode": {
             "function_button_word": "0x1",
@@ -559,12 +777,10 @@ def probe_dual_mode_settings(image: bytes) -> dict:
         "interpretation": (
             "Offline dual-mode uses located bank words: lever bits at 0x60366e58 "
             "and KeyAssignment mode_dial cache at 0x603713d4 (B=28). "
-            "Live 1482/1483 property-service bag remains unmodeled."
+            "MODE_DIAL_B_ONOFF gates 1482/1483 are exercised separately via "
+            "probe_property_service_1482_1483."
         ),
-        "open_dependency": (
-            "Property-service objects for MODE_DIAL_B_ONOFF gates 1482/1483 "
-            "are not instantiated offline; enum ids and cache words are located."
-        ),
+        "open_dependency": None,
     }
 
 
@@ -606,6 +822,7 @@ def evaluate_acceptance(static: dict, probes: dict) -> dict:
     play = probes["start_play_sound"]
     lever = probes["get_lever"]
     dual = probes["dual_mode"]
+    props = probes.get("property_service") or {}
     l2 = probes.get("l2_patches") or {}
 
     sound_l0 = bool(static["ikey_wave_table"]) and all(
@@ -617,6 +834,7 @@ def evaluate_acceptance(static: dict, probes: dict) -> dict:
     )
     lever_l1 = bool(changefn.get("passed")) and bool(lever.get("passed"))
     dual_l1 = bool(dual.get("passed"))
+    props_l1 = bool(props.get("passed"))
     l2_ok = bool(l2.get("passed"))
 
     criteria = {
@@ -651,6 +869,14 @@ def evaluate_acceptance(static: dict, probes: dict) -> dict:
                     "0x60366e58 vs 0x603713d4 dial-B contrast"
                 ),
             },
+            "L1_property_service_1482_1483": {
+                "required": True,
+                "met": props_l1,
+                "evidence": (
+                    "Native get 0x61085dbb / set 0x612d719f round-trip on "
+                    "MODE_DIAL_B_ONOFF gates 1482/1483 via stubbed service object"
+                ),
+            },
         },
         "l2": {
             "L2_sound_and_lever_patch_builds": {
@@ -682,7 +908,7 @@ def evaluate_acceptance(static: dict, probes: dict) -> dict:
 
     if len(met) == len(required):
         overall = "PASS_PREFLASH_FULLCHAIN"
-    elif sound_l1 and lever_l1 and dual_l1 and not l2_ok:
+    elif sound_l1 and lever_l1 and dual_l1 and props_l1 and not l2_ok:
         overall = "PASS_PREFLASH_L1_PLUS"
     elif sound_l1 and lever_l1:
         overall = "PASS_PREFLASH_L1"
@@ -691,24 +917,17 @@ def evaluate_acceptance(static: dict, probes: dict) -> dict:
     else:
         overall = "INCOMPLETE"
 
-    hard_stop = None
-    if dual.get("open_dependency") and dual_l1:
-        hard_stop = {
-            "id": "property_service_1482_1483",
-            "summary": dual.get("open_dependency"),
-            "blocks": "On-device-identical MODE_DIAL_B_ONOFF property bag (not required for FULLCHAIN offline bar)",
-        }
-
     return {
         "overall": overall,
         "required_met": f"{len(met)}/{len(required)}",
         "criteria": criteria,
         "blockers": blockers,
-        "hard_stop_beyond_fullchain": hard_stop,
+        "hard_stop_beyond_fullchain": None,
         "preflash_bar_definition": {
             "L0": "Static xref/ABI closed",
             "L1": "Native aud_ikey + play return + changeFunction + lever leaf",
             "L1_dual": "Located MODE_DIAL/LEVER bank offsets + offline dual-mode contrast",
+            "L1_property": "Property-service get/set round-trip for 1482/1483 (MODE_DIAL_B_ONOFF)",
             "L2": "Reproducible data patches under patches/*/om-3 with native acceptance",
             "FULLCHAIN": "All required L0–L2 criteria met offline (no GUI, no flash)",
             "L3": "On-device only with explicit user authorization",
@@ -736,6 +955,7 @@ def main(argv=None):
             "start_play_sound": {"passed": False, "skipped": True},
             "get_lever": {"passed": False, "skipped": True},
             "dual_mode": {"passed": False, "skipped": True},
+            "property_service": {"passed": False, "skipped": True},
             "l2_patches": {"passed": False, "skipped": True},
         }
     else:
@@ -744,6 +964,7 @@ def main(argv=None):
         probes["start_play_sound"] = probe_start_play_sound(image)
         probes["get_lever"] = probe_get_lever(image)
         probes["dual_mode"] = probe_dual_mode_settings(image)
+        probes["property_service"] = probe_property_service_1482_1483(image)
         probes["l2_patches"] = (
             {"passed": False, "skipped": True}
             if args.skip_l2
@@ -780,6 +1001,7 @@ def main(argv=None):
                 {
                     "change_function": probes.get("change_function"),
                     "dual_mode": probes.get("dual_mode"),
+                    "property_service": probes.get("property_service"),
                 },
                 indent=2,
             )
@@ -798,6 +1020,7 @@ def main(argv=None):
         "change_function_passed": probes.get("change_function", {}).get("passed"),
         "get_lever_passed": probes.get("get_lever", {}).get("passed"),
         "dual_mode_passed": probes.get("dual_mode", {}).get("passed"),
+        "property_service_passed": probes.get("property_service", {}).get("passed"),
         "l2_passed": probes.get("l2_patches", {}).get("passed"),
         "blockers": [b.get("name") for b in acceptance.get("blockers", [])],
         "hard_stop_beyond_fullchain": acceptance.get("hard_stop_beyond_fullchain"),

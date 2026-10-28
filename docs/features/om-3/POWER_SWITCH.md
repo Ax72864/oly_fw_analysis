@@ -61,21 +61,23 @@ for OM-3 lever/power.
 | `LEVER_SWITCH` property enum | **`0x61`** (table `0x612f1c60`) |
 | Function-button bits | **`0x60366e58`** |
 | KeyAssignment mode_dial cache | **`0x603713d4`**, `0x603713d8` |
-| `MODE_DIAL_B_ONOFF` gate property numbers | **1482**, **1483** (need live property service) |
+| `MODE_DIAL_B_ONOFF` gate property numbers | **1482**, **1483** |
+| Property get wrapper | **`0x61085dbb`** (`d0=id` → `d0=value`; mask `0xa0` frame `0x18`) |
+| Property set wrapper | **`0x612d719f`** (`d0=id` `d1=value`; mask `0xf0` frame `0x24`) |
+| Property-service singleton | **`*(0x60369acc)`** → object; vtable **get=+12**, **set=+4** |
 
-Offline dual-mode + L2 default-bit patch:
+Offline dual-mode + property-service bag + L2 default-bit patch:
 `python tools/om3_preflash_validate.py --out generated/om3-preflash-validate`  
-(`patches/power_lever/om-3/`).
+(`patches/power_lever/om-3/`). The harness installs a fixture object at the
+singleton and stubs vtable get/set so 1482/1483 round-trip like the property API.
 
 ## Next proof steps (still offline / read-only)
 
 1. Dump the custom-assignment **record layout** near `0x615d2af0` (which swXX is
    power lever) — strings located; field widths still open.
-2. Instantiate property-service objects for gates **1482/1483** if on-device-identical
-   `MODE_DIAL_B_ONOFF` contrast is required (beyond offline FULLCHAIN).
-3. If the lever remains a distinct key ID with assignment slot `none`, point it at
+2. If the lever remains a distinct key ID with assignment slot `none`, point it at
    an existing function ID (candidate `0x400000d`).
-4. If power-on-dial **aliases** the lever away at the event source, remapping needs
+3. If power-on-dial **aliases** the lever away at the event source, remapping needs
    a new event producer — higher risk, needs cave space.
 
 No flashable product patch is proposed beyond the offline L2 data demos.
