@@ -41,15 +41,34 @@ channel 7 / `0x98c00058`) and ordinary button descriptors
 “power on mode dial” product mode in this tree. Do not reuse PEN-F ADC numbers
 for OM-3 lever/power.
 
+## Resolved entries (build 1100, offline)
+
+| Symbol | Entry / evidence | Notes |
+| --- | --- | --- |
+| `changeFunctionButton` | `0x60af1f1e` | `d0=key`, `d1=lever`; **only keys 11 and 16** accepted |
+| `getChangeFunctionButton` | `0x60af284f` | reads bit from settings word `0x60366e58` |
+| `CameraCommon` vtable | `0x60e20750` | |
+| `getLeverSwitchState` | `0x60b34c2c` (vt+`0xec`) | leaf body `0x60af2e05` |
+| `EV_CHANGE_LEVER_SW` | name `0x60dee084` | event id **`0xe2`** |
+| `GUI_FN_LEVER_POWER_SWITCH` | string `0x61343ffe` | function id **`0x400000d`** |
+| `customKeyAssignment_sw01…15` | `0x615d2b04+` | log/state labels present for sw01–06,12–15 |
+
+Native settings round-trip (key 11/16, lever 0/1) and synthetic lever-state
+contrast: `python tools/om3_preflash_validate.py --out generated/om3-preflash-validate`.
+
 ## Next proof steps (still offline / read-only)
 
 1. Dump the custom-assignment table records near `0x615d2af0` and identify which
-   `swXX` (if any) is the power lever.
+   `swXX` (if any) is the power lever. **Strings located; runtime record layout
+   still open.**
 2. Native-read `getLeverSwitchState` / `getChangeFunctionButton` with synthetic
    lever levels after a settings bank where power-on-dial is enabled.
+   **Partial:** changeFunction/getChangeFunction round-trip works; lever leaf
+   contrast works under property stubs. **Hard stop:** mode-dial-as-power
+   settings-bank offset not located.
 3. If the lever remains a distinct key ID with assignment slot `none`, a patch
    or settings edit could point it at an existing function ID already accepted
-   by `customKeyAssignment_*`.
+   by `customKeyAssignment_*` (candidate target id `0x400000d` is power-switch).
 4. If power-on-dial **aliases** the lever away at the event source, remapping
    needs a new event producer — higher risk, needs cave space.
 

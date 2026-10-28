@@ -76,6 +76,20 @@ python tools/om3_boot.py idle --limit 5000000 --out generated/om3-boot-fullchain
 `deeper_idle` means **synthetic app-schedulable steady state** after peer/DMA/storage
 stubs — not GUI, not real multi-core RTOS idle.
 
+### Pre-flash feature validation (not deeper_idle)
+
+For offline acceptance of sound / lever / settings hooks before any flash, use:
+
+```bash
+python tools/om3_preflash_validate.py --out generated/om3-preflash-validate
+```
+
+That harness resolves and natively probes `aud_ikey_to_wavetype_is_short_sound`,
+`Start_Play_Sound_Ext` entry smoke, `changeFunctionButton` /
+`getChangeFunctionButton` settings round-trip, and synthetic
+`getLeverSwitchState` contrast. See `docs/features/om-3/SHUTTER_SOUND.md` and
+`POWER_SWITCH.md`. Do **not** treat `deeper_idle` as the pre-flash bar.
+
 ## Simulation boundary (what this is / is not)
 
 **This is a CPU + MMIO offline harness**, not a camera GUI emulator.

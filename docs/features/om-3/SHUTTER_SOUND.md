@@ -32,10 +32,21 @@ Working hypothesis from naming (not yet natively executed):
 3. Even if a wave type is selected, `aud_soundic` power/format must be up;
    HDMI/sound-format helpers show separate enable paths.
 
+## Resolved entries (build 1100, offline)
+
+| Symbol | Entry / evidence | ABI notes |
+| --- | --- | --- |
+| `aud_ikey_to_wavetype_is_short_sound` | `0x60adf844` | `a0` = ikey C string; `d0` = short? (0/1); call mask `0xf0` frame `0x1c` |
+| ikey → short table | `0x60ddb9e4` (18×8) | `PRM_AUD_SHUT*_VOL` → 1; `PRM_AUD_CSHUT*_VOL` → 0 |
+| `Start_Play_Sound_Ext` | `0x604375d6` | `movm` + `add -48,sp`; call mask `0xf0` frame `0x30` |
+
+Native map + play entry smoke: `python tools/om3_preflash_validate.py --out generated/om3-preflash-validate`.
+
 ## How to prove a fix path (offline)
 
 1. Native call into `aud_ikey_to_wavetype_is_short_sound` with synthetic ikey
-   values for silent vs mechanical shutter; record returned wave type.
+   values for silent vs mechanical shutter; record returned wave type. **Done**
+   in `om3_preflash_validate` (`PRM_AUD_SHUT*` short, `PRM_AUD_CSHUT*` not).
 2. Trace callers of `Start_Play_Sound_Ext` for shutter-complete events.
 3. Diff silent vs mechanical capture completion in a future connected probe.
 4. Only then consider a cave that plays `MDN_BEEP` or a short WAV on e-shutter
