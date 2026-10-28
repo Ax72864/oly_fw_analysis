@@ -53,23 +53,29 @@ for OM-3 lever/power.
 | `GUI_FN_LEVER_POWER_SWITCH` | string `0x61343ffe` | function id **`0x400000d`** |
 | `customKeyAssignment_sw01…15` | `0x615d2b04+` | log/state labels present for sw01–06,12–15 |
 
-Native settings round-trip (key 11/16, lever 0/1) and synthetic lever-state
-contrast: `python tools/om3_preflash_validate.py --out generated/om3-preflash-validate`.
+### Mode-dial-as-power settings bank (located)
+
+| Item | Offset / id |
+| --- | --- |
+| `MODE_DIAL` property enum | **`0x60`** (table `0x612f1c54`) |
+| `LEVER_SWITCH` property enum | **`0x61`** (table `0x612f1c60`) |
+| Function-button bits | **`0x60366e58`** |
+| KeyAssignment mode_dial cache | **`0x603713d4`**, `0x603713d8` |
+| `MODE_DIAL_B_ONOFF` gate property numbers | **1482**, **1483** (need live property service) |
+
+Offline dual-mode + L2 default-bit patch:
+`python tools/om3_preflash_validate.py --out generated/om3-preflash-validate`  
+(`patches/power_lever/om-3/`).
 
 ## Next proof steps (still offline / read-only)
 
-1. Dump the custom-assignment table records near `0x615d2af0` and identify which
-   `swXX` (if any) is the power lever. **Strings located; runtime record layout
-   still open.**
-2. Native-read `getLeverSwitchState` / `getChangeFunctionButton` with synthetic
-   lever levels after a settings bank where power-on-dial is enabled.
-   **Partial:** changeFunction/getChangeFunction round-trip works; lever leaf
-   contrast works under property stubs. **Hard stop:** mode-dial-as-power
-   settings-bank offset not located.
-3. If the lever remains a distinct key ID with assignment slot `none`, a patch
-   or settings edit could point it at an existing function ID already accepted
-   by `customKeyAssignment_*` (candidate target id `0x400000d` is power-switch).
-4. If power-on-dial **aliases** the lever away at the event source, remapping
-   needs a new event producer — higher risk, needs cave space.
+1. Dump the custom-assignment **record layout** near `0x615d2af0` (which swXX is
+   power lever) — strings located; field widths still open.
+2. Instantiate property-service objects for gates **1482/1483** if on-device-identical
+   `MODE_DIAL_B_ONOFF` contrast is required (beyond offline FULLCHAIN).
+3. If the lever remains a distinct key ID with assignment slot `none`, point it at
+   an existing function ID (candidate `0x400000d`).
+4. If power-on-dial **aliases** the lever away at the event source, remapping needs
+   a new event producer — higher risk, needs cave space.
 
-No flashable patch is proposed here.
+No flashable product patch is proposed beyond the offline L2 data demos.

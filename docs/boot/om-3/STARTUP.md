@@ -84,11 +84,11 @@ For offline acceptance of sound / lever / settings hooks before any flash, use:
 python tools/om3_preflash_validate.py --out generated/om3-preflash-validate
 ```
 
-That harness resolves and natively probes `aud_ikey_to_wavetype_is_short_sound`,
-`Start_Play_Sound_Ext` entry smoke, `changeFunctionButton` /
-`getChangeFunctionButton` settings round-trip, and synthetic
-`getLeverSwitchState` contrast. See `docs/features/om-3/SHUTTER_SOUND.md` and
-`POWER_SWITCH.md`. Do **not** treat `deeper_idle` as the pre-flash bar.
+Expect `overall=PASS_PREFLASH_FULLCHAIN` (L0–L2): `aud_ikey` map,
+`Start_Play_Sound_Ext` **stable return**, lever/settings dual-mode on located
+bank offsets, plus `patches/sound/om-3` and `patches/power_lever/om-3` offline
+builds. See `docs/features/om-3/SHUTTER_SOUND.md` and `POWER_SWITCH.md`.
+Do **not** treat `deeper_idle` as the pre-flash bar.
 
 ## Simulation boundary (what this is / is not)
 

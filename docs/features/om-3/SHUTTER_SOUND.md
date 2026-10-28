@@ -38,9 +38,11 @@ Working hypothesis from naming (not yet natively executed):
 | --- | --- | --- |
 | `aud_ikey_to_wavetype_is_short_sound` | `0x60adf844` | `a0` = ikey C string; `d0` = short? (0/1); call mask `0xf0` frame `0x1c` |
 | ikey → short table | `0x60ddb9e4` (18×8) | `PRM_AUD_SHUT*_VOL` → 1; `PRM_AUD_CSHUT*_VOL` → 0 |
-| `Start_Play_Sound_Ext` | `0x604375d6` | `movm` + `add -48,sp`; call mask `0xf0` frame `0x30` |
+| `Start_Play_Sound_Ext` | `0x604375d6` | prologue `movm`+`add -48`; probe CALLER **mask=0 frame=0**; stable return with peer stubs |
 
-Native map + play entry smoke: `python tools/om3_preflash_validate.py --out generated/om3-preflash-validate`.
+Native map + play return + L2 CSHUT table patch:
+`python tools/om3_preflash_validate.py --out generated/om3-preflash-validate`  
+(`patches/sound/om-3/` flips `PRM_AUD_CSHUT*_VOL` short flags for offline acceptance).
 
 ## How to prove a fix path (offline)
 

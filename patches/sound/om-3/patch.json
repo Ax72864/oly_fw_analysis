@@ -1,0 +1,43 @@
+{
+  "model": "OM-3",
+  "build": "1100",
+  "kind": "data_table",
+  "cpu_base": "0x60021020",
+  "stock_main_sha256": "5e8d376e9111a44ac0352f26030d7c1b17026d42c45f3600cfa02a0e8c5b7d59",
+  "purpose": "Force PRM_AUD_CSHUT*_VOL short-sound flags to 1 for offline L2 acceptance",
+  "main_ranges": [
+    {
+      "name": "ikey_cshut1_wave",
+      "address": "0x60ddb9fc",
+      "bytes": 8,
+      "before_sha256": "fb42a44bb9cf9b799d93f338d35079928c7a06153af0af55e67537afa6234ae2",
+      "after_hex": "c6b8dd6001000000"
+    },
+    {
+      "name": "ikey_cshut2_wave",
+      "address": "0x60ddba04",
+      "bytes": 8,
+      "before_sha256": "b077406139ea665f061b124fee1ad5ac868ccabd873f1d5f2df4c706d00c7204",
+      "after_hex": "d9b8dd6001000000"
+    },
+    {
+      "name": "ikey_cshut3_wave",
+      "address": "0x60ddba0c",
+      "bytes": 8,
+      "before_sha256": "7c2b4a9392390fdf2af7ccc453e1df72a2c573f982338bd9b1aa74b627ce3aaf",
+      "after_hex": "ecb8dd6001000000"
+    }
+  ],
+  "acceptance": {
+    "expect_ikey_short": {
+      "PRM_AUD_CSHUT1_VOL": 1,
+      "PRM_AUD_CSHUT2_VOL": 1,
+      "PRM_AUD_CSHUT3_VOL": 1,
+      "PRM_AUD_SHUT1_VOL": 1
+    }
+  },
+  "limits": [
+    "Data-only L2 proof; not a capture-complete hook",
+    "Does not flash a camera"
+  ]
+}

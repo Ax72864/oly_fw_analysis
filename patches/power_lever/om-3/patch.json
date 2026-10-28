@@ -1,0 +1,33 @@
+{
+  "model": "OM-3",
+  "build": "1100",
+  "kind": "data_default",
+  "cpu_base": "0x60021020",
+  "stock_main_sha256": "5e8d376e9111a44ac0352f26030d7c1b17026d42c45f3600cfa02a0e8c5b7d59",
+  "purpose": "Default-enable changeFunctionButton key 11 bit in settings word 0x60366e58",
+  "settings_selectors": {
+    "MODE_DIAL_property_id": "0x60",
+    "LEVER_SWITCH_property_id": "0x61",
+    "function_button_word": "0x60366e58",
+    "keyassignment_mode_dial_cache": ["0x603713d4", "0x603713d8"],
+    "GUI_FN_LEVER_POWER_SWITCH": "0x400000d"
+  },
+  "main_ranges": [
+    {
+      "name": "change_function_settings_word",
+      "address": "0x60366e58",
+      "bytes": 4,
+      "before_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "after_hex": "01000000",
+      "note": "bit0 set → getChangeFunctionButton(key=11) returns 1"
+    }
+  ],
+  "acceptance": {
+    "getChangeFunctionButton_key11": 1,
+    "getChangeFunctionButton_key16_default": 0
+  },
+  "limits": [
+    "Data-only L2 proof of settings-word remapping",
+    "Does not flash a camera"
+  ]
+}
