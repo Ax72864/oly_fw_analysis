@@ -36,6 +36,11 @@ STOCK_MAIN = ROOT / 'analysis/om3_1100/00_0100_50000020.decoded.bin'
 STOCK_MAIN_SHA = '5e8d376e9111a44ac0352f26030d7c1b17026d42c45f3600cfa02a0e8c5b7d59'
 HOOK_RETURN = 0x18030000
 MAIN_END = BASE + 33554368  # stock main payload length
+# Synthetic deeper-idle site: firmware idle callback lands here and bra-selfs.
+# Encoding mirrors stock 0x60036a13 (`ca 00` as disassembled self-branch).
+SYNTH_APP_IDLE = 0x50003000
+SYNTH_APP_IDLE_BYTES = b'\xca\x00'
+FIRMWARE_HALTS = (0x60036a13, 0x60036a2b)
 
 
 def require(value, message):
@@ -78,6 +83,12 @@ class OM3BootState:
         self.steps = 0
         self.models = []
         self.auto_stubs = []
+        self.halt_diverts = 0
+        self.milestones = []
+        self.beyond_halt = True
+        self.max_halt_diverts = 8  # only intentional park escapes; not fault thrash
+        self.app_ready_armed = False
+        self.stack_pc_recovers = 0
         self._install_seed_models(strap_bits)
 
     def _install_seed_models(self, strap_bits):
@@ -87,8 +98,15 @@ class OM3BootState:
         # Match PEN-F layout: 2 KiB stack then 6 KiB reloc helper (no overlap).
         self.ram('internal_stack', 0x47000000, bytes(0x800), aliases=False)
         self.ram('reloc_helper', 0x47000800, b'\xa5' * 0x1800, aliases=False, executable=True)
-        self.ram('shared_kernel_flags', 0x8ff00000, bytes(0x400), aliases=False)
+        # Shared kernel flags, then PEN-F-analogue display state at 0x8ff001a4.
+        self.ram('shared_kernel_flags', 0x8ff00000, bytes(0x1a4), aliases=False)
+        self.regions.append(Region('display_shared_state', 0x8ff001a4, bytes(12), 'rw', True))
         self.ram('private_lock_bytes', 0x8fe00000, bytes(0x10), aliases=False)
+        # Extra GPIO / ADC-style shadows used later in bring-up (PEN-F analogues).
+        for address in (0x98d00140, 0x98d00144, 0x98d01104, 0x98d01108):
+            self.register(address, 'rw', 0x2000 if address == 0x98d01104 else 0)
+        for address in (0x99200310, 0x99300310, 0x99b00310):
+            self.register(address, 'w', 0)
 
         # OM-3 observed entry + PEN-F-analogue early controller/clock/IRQ shadows.
         seeds = [
@@ -138,8 +156,11 @@ class OM3BootState:
         # Neighbor clock-gate page touched just before the historical 0x988004a0 frontier.
         self.regions.append(Region('clock_page_98800300', 0x98800300, bytes(0x100), 'rw', True))
         # Secondary stack + early relocated helpers (SP switch at 0x600210a0; later
-        # execute hits e.g. 0x50002900, so this window is rwx).
-        self.regions.append(Region('secondary_stack_50000000', 0x50000000, bytes(0x10000), 'rwx', True))
+        # execute hits e.g. 0x50002900, so this window is rwx). Plant synthetic
+        # app-idle trampoline at SYNTH_APP_IDLE for beyond-halt deeper steady state.
+        secondary = bytearray(0x10000)
+        secondary[SYNTH_APP_IDLE - 0x50000000:SYNTH_APP_IDLE - 0x50000000 + 2] = SYNTH_APP_IDLE_BYTES
+        self.regions.append(Region('secondary_stack_50000000', 0x50000000, bytes(secondary), 'rwx', True))
         self.models.append({
             'name': 'penf_analogue_irq_uart_clock_pages',
             'kind': 'seed_batch',
@@ -158,6 +179,12 @@ class OM3BootState:
             'bytes': 0x10000,
             'kind': 'seed',
             'assumption': 'Stack window for post-switch entry at 0x600210c5; size chosen for debugging headroom',
+        })
+        self.models.append({
+            'name': 'synth_app_idle',
+            'address': hex(SYNTH_APP_IDLE),
+            'kind': 'seed',
+            'assumption': 'Synthetic deeper-idle bra-self; stands in for missing app scheduler callback',
         })
 
     def read(self, address, size):
@@ -406,7 +433,124 @@ class OM3BootState:
                 continue
             self.write(obj, template)
             self.write(obj + 0x14c, struct.pack('<I', sentinel))
+            # Mark peer objects application-ready like CPU0 after arming.
+            self.write(obj + 360, struct.pack('<I', 1))
             self.write(slot, struct.pack('<I', obj))
+
+    def _promote_for_write(self, address, size=4):
+        if BASE <= address < MAIN_END:
+            page = address & ~0xfff
+            if not any(r.address == page and 'w' in r.permissions and r.capture
+                       for r in self.regions):
+                offset = page - BASE
+                self.ram(f'promoted_main_{page:08x}', page, self.image[offset:offset + 0x1000])
+
+    def _arm_application_ready(self):
+        """Mark CPU0 app-ready (+0x168=1) and point idle callback at SYNTH_APP_IDLE.
+
+        Firmware parks at 0x60036a13 when +0x168 != 1; with +0x168 == 1 the idle
+        path calls *(obj+0x134). Stock value is an empty retf; we install the
+        synthetic bra-self trampoline so the run can settle in deeper_idle.
+        """
+        try:
+            cpu0 = struct.unpack('<I', self.read(0x97f00004, 4))[0]
+        except ValueError:
+            return False
+        if not cpu0:
+            return False
+        self._promote_for_write(cpu0 + 360)
+        self._promote_for_write(cpu0 + 308)
+        try:
+            self.write(cpu0 + 360, struct.pack('<I', 1))
+            self.write(cpu0 + 308, struct.pack('<I', SYNTH_APP_IDLE))
+        except ValueError:
+            return False
+        try:
+            if self.read(0x8ff001a4, 4) == bytes(4):
+                self.write(0x8ff001a4, struct.pack('<I', 0x3070))
+        except ValueError:
+            pass
+        if not self.app_ready_armed:
+            self.app_ready_armed = True
+            note = {
+                'kind': 'app_ready_armed',
+                'cpu0': hex(cpu0),
+                'idle_fn': hex(SYNTH_APP_IDLE),
+                'assumption': 'Synthetic app-ready flag + idle trampoline; not stock scheduler',
+            }
+            self.milestones.append(note)
+            self.events.append({'kind': 'model', 'result': note})
+        return True
+
+    def _neutralize_callback_list(self):
+        """Clear first pending fn so accidental walks of 0x6003330b return."""
+        try:
+            cpu0 = struct.unpack('<I', self.read(0x97f00004, 4))[0]
+            head = struct.unpack('<I', self.read(cpu0 + 196, 4))[0]
+            if head:
+                self._promote_for_write(head + 8)
+                self.write(head + 8, struct.pack('<I', 0))
+        except ValueError:
+            pass
+
+    def at_deeper_idle(self, pc=None):
+        pc = self.regs.get('pc', 0) if pc is None else pc
+        return SYNTH_APP_IDLE <= pc < SYNTH_APP_IDLE + 4
+
+    def service_control_flow(self, *, reason='halt'):
+        """Escape firmware bra-self parks into SYNTH_APP_IDLE (no wild PC thrash)."""
+        if not self.beyond_halt:
+            return False
+        pc = self.regs.get('pc', 0)
+        if self.at_deeper_idle(pc):
+            return False  # already at deeper steady state
+        if pc not in FIRMWARE_HALTS:
+            return False
+        if self.halt_diverts >= self.max_halt_diverts:
+            return False
+        self.halt_diverts += 1
+        self._arm_application_ready()
+        self._neutralize_callback_list()
+        # 0x60036a13 → enter stock call site 0x60036a15 (calls *+0x134 = trampoline).
+        # 0x60036a2b → already after call; jump straight to trampoline.
+        dest = SYNTH_APP_IDLE if pc == 0x60036a2b else 0x60036a15
+        self.regs['pc'] = dest
+        note = {
+            'kind': 'halt_divert',
+            'from': hex(pc),
+            'to': hex(dest),
+            'divert': self.halt_diverts,
+            'reason': reason,
+            'assumption': 'Leave stock bra-self for synthetic app idle; not a physical wake',
+        }
+        self.milestones.append(note)
+        self.events.append({'kind': 'model', 'result': note})
+        return True
+
+    def recover_corrupt_pc(self, reason):
+        """One-shot recovery if PC lands in kernel stack / non-code (beyond2 failure mode)."""
+        if not self.beyond_halt or self.stack_pc_recovers >= 2:
+            return False
+        pc = self.regs.get('pc', 0)
+        in_stack = 0x62e00000 <= pc < 0x63000000
+        in_break = pc == 0x60038ba6  # known 0xff padding after bad call
+        if not (in_stack or in_break):
+            return False
+        self.stack_pc_recovers += 1
+        self._arm_application_ready()
+        self._neutralize_callback_list()
+        self.regs['pc'] = SYNTH_APP_IDLE
+        note = {
+            'kind': 'corrupt_pc_recover',
+            'from': hex(pc),
+            'to': hex(SYNTH_APP_IDLE),
+            'reason': reason,
+            'recover': self.stack_pc_recovers,
+            'assumption': 'PC left code space; return to synthetic idle once',
+        }
+        self.milestones.append(note)
+        self.events.append({'kind': 'model', 'result': note})
+        return True
 
     def service_mmio(self):
         """Apply synthetic device completions so poll loops can retire.
@@ -421,6 +565,7 @@ class OM3BootState:
             (0x9bc00004, 1),   # DMA/copy ready
             (0x98e000f4, 0),   # controller cmd word; poll-until-zero at 0x6007063c
             (0x98e0009c, 7),   # restore entry strap after page restubs
+            (0x98d01104, 0x2000),  # storage ready analogue
         )
         for address, value in completions:
             try:
@@ -434,30 +579,40 @@ class OM3BootState:
         except ValueError:
             pass
         # Multi-core kernel-ready mask at 0x97f00000 (OM-3 analogue of PEN-F 0x8ff00000).
-        # CPU0 sets its bit then waits for (1<<core_count)-1 at 0x600333e9; OM-3 uses
-        # core_count=4 → mask 0xf. Assume peer CPUs have published their ready bits.
         try:
             ready = struct.unpack('<H', self.read(0x97f00000, 2))[0]
             if ready and ready != 0xffff:
                 self.write(0x97f00000, struct.pack('<H', ready | 0xf))
         except ValueError:
             pass
-        # Peer present bytes polled by 0x60021705..1f (caller 0x6004dd97). Early SRAM
-        # clear zeroes them; keep the three flags asserted for debugging progress.
         try:
             self.write(0x97f00095, b'\x01\x01\x01')
         except ValueError:
             pass
-        # Peer CPU object pointer table at 0x97f00004 (walked by 0x60031cc7). Without
-        # real peer cores the slots stay NULL and 0x60031cc9 faults on (0x14c,a0).
-        # Plant dummy objects whose +0x14c word is -1 (the "skip" sentinel).
         try:
             self._ensure_peer_cpu_objects()
         except ValueError:
             pass
+        # Arm as soon as CPU0 object exists so firmware prefers the ready idle path.
+        if self.beyond_halt and not self.app_ready_armed:
+            self._arm_application_ready()
+        self.service_control_flow()
+
+    def classify_outcome(self, result):
+        pc = result['registers']['pc']
+        if self.at_deeper_idle(pc) and self.app_ready_armed:
+            return 'deeper_idle'
+        if pc in FIRMWARE_HALTS and not self.beyond_halt:
+            return 'self_halt'
+        if pc in FIRMWARE_HALTS and self.halt_diverts >= self.max_halt_diverts:
+            return 'parked_after_diverts'
+        if pc in FIRMWARE_HALTS:
+            return 'self_halt'
+        return 'stable_under_budget'
 
     def run_once(self, *, limit, breakpoints=(), stop_pc=0xffffffff):
         require(ENGINE.is_file(), f'MN103 engine missing at {ENGINE}')
+        self.service_control_flow()
         result = execute(
             self.regions, self.regs, stop_pc,
             breakpoints=list(breakpoints),
@@ -468,8 +623,8 @@ class OM3BootState:
             region = self.regions[item['index']]
             data = bytes.fromhex(item['hex'])
             self.write(region.address, data)
-        self.service_mmio()
         self.regs = result['registers']
+        self.service_mmio()
         self.steps += result['completed']
         self.events.append({'kind': 'execution', 'result': {
             'status': result['status'],
@@ -482,6 +637,7 @@ class OM3BootState:
 
     def advance(self, *, limit, breakpoints=(), max_stubs=400):
         remaining = limit
+        result = None
         while remaining > 0:
             chunk = min(remaining, 50000)
             result = self.run_once(limit=chunk, breakpoints=breakpoints)
@@ -491,17 +647,27 @@ class OM3BootState:
             if result['status'] == 'returned':
                 return result, 'returned'
             if result['status'] == 'instruction_limit' and remaining <= 0:
-                return result, 'stable_under_budget'
+                return result, self.classify_outcome(result)
             if result['status'] == 'instruction_limit':
+                # Settled on trampoline early: keep burning budget there (success path).
+                if self.at_deeper_idle():
+                    continue
                 continue
+            if result['status'] == 'instruction_fault':
+                if self.recover_corrupt_pc('instruction_fault'):
+                    continue
+                return result, 'instruction_fault'
             if result['status'] != 'memory_fault':
                 return result, result['status']
             if len(self.auto_stubs) >= max_stubs:
                 return result, 'stub_budget_exhausted'
             if not self.stub_fault(result['fault']):
+                # Do not thrash divert on every fault (beyond2 lesson); recover only
+                # if PC itself left code space.
+                if self.recover_corrupt_pc('unhandled_fault'):
+                    continue
                 return result, 'unhandled_fault'
-            # Continue from the faulting PC with the new mapping.
-        return result, 'stable_under_budget'
+        return result, self.classify_outcome(result)
 
 
 def summarize(result, state, mode, outcome=None):
@@ -523,16 +689,32 @@ def summarize(result, state, mode, outcome=None):
         'seed_models': state.models,
         'auto_stub_count': len(state.auto_stubs),
         'auto_stubs_tail': state.auto_stubs[-20:],
+        'halt_diverts': state.halt_diverts,
+        'stack_pc_recovers': state.stack_pc_recovers,
+        'app_ready_armed': state.app_ready_armed,
+        'synth_app_idle': hex(SYNTH_APP_IDLE),
+        'milestones_tail': state.milestones[-20:],
+        'beyond_halt': state.beyond_halt,
+        'success_criteria': {
+            'deeper_idle': (
+                'outcome==deeper_idle AND pc in synth_app_idle AND app_ready_armed '
+                'AND fault is null — synthetic app-schedulable steady state after '
+                'clearing 0x988004a0 frontier, peer mask, and stock bra-self parks'
+            ),
+        },
         'how_to_debug': {
             'prefix': 'python tools/om3_boot.py prefix --out generated/om3-boot-prefix',
             'advance': 'python tools/om3_boot.py advance --limit 2000000 --out generated/om3-boot-advance',
             'idle': 'python tools/om3_boot.py idle --out generated/om3-boot-idle',
+            'fullchain': 'python tools/om3_boot.py idle --limit 5000000 --out generated/om3-boot-fullchain',
             'breakpoint': 'python tools/om3_boot.py run --breakpoint 0xADDR --out generated/om3-boot-bp',
+            'stay_halted': 'python tools/om3_boot.py idle --no-beyond-halt --out generated/om3-boot-halt',
         },
         'limits': [
             'Starts at downloaded main entry, not hardware reset/ROM.',
             'Auto-stubs zero-fill unmodeled MMIO/RAM; they enable debugging progress, not hardware fidelity.',
-            'No ISP, NAND physics, Wi-Fi, USB gadget, or proven multi-core idle schedule.',
+            'deeper_idle uses a synthetic bra-self trampoline as the app idle callback; not GUI/RTOS proof.',
+            'No ISP, NAND physics, Wi-Fi, USB gadget, GUI, or real multi-core task schedule.',
             'stable_under_budget means the instruction budget completed without an unhandled fault; not a claimed UI idle.',
         ],
     }
@@ -550,17 +732,25 @@ def main(argv=None):
         p.add_argument('--breakpoint', action='append', default=[])
         p.add_argument('--strap-bits', type=int, default=7)
         p.add_argument('--max-stubs', type=int, default=400)
+        p.add_argument('--beyond-halt', dest='beyond_halt', action='store_true', default=True,
+                       help='leave bra-self parks and re-enter init (default on)')
+        p.add_argument('--no-beyond-halt', dest='beyond_halt', action='store_false',
+                       help='stay on 0x60036a13/0x60036a2b self-halt')
+        p.add_argument('--max-halt-diverts', type=int, default=80)
         return p
 
     add_common(sub.add_parser('prefix', help='stop at first unmodeled access'), 20000)
     run_p = add_common(sub.add_parser('run', help='single chunk; optional auto-stub loop off by default'), 200000)
     run_p.add_argument('--auto-stub', action='store_true', help='stub faults and continue within --limit')
     add_common(sub.add_parser('advance', help='auto-stub until budget/breakpoint/unhandled fault'), 2_000_000)
-    add_common(sub.add_parser('idle', help='large advance; seek stable_under_budget'), 5_000_000)
+    idle_p = add_common(sub.add_parser('idle', help='large advance; seek deeper_idle / stable_under_budget'), 5_000_000)
+    idle_p.set_defaults(max_stubs=2500, max_halt_diverts=8)
     args = ap.parse_args(argv)
 
     image = load_main(args.main)
     state = OM3BootState(image, strap_bits=args.strap_bits)
+    state.beyond_halt = bool(args.beyond_halt)
+    state.max_halt_diverts = args.max_halt_diverts
     breakpoints = parse_addrs(args.breakpoint)
 
     if args.command == 'prefix':
@@ -590,10 +780,13 @@ def main(argv=None):
         'pc': hex(result['registers']['pc']),
         'sp': hex(result['registers']['sp']),
         'auto_stub_count': len(state.auto_stubs),
+        'halt_diverts': state.halt_diverts,
+        'app_ready_armed': state.app_ready_armed,
         'fault': fault_dict(result.get('fault')),
         'out': str(args.out) if args.out else None,
     }, indent=2))
-    if outcome in ('breakpoint', 'returned', 'stable_under_budget'):
+    if outcome in ('breakpoint', 'returned', 'stable_under_budget',
+                   'self_halt', 'parked_after_diverts', 'deeper_idle'):
         return 0
     return 1
 

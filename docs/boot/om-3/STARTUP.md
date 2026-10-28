@@ -26,7 +26,9 @@ Observed early entry helpers:
 | `0x60022e99` | Storage busy clear poll on `0x98d002f0` bit0 |
 | `0x600333e9` | 4-core ready mask poll on `0x97f00000` (expect `0xf`) |
 | `0x600335fa` | Peer doorbell poll on `0x8958` bit4 |
-| `0x60036a13` | Intentional `bra self` halt reached by `idle` under budget |
+| `0x60036a13` | Intentional `bra self` when CPU object `+0x168 != 1` |
+| `0x60036a2b` | `bra self` after idle callback `*(obj+0x134)` returns |
+| `0x6003330b` | Pending-callback walker (used as synthetic idle target) |
 
 ## Debug harness
 
@@ -40,8 +42,11 @@ python tools/om3_boot.py prefix --out generated/om3-boot-prefix
 # Past the old 0x988004a0 / pc=0x600216b1 frontier; auto-stub + completions
 python tools/om3_boot.py advance --limit 2000000 --out generated/om3-boot-advance
 
-# Large budget; seek stable_under_budget for debugging
+# Large budget; leave bra-self parks and re-enter init (default)
 python tools/om3_boot.py idle --out generated/om3-boot-idle
+
+# Stay on the intentional self-halt (old debug steady state)
+python tools/om3_boot.py idle --no-beyond-halt --out generated/om3-boot-halt
 
 # Breakpoint helper
 python tools/om3_boot.py run --breakpoint 0x600335fa --out generated/om3-boot-bp
@@ -51,9 +56,25 @@ Reports land in `--out` as `om3-boot.json`, `auto-stubs.json`, and `events.json`
 `--out` may be reused: the directory is created if missing, and those three files
 are overwritten on re-run. Omit `--out` to print only the compact stdout summary.
 
-Observed `idle` result (stock 1100, synthetic peers/completions):
-`outcome=stable_under_budget`, `pc=0x60036a13` (`bra self`), DRAM SP around
-`0x62f08fe4`, after the historical `0x988004a0` / `pc=0x600216b1` frontier.
+Observed results (stock 1100, synthetic peers/completions):
+
+- Historical frontier `0x988004a0` / `pc=0x600216b1` is cleared.
+- With `--no-beyond-halt`: parks at `0x60036a13` (`bra self`).
+- Default `--beyond-halt` success target **`deeper_idle`**:
+  - arms CPU object `+0x168=1`
+  - points idle callback `+0x134` at synthetic trampoline `0x50003000`
+  - leaves stock bra-self parks without thrashing on wild PCs
+  - settles at `pc=0x50003000` for the remaining instruction budget
+
+### Full-chain verify
+
+```bash
+python tools/om3_boot.py idle --limit 5000000 --out generated/om3-boot-fullchain
+# expect: outcome=deeper_idle, pc=0x50003000, app_ready_armed=true, fault=null
+```
+
+`deeper_idle` means **synthetic app-schedulable steady state** after peer/DMA/storage
+stubs — not GUI, not real multi-core RTOS idle.
 
 ## Simulation boundary (what this is / is not)
 
