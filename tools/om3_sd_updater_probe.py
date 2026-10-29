@@ -12,7 +12,7 @@ What this refuses
   - Staging onto paths that look like the live OM-3 volume (e.g. H:\\).
 
 This is not a port of penf_sd_path_probe's native client/service transaction.
-Native OM-3 SD client → FIRMUP_SRV fixtures remain future work.
+For the offline SD→validate→FIRMUP_SRV-class MN103 fixture, see om3_firmup_sim.py.
 """
 from __future__ import annotations
 
@@ -165,15 +165,15 @@ def main(argv=None):
         "not": [
             "camera flash / firmware install",
             "SD card write or format",
-            "native FIRMUP_SRV transaction (see penf_sd_path_probe for PEN-F)",
+            "camera flash programming (see om3_firmup_sim.py for trapped native path)",
             "OK+power activation proof",
         ],
         "landmarks": landmarks,
         "msc_read_only": msc,
         "host_stage": staged,
         "next_gap": (
-            "Port a bounded OM-3 native SD client→FIRMUP_SRV fixture modeled on "
-            "penf_sd_path_probe; keep flash backends trapped."
+            "Pin FIRMUP_SRV task entry PC and client↔service RTOS queues "
+            "(om3_firmup_sim.py covers SD search + validate + class-body traps)."
         ),
     }
     text = json.dumps(report, indent=2) + "\n"
