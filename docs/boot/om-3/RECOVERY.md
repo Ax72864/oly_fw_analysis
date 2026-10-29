@@ -61,7 +61,25 @@ PEN-F recovery limits still apply as a conservative baseline:
 
 ## Related tools (do not write camera flash)
 
+- Firmup landmarks: `tools/om3_firmup_landmarks.py`
+- SD updater surface + MSC read-only: `tools/om3_sd_updater_probe.py`
+  (`--msc-root H:/`; optional host-only `--stage-out`, refuses camera paths)
 - Pre-flash offline bar: `tools/om3_preflash_validate.py`
 - Container decode: `tools/oly_container.py`
 - V22 audit only: `tools/om3_patch_audit.py` (no installable package)
 - USB Storage read-only note: [USB_MSC_PROBE.md](../../features/om-3/USB_MSC_PROBE.md)
+
+Example (camera Storage connected; still no device writes):
+
+```bash
+python tools/om3_sd_updater_probe.py --msc-root H:/ --out generated/om3-sd-updater-probe
+python tools/om3_sd_updater_probe.py \
+  --container firmware_archive/reference/OM-3/1.1/OLY_E_147_1100_0000_0000.BIN \
+  --stage-out generated/om3-sd-host-stage \
+  --out generated/om3-sd-stage-report
+```
+
+## Still open
+
+Native OM-3 SD client → `FIRMUP_SRV` transaction fixture (PEN-F analogue:
+`penf_sd_path_probe.py`) with flash backends trapped.
