@@ -2,15 +2,20 @@
 
 Build **1100** only. Analysis / offline acceptance — **does not flash a camera**.
 
+For the **verified** three-slot custom e-shutter sound package (physical SD
+firmup 2026-11-04), see `docs/boot/om-3/FLASH_WORKFLOW.md` and
+`docs/features/om-3/CUSTOM_FEATURES.md` — that path uses
+`tools/om3_db_feature_patch.py` + `tools/om3_shutter_slots.py`, not this L2 table
+flip.
+
 ## Goal
 
 Demonstrate a reproducible, hash-gated data patch that flips
 `PRM_AUD_CSHUT*_VOL` from non-short (`0`) to short (`1`) in the
 `aud_ikey_to_wavetype_is_short_sound` table at `0x60ddb9e4`.
 
-This is a **proof of the L2 pipeline**, not a finished product beep patch.
-A real e-shutter cue still needs a capture-complete call-site hook (see
-`docs/features/om-3/SHUTTER_SOUND.md`).
+This is a **proof of the L2 pipeline**, not the shipping shutter-sound feature.
+
 
 ## Build
 

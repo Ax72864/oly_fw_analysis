@@ -1,7 +1,18 @@
 # OM-3 electronic shutter sound (build 1100)
 
 Goal: understand why silent/e-shutter may lack an audible cue, and where a
-stock or patched sound could be attached. Analysis only; no flash procedure.
+stock or patched sound could be attached.
+
+**Physical status:** research packages with db.firmware-style shutter-sound plus
+three custom WAV slots were SD-flashed to an OM-3; silent shooting played slots
+**1 / 2 / 3**. Current stable Caduceus merge:
+[CADUCEUS_V0262_SHUTTER_STABLE.md](CADUCEUS_V0262_SHUTTER_STABLE.md)
+（v0.26.2 resident，`71e5de2c…`，2026-11-13 机身通过）。
+
+**Known limitation:** custom e-shutter sound is audible only when the body’s
+**focus-lock confirmation beep** is enabled; with that beep off, slot select
+still works but playback is silent. Not treated as intentional patch gating;
+left unfixed for now.
 
 ## Sound pipeline leads
 
@@ -51,8 +62,12 @@ Native map + play return + L2 CSHUT table patch:
    in `om3_preflash_validate` (`PRM_AUD_SHUT*` short, `PRM_AUD_CSHUT*` not).
 2. Trace callers of `Start_Play_Sound_Ext` for shutter-complete events.
 3. Diff silent vs mechanical capture completion in a future connected probe.
-4. Only then consider a cave that plays `MDN_BEEP` or a short WAV on e-shutter
-   complete — placement must follow [code-space caves](../../safety/om-3/CODE_SPACE.md).
+4. The **shipping** research path is not a one-off `MDN_BEEP` cave: it reuses
+   upstream multibody shutter-sound code caves + PCM arenas
+   (`tools/om3_db_feature_patch.py` + `tools/om3_shutter_slots.py`). WAV target
+   format and bank budget: [POLICY.md](../../../generated/om3-shutter-sounds/POLICY.md).
 
-PEN-F comparison: this repository’s deepest sound work is not a PEN-F e-shutter
-beep patch; treat OM-3 audio as its own subsystem (`api_sound.c` / `aud_*`).
+The older L2 table flip under `patches/sound/om-3` remains an offline acceptance
+experiment only; it is **not** the verified three-slot package.
+
+PEN-F comparison: treat OM-3 audio as its own subsystem (`api_sound.c` / `aud_*`).
